@@ -172,12 +172,35 @@
             display: inline-block;
         }
         
+        
         .experience-item, .education-item {
+
             margin-bottom: 2.5rem;
+
             padding: 1.5rem;
+
             background: var(--bg-light);
+
             border-radius: 8px;
+
             border-left: 4px solid var(--primary);
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+        }
+
+        
+
+        .experience-item.animate-in, .education-item.animate-in {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
         }
         
         .item-header {
@@ -826,6 +849,84 @@
                               '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
             
             window.location.href = mailtoLink;
+        });
+
+
+        // Animation on scroll for experience and education items
+
+        const animateItems = document.querySelectorAll('.experience-item, .education-item');
+
+        
+
+        const itemObserverOptions = {
+
+            root: null,
+
+            rootMargin: '0px',
+
+            threshold: 0.15
+
+        };
+
+        
+
+        const itemObserver = new IntersectionObserver(function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    // Get the index of this item in the NodeList
+
+                    const index = Array.from(animateItems).indexOf(entry.target);
+
+                    
+
+                    // Add staggered delay for multiple items
+                    setTimeout(function() {
+
+                        entry.target.classList.add('animate-in');
+
+                    }, index * 100);
+
+                } else {
+
+                    // Remove animation when item leaves viewport
+
+                    entry.target.classList.remove('animate-in');
+
+                }
+
+            });
+
+        }, itemObserverOptions);
+
+        
+
+        animateItems.forEach(function(item) {
+
+            itemObserver.observe(item);
+
+        });
+        
+        // Smooth scrolling
+
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(function(link) {
+
+            link.addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+
+                const targetSection = document.querySelector(targetId);
+
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            });
+
         });
     </script>
 </body>
