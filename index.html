@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yann Cohen - Data Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #FF8C61;
+            --primary-dark: #e67a52;
+            --text-dark: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --border: #e2e8f0;
+        }
+        
+        body.dark-theme {
+            --primary: #FF8C61;
+            --primary-dark: #e67a52;
+            --text-dark: #e2e8f0;
+            --text-light: #cbd5e0;
+            --bg-light: #2d3748;
+            --bg-white: #1a202c;
+            --border: #4a5568;
+        }
+        
+        body.funky-theme {
+            --primary: #ff1493;
+            --primary-dark: #c71067;
+            --text-dark: #fce7f3;
+            --text-light: #f9a8d4;
+            --bg-light: #1e1b4b;
+            --bg-white: #0f0a2e;
+            --border: #4c1d95;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+        }
+        
+        .contact-links a:hover {
+            transform: translateY(-2px);
+        }
+        
+        nav {
+            background: var(--bg-white);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 80px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .item-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .item-company {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .item-date {
+            color: var(--text-light);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .item-description {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .item-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: var(--bg-white);
+            padding: 0.5rem 1rem;
+            margin: 0.3rem;
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .skill-tag:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 100%;
+        }
+        
+        .language-item {
+            background: var(--bg-light);
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .language-name {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .language-level {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .contact-form {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background: var(--bg-white);
+            color: var(--text-dark);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 140, 97, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .fun-fact {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 3rem;
+        }
+        
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.2s, opacity 0.3s;
+            opacity: 0.9;
+        }
+        
+        .footer-links a:hover {
+            transform: translateY(-3px);
+            opacity: 1;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .theme-toggle:hover {
+            opacity: 1;
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+        
+        .theme-toggle:active {
+            transform: scale(0.95);
+        }
+        
+        .theme-menu {
+            position: fixed;
+            bottom: 5rem;
+            right: 1.5rem;
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 999;
+        }
+        
+        .theme-menu.open {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .theme-option {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-white);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+        
+        .theme-option:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(-5px);
+        }
+        
+        .theme-option.active {
+            border-color: var(--primary);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Yann Cohen</h1>
+            <p class="subtitle">Data Analyst & Psychology Graduate</p>
+            <p class="tagline">Passionate about statistics and data science. Supporting researchers in analyzing and interpreting results.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:Yannco5@gmail.com">
+                    <span>✉️</span> Yannco5@gmail.com
+                </a>
+                <a href="tel:+594694314797">
+                    <span>📱</span> +594 694 314 797
+                </a>
+                <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="https://github.com/iamyannc" target="_blank">
+                    <span>💻</span> GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light);">
+                Data Analyst and Psychology graduate based in Fort-de-France, Martinique, with a unique blend of technical and human sciences expertise. I specialize in statistics and data science, helping researchers and organizations make data-driven decisions. My background in psychology gives me valuable insight into human behavior, which I combine with advanced analytical methods and neuroimaging techniques.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light); margin-top: 1rem;">
+                At INNIO, I developed key performance indicators and led database migration projects. I'm seeking opportunities to leverage my expertise in achieving data-driven outcomes.
+            </p>
+        </section>
+        
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Statistics Consultant (remote)</div>
+                        <div class="item-company">Freelance</div>
+                    </div>
+                    <div class="item-date">2024 – 2025</div>
+                </div>
+                <div class="item-description">
+                    Conducted various analyses, including developing a graph model to illustrate relationships between specific personality traits in primary school children.
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Data Analyst</div>
+                        <div class="item-company">INNIO, Austria</div>
+                    </div>
+                    <div class="item-date">2023 – 2024</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Assessed engine performance and developed predictive models</li>
+                        <li>Played a key role in a database migration project, coordinating with multiple departments across the company</li>
+                        <li>Developed a key performance indicator (KPI) to assess customer satisfaction</li>
+                        <li>Created several predictive models on engine performance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Private Tutor and Developer</div>
+                        <div class="item-company">Freelance</div>
+                    </div>
+                    <div class="item-date">2020 – 2023</div>
+                </div>
+                <div class="item-description">
+                    <ul>
+                        <li>Taught programming and statistics to students and PhD candidates</li>
+                        <li>Developed web applications using the Shiny framework, along with basic HTML and CSS</li>
+                        <li>Wrote custom R packages</li>
+                        <li>Taught English at an intermediate level</li>
+                        <li>Explored Adobe Photoshop and Photography</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Data Science and Math Courses</div>
+                        <div class="item-company">Innsbruck University (Austria)</div>
+                    </div>
+                    <div class="item-date">2022 – 2023</div>
+                </div>
+                <div class="item-description">
+                    During my Erasmus exchange in Innsbruck, I completed mathematics and programming courses with a focus on data science, including Python, linear algebra, and algorithms.
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">B.A. in Psychology</div>
+                        <div class="item-company">Ben-Gourion University, final grade: 94 - cum laude</div>
+                    </div>
+                    <div class="item-date">2020 – 2024</div>
+                </div>
+                <div class="item-description">
+                    Studied emotional and personality theories, advanced methods in cognition and statistics, and advanced neuroimaging techniques — all aimed at deepening my understanding of the human brain (and because it was truly fascinating...).
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Tools</h3>
+                    <div>
+                        <span class="skill-tag">R (Proficient)</span>
+                        <span class="skill-tag">Python (Proficient)</span>
+                        <span class="skill-tag">SQL (Proficient)</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Markdown</span>
+                        <span class="skill-tag">Shiny Framework</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div>
+                        <span class="skill-tag">Team Player</span>
+                        <span class="skill-tag">Independent</span>
+                        <span class="skill-tag">Analytical Thinking</span>
+                        <span class="skill-tag">Communication</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="languages">
+            <h2>Languages</h2>
+            <div class="languages">
+                <div class="language-item">
+                    <div class="language-name">Hebrew</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Excellent (oral & written)</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">French</div>
+                    <div class="language-level">Excellent (oral)</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Spanish</div>
+                    <div class="language-level">Very Good (oral & written)</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light); text-align: center; margin-bottom: 2rem;">
+                Interested in collaborating or have a project in mind? I'd love to hear from you!
+            </p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+        
+        <div class="fun-fact">
+            <strong>🚴 Fun Fact:</strong> I rode a bicycle from Alaska to Ushuaia!
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:Yannco5@gmail.com" aria-label="Email">✉️</a>
+            <a href="tel:+594694314797" aria-label="Phone">📱</a>
+            <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" aria-label="LinkedIn">💼</a>
+            <a href="https://github.com/iamyannc" target="_blank" aria-label="GitHub">💻</a>
+        </div>
+        <p>&copy; 2025 Yann Cohen. Based in Fort-de-France, Martinique.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Open to remote opportunities and collaborations</p>
+    </footer>
+    
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme menu">
+        🎨
+    </button>
+    
+    <div class="theme-menu" id="themeMenu">
+        <button class="theme-option active" data-theme="light">☀️ Light</button>
+        <button class="theme-option" data-theme="dark">🌙 Dark</button>
+        <button class="theme-option" data-theme="funky">✨ Funky</button>
+    </div>
+    
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeMenu = document.getElementById('themeMenu');
+        const themeOptions = document.querySelectorAll('.theme-option');
+        const body = document.body;
+        
+        // Toggle menu on button click
+        themeToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            themeMenu.classList.toggle('open');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!themeMenu.contains(e.target) && e.target !== themeToggle) {
+                themeMenu.classList.remove('open');
+            }
+        });
+        
+        // Theme selection
+        themeOptions.forEach(function(option) {
+            option.addEventListener('click', function() {
+                const theme = this.getAttribute('data-theme');
+                applyTheme(theme);
+                themeMenu.classList.remove('open');
+            });
+        });
+        
+        function applyTheme(theme) {
+            body.classList.remove('dark-theme', 'funky-theme');
+            
+            if (theme === 'dark') {
+                body.classList.add('dark-theme');
+            } else if (theme === 'funky') {
+                body.classList.add('funky-theme');
+            }
+            
+            themeOptions.forEach(function(opt) {
+                opt.classList.remove('active');
+                if (opt.getAttribute('data-theme') === theme) {
+                    opt.classList.add('active');
+                }
+            });
+        }
+        
+        // Intersection Observer for active navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '-50% 0px -50% 0px',
+            threshold: 0
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    
+                    // Remove active from all links
+                    navLinks.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    
+                    // Add active to the matching link
+                    navLinks.forEach(function(link) {
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        sections.forEach(function(section) {
+            observer.observe(section);
+        });
+        
+        // Smooth scrolling
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            const mailtoLink = 'mailto:Yannco5@gmail.com?subject=' + 
+                              encodeURIComponent(subject || 'Message from Portfolio') +
+                              '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+            
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>
