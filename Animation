@@ -26,6 +26,8 @@
         align-items: center;  
         gap: 1.5rem;  
         position: relative;  
+        overflow: hidden;
+        padding: 0 1rem;
     }  
 
     /* Typing effect shown in the same spot */  
