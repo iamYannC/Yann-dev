@@ -62,8 +62,8 @@
         }
 
         .profile-logo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid white;
@@ -372,6 +372,21 @@
             transform: translateY(-3px);
             opacity: 1;
         }
+
+        .contact-links i,
+        .footer-links i {
+             font-size: 1.3rem;
+             color: var(--primary);
+             transition: transform 0.25s ease, color 0.25s ease, opacity 0.2s;
+             opacity: 0.9;
+        }
+
+       .contact-links a:hover i,
+       .footer-links a:hover i {
+            transform: translateY(-2px);
+            color: var(--primary-dark);
+            opacity: 1;
+       }
         
         .theme-toggle {
             position: fixed;
@@ -480,6 +495,8 @@
             }
         }
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -487,21 +504,13 @@
             <h1>Yann Cohen</h1>
             <p class="subtitle">Data Analyst & Psychology Graduate</p>
             <img src="logo.jpg" alt="Yann Cohen Logo" class="profile-logo">
-            <p class="tagline">Passionate about statistics and data science.</p>
+            <p class="tagline">Passionate about Statistics, Data Science and Web Design. <br> Based in Martinique.</p>
             
             <div class="contact-links">
-                <a href="mailto:Yannco5@gmail.com">
-                    <span>✉️</span> Yannco5@gmail.com
-                </a>
-                <a href="https://wa.me/594694314797" target="_blank">
-    <span>📱</span> +594 694 314 797
-                </a>
-                <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank">
-                    <span>💼</span> LinkedIn
-                </a>
-                <a href="https://github.com/iamyannc" target="_blank">
-                    <span>💻</span> GitHub
-                </a>
+    <a href="mailto:Yannco5@gmail.com"><i class="fa-solid fa-envelope"></i> yannco5@gmail.com</a>
+    <a href="https://wa.me/594694314797" target="_blank"><i class="fa-brands fa-whatsapp"></i> 0694 π 797</a>
+    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/iamyannc" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
@@ -694,18 +703,18 @@
         </section>
         
         <div class="fun-fact">
-            <strong>🚴 Fun Fact:</strong> I rode a bicycle from Alaska to Ushuaia!
+            <strong>🚴 Fun Fact:</strong> Riding my bicycle across the Americas since 2018😎🚴🏻‍♀️
         </div>
     </div>
     
     <footer>
         <div class="footer-links">
-            <a href="mailto:Yannco5@gmail.com" aria-label="Email">✉️</a>
-            <a href="https://wa.me/594694314797" target="_blank" aria-label="WhatsApp">📱</a>
-            <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" aria-label="LinkedIn">💼</a>
-            <a href="https://github.com/iamyannc" target="_blank" aria-label="GitHub">💻</a>
+    <a href="mailto:Yannco5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://wa.me/594694314797" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/iamyannc" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
-        <p>&copy; 2025 Yann Cohen. Based in Fort-de-France, Martinique.</p>
+        <p>&copy; 2025 Yann Cohen.</p>
         <p style="margin-top: 0.5rem; opacity: 0.8;">Open to remote opportunities and collaborations</p>
     </footer>
     
