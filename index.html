@@ -387,14 +387,15 @@
 
         .contact-links i,
         .footer-links i {
-             color: white;
-             opacity: 0.95;
              font-size: 1.3rem;
              color: var(--primary);
              transition: transform 0.25s ease, color 0.25s ease, opacity 0.2s;
              opacity: 0.9;
         }
 
+        /* Ensures the top icons are white for better contrast */
+       .contact-links i { color: white; }
+        
        .contact-links a:hover i,
        .footer-links a:hover i {
             transform: translateY(-2px);
