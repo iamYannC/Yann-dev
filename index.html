@@ -60,6 +60,21 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
+        .profile-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.profile-logo:hover {
+    transform: scale(1.05);
+}
         
         h1 {
             font-size: 2.5rem;
@@ -471,14 +486,15 @@
         <div class="header-content">
             <h1>Yann Cohen</h1>
             <p class="subtitle">Data Analyst & Psychology Graduate</p>
-            <p class="tagline">Passionate about statistics and data science. Supporting researchers in analyzing and interpreting results.</p>
+            <img src="logo.jpg" alt="Yann Cohen Logo" class="profile-logo">
+            <p class="tagline">Passionate about statistics and data science.</p>
             
             <div class="contact-links">
                 <a href="mailto:Yannco5@gmail.com">
                     <span>✉️</span> Yannco5@gmail.com
                 </a>
-                <a href="tel:+594694314797">
-                    <span>📱</span> +594 694 314 797
+                <a href="https://wa.me/594694314797" target="_blank">
+    <span>📱</span> +594 694 314 797
                 </a>
                 <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank">
                     <span>💼</span> LinkedIn
@@ -685,7 +701,7 @@
     <footer>
         <div class="footer-links">
             <a href="mailto:Yannco5@gmail.com" aria-label="Email">✉️</a>
-            <a href="tel:+594694314797" aria-label="Phone">📱</a>
+            <a href="https://wa.me/594694314797" target="_blank" aria-label="WhatsApp">📱</a>
             <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" aria-label="LinkedIn">💼</a>
             <a href="https://github.com/iamyannc" target="_blank" aria-label="GitHub">💻</a>
         </div>
