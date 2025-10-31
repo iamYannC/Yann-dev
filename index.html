@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
  <script>
-	 // make sure the redirection only happens once
-  if (window.location.pathname === "/Yann-dev/" || window.location.pathname === "/Yann-dev/index.html") {
-  const userLang = navigator.language || navigator.userLanguage;
-  if (userLang && userLang.startsWith("fr")) {
-    window.location.href = "./fr/index.html";
+	 // disabling auto directing if the english option is clicked , for debugging clear local storage
+	 // localStorage.removeItem("langRedirected");
+if (!localStorage.getItem("langRedirected")) {
+  if (
+    window.location.pathname === "/Yann-dev/" ||
+    window.location.pathname === "/Yann-dev/index.html"
+  ) {
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang && userLang.startsWith("fr")) {
+      localStorage.setItem("langRedirected", "true");
+      window.location.href = "./fr/index.html";
+    }
   }
 }
-  </script>
+</script>
+
 
 
     <meta charset="UTF-8">
@@ -266,5 +274,6 @@
   </body>
 
 </html>
+
 
 
