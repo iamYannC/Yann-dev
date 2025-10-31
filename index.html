@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <script>
-	 // disabling auto directing if the english option is clicked , for debugging clear local storage
+	<script>
+		 // disabling auto directing if the english option is clicked , for debugging clear local storage
 	 // localStorage.removeItem("langRedirected");
-if (!localStorage.getItem("langRedirected")) {
-  if (
-    window.location.pathname === "/Yann-dev/" ||
-    window.location.pathname === "/Yann-dev/index.html"
-  ) {
+(function() {
+  // Only redirect from English root once
+  const redirected = localStorage.getItem("langRedirected");
+  const onRoot = window.location.pathname === "/Yann-dev/" || window.location.pathname === "/Yann-dev/index.html";
+  
+  if (!redirected && onRoot) {
     const userLang = navigator.language || navigator.userLanguage;
     if (userLang && userLang.startsWith("fr")) {
       localStorage.setItem("langRedirected", "true");
-      window.location.href = "./fr/index.html";
+      setTimeout(() => {
+        window.location.href = "./fr/index.html";
+      }, 100); // delay to ensure storage is saved
     }
   }
-}
+})();
 </script>
+
 
 
 
@@ -274,6 +278,7 @@ if (!localStorage.getItem("langRedirected")) {
   </body>
 
 </html>
+
 
 
 
