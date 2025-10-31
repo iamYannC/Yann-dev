@@ -506,12 +506,17 @@ html[lang="fr"] .lang-toggle::after {
             display: none;
             z-index: 999;
         }
+
+        #themeMenu button {
+	    padding: 0.5rem;
+	}
         
         .theme-menu.open {
             display: block;
             animation: slideIn 0.3s ease;
         }
         
+
         @keyframes slideIn {
             from {
                 opacity: 0;

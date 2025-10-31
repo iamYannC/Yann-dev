@@ -1,47 +1,49 @@
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const themeMenu = document.getElementById('themeMenu');
-        const themeOptions = document.querySelectorAll('.theme-option');
-        const body = document.body;
-        
-        // Toggle menu on button click
-        themeToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            themeMenu.classList.toggle('open');
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!themeMenu.contains(e.target) && e.target !== themeToggle) {
-                themeMenu.classList.remove('open');
-            }
-        });
-        
-        // Theme selection
-        themeOptions.forEach(function(option) {
-            option.addEventListener('click', function() {
-                const theme = this.getAttribute('data-theme');
-                applyTheme(theme);
-                themeMenu.classList.remove('open');
-            });
-        });
-        
-        function applyTheme(theme) {
-            body.classList.remove('dark-theme', 'funky-theme');
-            
-            if (theme === 'dark') {
-                body.classList.add('dark-theme');
-            } else if (theme === 'funky') {
-                body.classList.add('funky-theme');
-            }
-            
-            themeOptions.forEach(function(opt) {
-                opt.classList.remove('active');
-                if (opt.getAttribute('data-theme') === theme) {
-                    opt.classList.add('active');
-                }
-            });
-        }
+const themeToggle = document.getElementById('themeToggle');
+const themeMenu = document.getElementById('themeMenu');
+const themeOptions = document.querySelectorAll('.theme-option');
+const body = document.body;
+
+// Open on hover
+themeToggle.addEventListener('mouseenter', () => {
+  themeMenu.classList.add('open');
+});
+
+// Keep menu open while hovering
+themeMenu.addEventListener('mouseenter', () => {
+  themeMenu.classList.add('open');
+});
+
+// Close when leaving both
+themeToggle.addEventListener('mouseleave', () => {
+  setTimeout(() => {
+    if (!themeMenu.matches(':hover')) themeMenu.classList.remove('open');
+  }, 100);
+});
+
+themeMenu.addEventListener('mouseleave', () => {
+  themeMenu.classList.remove('open');
+});
+
+// Theme selection logic
+themeOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    const theme = option.getAttribute('data-theme');
+    applyTheme(theme);
+    themeMenu.classList.remove('open');
+  });
+});
+
+function applyTheme(theme) {
+  body.classList.remove('dark-theme', 'funky-theme');
+
+  if (theme === 'dark') body.classList.add('dark-theme');
+  else if (theme === 'funky') body.classList.add('funky-theme');
+
+  themeOptions.forEach(opt => {
+    opt.classList.toggle('active', opt.getAttribute('data-theme') === theme);
+  });
+}
+
         
         // Intersection Observer for active navigation
         const sections = document.querySelectorAll('section');
