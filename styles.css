@@ -168,8 +168,14 @@
   align-items: center;
 }
 #main-nav ul {
-  flex: 1;
+  display: flex;
   justify-content: center;
+  flex: 1;
+  list-style: none;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 
