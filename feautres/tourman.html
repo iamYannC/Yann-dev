@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tourman Section</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .intro .text {
+      flex: 1;
+      text-align: left;
+    }
+    .intro .photo {
+      width: 200px;
+      height: 200px;
+      background-color: #ddd;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    /* Carousel container */
+    .carousel {
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: calc( (100%) * 4 ); /* if 4 slides */
+    }
+    .carousel-slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .carousel-slide img {
+      width: 100%;
+      display: block;
+    }
+
+    /* radio buttons */
+    input[type="radio"] {
+      display: none;
+    }
+    .nav-dots {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .nav-dots label {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #bbb;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+    /* highlight dot for checked */
+    #slide1:checked ~ .nav-dots label[for="slide1"],
+    #slide2:checked ~ .nav-dots label[for="slide2"],
+    #slide3:checked ~ .nav-dots label[for="slide3"],
+    #slide4:checked ~ .nav-dots label[for="slide4"] {
+      background: #333;
+    }
+    /* position track via checked radio */
+    #slide1:checked ~ .carousel .carousel-track {
+      transform: translateX(0);
+    }
+    #slide2:checked ~ .carousel .carousel-track {
+      transform: translateX(-100%);
+    }
+    #slide3:checked ~ .carousel .carousel-track {
+      transform: translateX(-200%);
+    }
+    #slide4:checked ~ .carousel .carousel-track {
+      transform: translateX(-300%);
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="intro">
+      <div class="text">
+        <h1>TOURMAN</h1>
+        <p>
+          This is a block of text describing who Tourman is. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        </p>
+      </div>
+      <img class="photo" src="photo.jpg" alt="Tourman Photo">
+    </div>
+
+    <!-- Carousel controls -->
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="img1.jpg" alt=""></div>
+        <div class="carousel-slide"><img src="img2.jpg" alt=""></div>
+        <div class="carousel-slide"><img src="img3.jpg" alt=""></div>
+        <div class="carousel-slide"><img src="img4.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <div class="nav-dots">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+    </div>
+  </section>
+</body>
+</html>
