@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
  <script>
-    const lang = navigator.language || navigator.userLanguage;
-    if (lang && lang.startsWith('fr')) {
-      window.location.replace('./fr/index.html');
-    }
+	 // make sure the redirection only happens once
+  if (window.location.pathname === "/Yann-dev/" || window.location.pathname === "/Yann-dev/index.html") {
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang && userLang.startsWith("fr")) {
+    window.location.href = "./fr/index.html";
+  }
+}
   </script>
 
 
@@ -261,4 +264,5 @@
     <script src="main.js"></script>
 
   </body>
+
 </html>
