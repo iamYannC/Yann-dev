@@ -148,7 +148,23 @@
             color: var(--primary);
             border-bottom-color: var(--primary);
         }
-        
+        /* Flag styling */
+.lang-toggle svg {
+  width: 24px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+}
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -505,4 +521,5 @@
             .contact-form {
                 padding: 1.5rem;
             }
+
         }
