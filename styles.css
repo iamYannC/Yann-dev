@@ -162,6 +162,17 @@
   gap: 0.5rem;
 }
 
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-nav ul {
+  flex: 1;
+  justify-content: center;
+}
+
+
 
 
 
@@ -523,3 +534,4 @@
             }
 
         }
+
