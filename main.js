@@ -77,16 +77,21 @@
             observer.observe(section);
         });
         
-        // Smooth scrolling
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
+      // Smooth scrolling for internal links only
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        // Only handle links that start with '#' (anchors)
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(href);
+            if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-        
+            }
+        }
+        // If not a hash link (e.g. /fr/index.html), allow normal navigation
+    });
+});
         // Form submission handler
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
