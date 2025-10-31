@@ -160,7 +160,38 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+cursor: pointer;
 }
+/* Default tooltip */
+.lang-toggle::after {
+  content: attr(data-tooltip-en);
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  transform: translateY(-1px);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-size: 12px;
+}
+
+/* show on hover */
+.lang-toggle:hover::after {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+/* switch tooltip language */
+html[lang="fr"] .lang-toggle::after {
+  content: attr(data-tooltip-fr);
+}
+
+
 
 #main-nav {
   display: flex;
@@ -429,7 +460,7 @@
        .contact-links a:hover i,
        .footer-links a:hover i {
             transform: translateY(-2px);
-            color: var(--primary-dark);
+            /*color: var(--primary-dark); */
             opacity: 1;
        }
         
