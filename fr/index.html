@@ -6,7 +6,8 @@
     <title>Yann Cohen - Data Analyst</title>
     <link rel="stylesheet" href="../styles.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -112,7 +113,6 @@
                         <li>Évaluation des performances des moteurs et développement de modèles prédictifs</li>
                         <li>Participation clé à un projet de migration de base de données, en coordination avec plusieurs départements</li>
                         <li>Développement d’indicateurs de performance (KPI) pour évaluer la satisfaction client</li>
-                        <li>Création de plusieurs modèles prédictifs sur les performances des moteurs</li>
                     </ul>
                 </div>
             </div>
@@ -217,10 +217,10 @@
         <div class="tourman-portrait-container">
           <div class="tourman-portrait-card">
             <div class="tourman-portrait-face tourman-portrait-front">
-              <img src="../tourman-img/portrait.jpg" alt="Portrait Front">
+              <img src="../tourman-img/portrait.jpg" alt="Portrait Front" loading="lazy">
             </div>
             <div class="tourman-portrait-face tourman-portrait-back">
-              <img src="../tourman-img/portrait-spin.jpg" alt="Portrait Back">
+              <img src="../tourman-img/portrait-spin.jpg" alt="Portrait Back" loading="lazy">
             </div>
           </div>
         </div>
@@ -229,6 +229,49 @@
 <p>Quelque part en Australie, en 2017, j’ai eu l’idée de parcourir le globe à vélo du nord au sud. Quelques mois plus tard, le 21 août 2018, j’ai quitté Brooklyn, New York, direction le nord. Le vrai nord: l’Alaska.</p>
 <p>Je suis ensuite redescendu vers le sud, zigzaguant entre les côtes, les déserts et les vallées de ce vaste pays, avant d’entrer au Mexique. Quelques mois plus tard, le monde allait changer: le COVID. En 2020, je me suis retrouvé au Costa Rica, incapable de continuer plus au sud, j’ai décidé de rentrer chez moi. Le vélo, lui, est resté là-bas.</p>
 <p>Avançons jusqu’en novembre 2024 (vous pouvez lire dans les sections ci-dessus ce que j’ai fait entre-temps). J’ai pris un vol pour retourner au Costa Rica et relancer mon voyage à vélo avec l’objectif d’atteindre ma destination: <strong>Ushuaïa</strong>, fin del mundo.</p>
+
+<div class="text-carousel-container" role="region" aria-label="Tourman photo carousel">
+  <ul class="text-carousel" aria-live="polite">
+   <li>
+    <img src="../tourman-img/map.jpg" alt="Map showing the Tourman travel route" loading="lazy">
+    
+    <button class="view-large" aria-label="View larger image">
+        <i class="fa-solid fa-up-down-left-right"></i>
+    </button>
+</li>
+    <li>
+      <img src="../tourman-img/rt66.jpg" alt="Tourman cycling on Route 66 desert road" loading="lazy">
+  <button class="view-large" aria-label="View larger image">
+<i class="fa-solid fa-up-down-left-right"></i>
+</button>
+
+    </li>
+    <li>
+      <img src="../tourman-img/yannchimbo.jpg" alt="Tourman with his bike near Chimborazo mountain" loading="lazy">
+  <button class="view-large" aria-label="View larger image">
+<i class="fa-solid fa-up-down-left-right"></i>
+</button>
+
+    </li>
+    <li>
+      <img src="../tourman-img/yannview.jpg" alt="Tourman overlooking a mountain landscape with his bike" loading="lazy">
+  <button class="view-large" aria-label="View larger image">
+<i class="fa-solid fa-up-down-left-right"></i>
+</button>
+
+    </li>
+  </ul>
+</div>
+
+
+<div id="imageModal" class="image-modal" hidden>
+  <div class="image-modal-content">
+    <button class="close-modal" aria-label="Close">×</button>
+    <img id="modalImage" src="" alt="Enlarged view">
+  </div>
+</div>
+
+
 <p>Je ne suis pas pressé. Comme le dit si bien l’un des podcasts ci-dessous, je ne fais pas que rouler: je <em>zigzague</em>. Je me suis donc retrouvé à pédaler dans les hautes Andes, l’immense Amazonie et - au moment où j’écris ces lignes - à préparer une aventure en bateau-stop pour rejoindre la Martinique, une île française des Caraïbes.</p>
 <p>Si vous voulez lire, écouter ou regarder davantage, consultez les liens ci-dessous. Et si vous souhaitez me contacter - en tant que programmeur ou aventurier - je serai toujours heureux de partager cette expérience.</p>
 
@@ -240,106 +283,94 @@
     <div class="tourman-carousel-track">
       
       <!-- ========== Original Set ========== -->
-      
-<!-- Podcast 2019 -->
-      <a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/podcast.jpg" alt="Un an sur la route - Podcast 2019">
-        <div class="tourman-card-info">
-          <strong>Un an sur la route</strong><div>Podcast • 2019 • Anglais</div>
-        </div>
-      </a>
-
-      <!-- ZigZaging Americas -->
-      <a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/gabriel.jpg" alt="ZigZaguer les Amériques Podcast 2025">
-        <div class="tourman-card-info">
-          <strong>ZigZaguer les Amériques</strong><div>Podcast • 2025 • Anglais</div>
-        </div>
-      </a>
-
-      <!-- Hebrew Podcast -->
-      <a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/podcast-heb.jpg" alt="(pas) Voyager Facilement Podcast 2025 Hébreu">
-        <div class="tourman-card-info">
-          <strong>(pas) Voyager Facilement</strong><div>Podcast • 2025 • Hébreu</div>
-        </div>
-      </a>
-
-      <!-- Howler Magazine -->
-      <a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/howler.jpg" alt="Le Costa Rica pendant le Covid - Magazine 2020">
-        <div class="tourman-card-info">
-          <strong>Le Costa Rica pendant le Covid</strong><div>Magazine • 2020 • Anglais</div>
-        </div>
-      </a>
-
-      <!-- TV Interview -->
-      <a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/ch13.jpg" alt="Faire du vélo pendant le Covid Entretien TV 2020 Hébreu">
-        <div class="tourman-card-info">
-          <strong>Faire du vélo pendant le Covid, deux ans sur la route</strong><div>Entretien TV • 2020 • Hébreu</div>
-        </div>
-      </a>
-
-      <!-- Haaretz -->
-      <a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/haaretz.jpg" alt="Haaretz - Une journée dans ma vie Magazine 2020">
-        <div class="tourman-card-info">
-          <strong>Haaretz - Une journée dans ma vie</strong><div>Magazine • 2020 • Hébreu</div>
-        </div>
-      </a>
+    <!-- Podcast 2019 -->
+<a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer" class="pod19">
+  <img src="../tourman-img/podcast.jpg" alt="Un an sur la route - Podcast 2019" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Un an sur la route</strong><div>Podcast • 2019 • Anglais</div>
+  </div>
+</a>
+<!-- ZigZaging Americas -->
+<a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer" class="poden">
+  <img src="../tourman-img/gabriel.jpg" alt="ZigZaguer les Amériques Podcast 2025" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>ZigZaguer les Amériques</strong><div>Podcast • 2025 • Anglais</div>
+  </div>
+</a>
+<!-- Hebrew Podcast -->
+<a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer" class="podheb">
+  <img src="../tourman-img/podcast-heb.jpg" alt="(pas) Voyager Facilement Podcast 2025 Hébreu" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>(pas) Voyager Facilement</strong><div>Podcast • 2025 • Hébreu</div>
+  </div>
+</a>
+<!-- Howler Magazine -->
+<a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer" class="howler">
+  <img src="../tourman-img/howler.jpg" alt="Le Costa Rica pendant le Covid - Magazine 2020" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Le Costa Rica pendant le Covid</strong><div>Magazine • 2020 • Anglais</div>
+  </div>
+</a>
+<!-- TV Interview -->
+<a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer" class="ch13">
+  <img src="../tourman-img/ch13.jpg" alt="Faire du vélo pendant le Covid Entretien TV 2020 Hébreu" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Faire du vélo pendant le Covid, deux ans sur la route</strong><div>Entretien TV • 2020 • Hébreu</div>
+  </div>
+</a>
+<!-- Haaretz -->
+<a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer" class="haretz">
+  <img src="../tourman-img/haaretz.jpg" alt="Haaretz - Une journée dans ma vie Magazine 2020" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Haaretz - Une journée dans ma vie</strong><div>Magazine • 2020 • Hébreu</div>
+  </div>
+</a>
 
 
       <!-- ========== Duplicate Set (for seamless loop) ========== -->
       
-      <!-- Podcast 2019 -->
-      <a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/podcast.jpg" alt="Un an sur la route - Podcast 2019">
-        <div class="tourman-card-info">
-          <strong>Un an sur la route</strong><div>Podcast • 2019 • Anglais</div>
-        </div>
-      </a>
-
-      <!-- ZigZaging Americas -->
-      <a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/gabriel.jpg" alt="ZigZaguer les Amériques Podcast 2025">
-        <div class="tourman-card-info">
-          <strong>ZigZaguer les Amériques</strong><div>Podcast • 2025 • Anglais</div>
-        </div>
-      </a>
-
-      <!-- Hebrew Podcast -->
-      <a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/podcast-heb.jpg" alt="(pas) Voyager Facilement Podcast 2025 Hébreu">
-        <div class="tourman-card-info">
-          <strong>(pas) Voyager Facilement</strong><div>Podcast • 2025 • Hébreu</div>
-        </div>
-      </a>
-
-      <!-- Howler Magazine -->
-      <a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/howler.jpg" alt="Le Costa Rica pendant le Covid - Magazine 2020">
-        <div class="tourman-card-info">
-          <strong>Le Costa Rica pendant le Covid</strong><div>Magazine • 2020 • Anglais</div>
-        </div>
-      </a>
-
-      <!-- TV Interview -->
-      <a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/ch13.jpg" alt="Faire du vélo pendant le Covid Entretien TV 2020 Hébreu">
-        <div class="tourman-card-info">
-          <strong>Faire du vélo pendant le Covid, deux ans sur la route</strong><div>Entretien TV • 2020 • Hébreu</div>
-        </div>
-      </a>
-
-      <!-- Haaretz -->
-      <a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer">
-        <img src="../tourman-img/haaretz.jpg" alt="Haaretz - Une journée dans ma vie Magazine 2020">
-        <div class="tourman-card-info">
-          <strong>Haaretz - Une journée dans ma vie</strong><div>Magazine • 2020 • Hébreu</div>
-        </div>
-      </a>
-
+     <!-- Podcast 2019 -->
+<a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer" class="pod19">
+  <img src="../tourman-img/podcast.jpg" alt="Un an sur la route - Podcast 2019" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Un an sur la route</strong><div>Podcast • 2019 • Anglais</div>
+  </div>
+</a>
+<!-- ZigZaging Americas -->
+<a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer" class="poden">
+  <img src="../tourman-img/gabriel.jpg" alt="ZigZaguer les Amériques Podcast 2025" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>ZigZaguer les Amériques</strong><div>Podcast • 2025 • Anglais</div>
+  </div>
+</a>
+<!-- Hebrew Podcast -->
+<a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer" class="podheb">
+  <img src="../tourman-img/podcast-heb.jpg" alt="(pas) Voyager Facilement Podcast 2025 Hébreu" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>(pas) Voyager Facilement</strong><div>Podcast • 2025 • Hébreu</div>
+  </div>
+</a>
+<!-- Howler Magazine -->
+<a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer" class="howler">
+  <img src="../tourman-img/howler.jpg" alt="Le Costa Rica pendant le Covid - Magazine 2020" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Le Costa Rica pendant le Covid</strong><div>Magazine • 2020 • Anglais</div>
+  </div>
+</a>
+<!-- TV Interview -->
+<a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer" class="ch13">
+  <img src="../tourman-img/ch13.jpg" alt="Faire du vélo pendant le Covid Entretien TV 2020 Hébreu" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Faire du vélo pendant le Covid, deux ans sur la route</strong><div>Entretien TV • 2020 • Hébreu</div>
+  </div>
+</a>
+<!-- Haaretz -->
+<a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer" class="haretz">
+  <img src="../tourman-img/haaretz.jpg" alt="Haaretz - Une journée dans ma vie Magazine 2020" loading="lazy">
+  <div class="tourman-card-info">
+    <strong>Haaretz - Une journée dans ma vie</strong><div>Magazine • 2020 • Hébreu</div>
+  </div>
+</a>
       
     </div>
   </div>
@@ -357,7 +388,7 @@
         </div>
         <p>&copy; 2025 Yann Cohen</p>
 
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Ouvert aux opportunités et collaborations à distance</p>
+        <p >Ouvert aux opportunités et collaborations à distance</p>
     </footer>
     
     <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">

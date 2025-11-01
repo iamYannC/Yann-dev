@@ -111,6 +111,36 @@ navLinks.forEach(function(link) {
             
             window.location.href = mailtoLink;
         });
-
-
 }); // wrapper for all JS
+
+// text carousel modal to inlarge images
+
+document.querySelectorAll('.view-large').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const img = btn.closest('li').querySelector('img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+    modal.removeAttribute('hidden');
+    requestAnimationFrame(() => modal.classList.add('show'));
+  });
+});
+
+document.querySelector('.close-modal').addEventListener('click', () => {
+  const modal = document.getElementById('imageModal');
+  modal.classList.remove('show');
+  setTimeout(() => modal.setAttribute('hidden', ''), 300);
+});
+
+document.getElementById('imageModal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) {
+    const modal = e.currentTarget;
+    modal.classList.remove('show');
+    setTimeout(() => modal.setAttribute('hidden', ''), 300);
+  }
+});
+
+
+
+
