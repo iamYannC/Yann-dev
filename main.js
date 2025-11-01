@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const themeToggle = document.getElementById('themeToggle');
 const themeMenu = document.getElementById('themeMenu');
 const themeOptions = document.querySelectorAll('.theme-option');
@@ -109,3 +111,6 @@ navLinks.forEach(function(link) {
             
             window.location.href = mailtoLink;
         });
+
+
+}); // wrapper for all JS
