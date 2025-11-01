@@ -35,7 +35,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Security SRI -->
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-3hX4LNnt09b+x+3kO94sS55uTzKb72vw3t+3rrKHVtMNE1bRmoPZlQVDcz1U0q4E0Kj6WZJrWl4+oFz+oiK9AA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <header>
@@ -47,9 +54,9 @@
             
             <div class="contact-links">
     <a href="mailto:Yannco5@gmail.com"><i class="fa-solid fa-envelope"></i> yannco5@gmail.com</a>
-    <a href="https://wa.me/594694314797" target="_blank"><i class="fa-brands fa-whatsapp"></i> 0694 π 797</a>
-    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-    <a href="https://github.com/iamyannc" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+    <a href="https://wa.me/594694314797" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> 0694 π 797</a>
+    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/iamyannc" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
@@ -61,7 +68,7 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#languages">Languages</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#tourman">TOURMAN</a></li>
   </ul>
   <div class="lang-toggle" data-tooltip-fr="Change to English" data-tooltip-en="Passer en Français">
     <a href="./fr/index.html">
@@ -215,48 +222,142 @@
             </div>
         </section>
         
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light); text-align: center; margin-bottom: 2rem;">
-                Got any questions or suggestions? I'd love to hear from you!
-            </p>
-            
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
-        
-        <div class="fun-fact">
-            <strong>🚴 Fun Fact:</strong>I'm riding my bicycle across the Americas since 2018😎
+<section id="tourman">
+  <h2>TOURMAN</h2>
+
+  <div class="tourman-section">
+      <div class="tourman-text">
+        <div class="tourman-portrait-container">
+          <div class="tourman-portrait-card">
+            <div class="tourman-portrait-face tourman-portrait-front">
+              <img src="tourman-img/portrait.jpg" alt="Portrait Front">
+            </div>
+            <div class="tourman-portrait-face tourman-portrait-back">
+              <img src="tourman-img/portrait-spin.jpg" alt="Portrait Back">
+            </div>
+          </div>
         </div>
+  <p><strong>Wait, who’s Tourman?</strong></p>
+        <p>Early on, when I started traveling, I adopted this last name as if to let people around me, and mostly myself, know that this journey is no joke. Let me (try to) start from the beginning.</p>
+        <p>Somewhere in Australia back in 2017, I got this idea of riding a bicycle the entire length of the globe from north to south. A few months later, on August 21st, 2018, I left Brooklyn, NYC, and headed north. Alaske north.</p>
+        <p>I returned south and started zigzagging between the coasts, deserts, and valleys of this vast country before eventually entering Mexico. In the next few months, the world was about to change - COVID. I found myself in mid-2020 in Costa Rica, unable to continue further south, I decided to go back home. The bike stayed there.</p>
+        <p>Fast forward to November 2024 (well, you can read in the sections above what I did all this time). I flew back to Costa Rica and re-launched my bike trip with the intention of reaching my destination: Ushuaia, fin del mundo.</p>
+        <p>I’m in no rush. As one of the podcast titles down below rightfully stated, I don’t just ride, I <em>zigzag</em>. So I found myself riding the high Andes, the mighty Amazonas, and - at the time of writing these lines - preparing for a boat-hitchhiking adventure to take me to Martinique, a French Caribbean island.</p>
+        <p>If you want to read, listen, or watch more, visit the links down below. And if you want to contact me - be it as a programmer or as an adventurer - I’m always glad to share this experience with others.</p>
+      </div>
     </div>
+
+  <!-- Media Carousel -->
+  <div class="tourman-carousel">
+    <div class="tourman-carousel-track">
+      
+      <!-- ========== Original Set ========== -->
+      
+      <!-- Podcast 2019 -->
+      <a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/podcast.jpg" alt="One Year on the Road — Podcast 2019">
+        <div class="tourman-card-info">
+          <strong>One Year on the Road</strong><div>Podcast • 2019 • English</div>
+        </div>
+      </a>
+
+      <!-- ZigZaging Americas -->
+      <a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/gabriel.jpg" alt="ZigZaging the Americas Podcast 2025">
+        <div class="tourman-card-info">
+          <strong>ZigZaging the Americas</strong><div>Podcast • 2025 • English</div>
+        </div>
+      </a>
+
+      <!-- Hebrew Podcast -->
+      <a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/podcast-heb.jpg" alt="(not) Easy Travelling Podcast 2025 Hebrew">
+        <div class="tourman-card-info">
+          <strong>(not) Easy Travelling</strong><div>Podcast • 2025 • Hebrew</div>
+        </div>
+      </a>
+
+      <!-- Howler Magazine -->
+      <a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/howler.jpg" alt="Costa Rica During Covid — Magazine 2020">
+        <div class="tourman-card-info">
+          <strong>Costa Rica during Covid</strong><div>Magazine • 2020 • English</div>
+        </div>
+      </a>
+
+      <!-- TV Interview -->
+      <a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/ch13.jpg" alt="Cycling During Covid TV Interview 2020 Hebrew">
+        <div class="tourman-card-info">
+          <strong>Cycling During Covid, 2 years on the road</strong><div>TV Interview • 2020 • Hebrew</div>
+        </div>
+      </a>
+
+      <!-- Haaretz -->
+      <a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/haaretz.jpg" alt="Haaretz — A day in my life Magazine 2020">
+        <div class="tourman-card-info">
+          <strong>Haaretz — A Day in My Life</strong><div>Magazine • 2020 • Hebrew</div>
+        </div>
+      </a>
+
+      <!-- ========== Duplicate Set (for seamless loop) ========== -->
+      
+      <a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/podcast.jpg" alt="">
+        <div class="tourman-card-info">
+          <strong>One Year on the Road</strong><div>Podcast • 2019 • English</div>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/gabriel.jpg" alt="">
+        <div class="tourman-card-info">
+          <strong>ZigZaging the Americas</strong><div>Podcast • 2025 • English</div>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/podcast-heb.jpg" alt="">
+        <div class="tourman-card-info">
+          <strong>(not) Easy Travelling</strong><div>Podcast • 2025 • Hebrew</div>
+        </div>
+      </a>
+
+      <a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/howler.jpg" alt="">
+        <div class="tourman-card-info">
+          <strong>Costa Rica during Covid</strong><div>Magazine • 2020 • English</div>
+        </div>
+      </a>
+
+      <a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/ch13.jpg" alt="">
+        <div class="tourman-card-info">
+          <strong>Cycling During Covid, 2 years on the road</strong><div>TV Interview • 2020 • Hebrew</div>
+        </div>
+      </a>
+
+      <a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer">
+        <img src="tourman-img/haaretz.jpg" alt="">
+        <div class="tourman-card-info">
+          <strong>Haaretz — A Day in My Life</strong><div>Magazine • 2020 • Hebrew</div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+
+</section>
+        
+           
     
     <footer>
         <div class="footer-links">
     <a href="mailto:Yannco5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://wa.me/594694314797" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/iamyannc" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://wa.me/594694314797" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/iamyannc" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
         <p>&copy; 2025 Yann Cohen</p>
         <p style="margin-top: 0.5rem; opacity: 0.8;">Open to remote opportunities and collaborations</p>
