@@ -237,6 +237,7 @@ html[lang="fr"] .lang-toggle::after {
         
     .experience-item, .education-item {
     margin-bottom: 2.5rem;
+    position: relative; 
     padding: 1.5rem;
     background: var(--bg-light);
     border-radius: 8px;
@@ -246,6 +247,13 @@ html[lang="fr"] .lang-toggle::after {
     animation: fadeInUp 0.7s ease forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
+}
+
+.experience-item:hover , .education-item:hover {
+    transform: scale(1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 }
 
 @keyframes fadeInUp {
@@ -256,12 +264,12 @@ html[lang="fr"] .lang-toggle::after {
 }
         
         .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        display: flex;
+    	justify-content: space-between; 
+   	align-items: flex-start; 
+    	margin-bottom: 1rem;
+    	flex-wrap: wrap;
+    	gap: 1rem; 
         }
         
         .item-title {
@@ -269,6 +277,57 @@ html[lang="fr"] .lang-toggle::after {
             font-weight: 600;
             color: var(--text-dark);
         }
+
+/* DOWNLOAD LINK BOOYAH */
+
+ .download-container {
+
+    position: absolute; 
+    bottom: 0.5rem; /* Match card padding */
+    right: 0.5rem;  /* Match card padding */
+    z-index: 20; /* Ensure container is on top */
+}
+
+.pdf-preview {
+    position: absolute;
+    /* Adjust these values to position the preview above and to the left of the icon */
+    bottom: 0; 
+    right: 100%; /* Start outside the container to the left */
+    
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border);
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Allows clicks to pass through */
+    transition: opacity 0.3s ease;
+}
+.download-container:hover .pdf-preview {
+    opacity: 1;
+    /* You may need to adjust the 'right' value based on your link size */
+    right: calc(100% + 10px); /* 10px margin from the icon */
+}
+
+     .download-link {
+	display: inline-block; 
+    	opacity: 0.1;
+    	color: var(--text-light); 
+    	font-size: 1.5rem; 
+    	text-decoration: none; 
+    	cursor: pointer;
+    	z-index: 10;
+    	transition: color 0.2s ease, opacity 0.3s ease;
+	}
+
+
+ .experience-item:hover .download-link,
+ .education-item:hover .download-link {
+    opacity: 1; 
+ }
+
+	.download-link:hover {
+    	    color: var(--primary); 
+	  }
         
         .item-company {
             font-style: italic;
@@ -505,10 +564,6 @@ color: var(--bg-white)
                 padding: 2rem 1rem;
             }
             
-            .contact-form {
-                padding: 1.5rem;
-            }
-
         }
 
 /* ===========================
