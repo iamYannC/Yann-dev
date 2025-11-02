@@ -597,6 +597,14 @@ color: var(--bg-white)
   float: right;
 }
 
+@media (max-width: 768px) {
+  .tourman-portrait-container {
+    float: none;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+
     .tourman-portrait-card {
       position: relative;
       width: 100%;
