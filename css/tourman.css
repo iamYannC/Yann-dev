@@ -288,13 +288,13 @@
 }
 
 .text-carousel::scroll-button(left) {
-  content: "◄";
+  content: "←";
   left: calc(anchor(left) + 5px);
   top: calc(anchor(top) + 130px);
 }
 
 .text-carousel::scroll-button(right) {
-  content: "►";
+  content: "→";
   left: calc(anchor(right) - 45px);
   top: calc(anchor(top) + 130px);
 }
