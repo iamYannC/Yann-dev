@@ -15,7 +15,7 @@
             --bg-white: #ffffff;
             --border: #e2e8f0;
             --bg-footer: var(--text-dark);
-	    --shadow-color: rgba(0, 0, 0, 0.15);
+	    --shadow-color: rgba(0, 0, 0, 0.1);
         }
         
         body.dark-theme {
@@ -51,6 +51,23 @@
             background-color: var(--bg-white);
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../bg.svg") no-repeat center/cover;
+  opacity: 0.09;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+
+
+
         
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -240,7 +257,7 @@ html[lang="fr"] .lang-toggle::after {
             display: inline-block;
         }
         
-    .experience-item, .education-item {
+    .experience-item, .education-item,  .language-item {
     margin-bottom: 2.5rem;
     position: relative; 
     padding: 1.5rem;
@@ -256,7 +273,7 @@ html[lang="fr"] .lang-toggle::after {
 
 }
 
-.experience-item:hover , .education-item:hover {
+.experience-item:hover , .education-item:hover,  .language-item:hover {
     transform: scale(1); 
     box-shadow: 0 10px 20px var(--shadow-color); 
 }
@@ -391,12 +408,6 @@ html[lang="fr"] .lang-toggle::after {
             max-width: 100%;
         }
         
-        .language-item {
-            background: var(--bg-light);
-            padding: 2rem 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
         
         .language-name {
             font-weight: 600;
