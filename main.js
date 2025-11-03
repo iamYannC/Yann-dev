@@ -96,6 +96,19 @@ navLinks.forEach(function(link) {
         // If not a hash link (e.g. /fr/index.html), allow normal navigation
     });
 });
+
+// restart animation
+
+document.querySelector('.profile-logo').addEventListener('click', function() {
+    const container = document.querySelector('.subtitle-container');
+    
+    // Remove and re-add the container to restart animations
+    const clone = container.cloneNode(true);
+    container.parentNode.replaceChild(clone, container);
+});
+
+
+
        }); // wrapper for all JS
 
 // text carousel modal to inlarge images
