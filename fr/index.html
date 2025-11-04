@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/tourman.css">
     
+  <!-- Leaflet, Map CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <link rel="stylesheet" href="css/map.css">
+    
+    <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -404,7 +409,31 @@
     </div>
   </div>
 
+
+
+<div class="map-toggle-container">
+    <button id="viewMapBtn" class="view-map-btn">
+         🚴‍♂️ Montre-moi la carte
+    </button>
+</div>
+
+<!-- Map Container (initially hidden) -->
+<div id="mapSection" class="map-section" style="display: none;">
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="map-controls">
+           <p class="osm-note">
+  Les emplacements ne sont pas exacts à 100%. <br>
+  J’aime<span class="heart" aria-hidden="true">♥</span>
+  <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>
+</p>
+        </div>
+    </div>
+</div>
+  
+
 </section>
+
 
         
     
@@ -431,6 +460,13 @@
     </div>
     
     <script src="../main.js"></script>
+
+    <!-- Leaflet JS, Map reated scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    
+    <script src="../js/map-cities.js"></script>
+    <script src="../js/map-fr.js"></script>
+
 </body>
 </html>
 
