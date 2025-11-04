@@ -32,6 +32,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/tourman.css">
     
+    <!-- Leaflet, Map CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <link rel="stylesheet" href="css/map.css">
+    
+    <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -435,9 +440,32 @@
     </div>
   </div>
 
-</section>
+    
+<div class="map-toggle-container">
+    <button id="viewMapBtn" class="view-map-btn">
+        🚴‍♂️ Show me the map
+    </button>
+</div>
 
-           
+<!-- Map Container (initially hidden) -->
+<div id="mapSection" class="map-section" style="display: none;">
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="map-controls">
+           <p class="osm-note">
+  Locations are not 100% accurate. <br>
+  I <span class="heart" aria-hidden="true">♥</span>
+  <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>
+</p>
+        </div>
+    </div>
+</div>
+
+
+  
+
+</section>
+          
     <footer>
         <div class="footer-links">
     <a href="mailto:Yannco5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -458,8 +486,17 @@
         <button class="theme-option" data-theme="dark">🌙 Dark</button>
         <button class="theme-option" data-theme="funky">✨ Funky</button>
     </div>
-    
+ 
+
+   
     <script src="main.js"></script>
+
+    <!-- Leaflet JS, Map reated scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    
+    <script src="js/map-cities.js"></script>
+    <script src="js/map.js"></script>
+ 
 
   </body>
 
