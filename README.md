@@ -1,6 +1,6 @@
 # Yann Cohen — Personal Website
 
-This repository contains the source code for my personal website, **[Yann Cohen](https://yanncohen.com)** — a space where I share my work, travels, and ongoing projects.
+This repository contains the source code for my personal website, **[Yann Cohen](https://iamyannc.github.io/Yann-dev/)** — a space where I share my work, travels, and ongoing projects.
 
 ---
 
@@ -17,7 +17,11 @@ This website serves as both a personal portfolio and a travel journal. It’s my
 - **Photo and text carousels** describing key moments and milestones  
 - **Sections** about my background, projects, and experiences on the road  
 
-Explore the site to follow my adventure and track my progress as both a traveler and a developer.
+I’m most proud of implementing logic that detects the browser’s language and automatically redirects the user to the site’s French version — even before the DOM reloads — while also storing preferences in local storage so users who choose English aren’t rerouted again.  
+
+My mom is happiest with the addition of the **interactive map** that shows all the places I’ve traveled through. For her, as a non-techy person, it would have taken a long time to gather that data one by one (whereas I just used ChatGPT to do it for me — just like this very README).
+
+![A screenshot of the map and main carousel sections of the site](readme-sc.png)
 
 ---
 
@@ -39,30 +43,23 @@ As the project expanded, I **split UI elements and sections** (map, text areas, 
 
 ---
 
-## Map Preview
-
-Here’s a glimpse of the interactive map built with **Leaflet.js**, showing my cycling route across the Americas:
-
-![Map section placeholder — screenshot coming soon](./assets/map-screenshot-placeholder.png)
-
-*(If you’re viewing this on GitHub, visit the live site for the full interactive version.)*
-
----
-
 ## Tech Stack
 
-- **HTML5**  
-- **CSS3** (custom responsive styling)  
-- **JavaScript (ES6)**  
+- **HTML**  
+- **CSS**  
+- **JavaScript**  
 - **Leaflet.js** for mapping  
 - **Font Awesome** for icons  
+- **uiverse.io** for UI elements  
+- **ChatGPT** & **Claude**
 
 ---
 
 ## Notes
 
-This project is part of my learning process — I’m still improving my JavaScript and UI/UX skills.  
-Feedback, suggestions, and pull requests are always welcome.
+I’m new to web design, and I couldn’t have taken on this project without the assistance of modern AI technologies.  
+My background as a data analyst and web app/package developer in the R programming language was crucial for asking the right questions.  
+We truly live in a great era.
 
 ---
 
