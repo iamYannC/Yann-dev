@@ -1,13 +1,11 @@
 # Yann Cohen - Personal Website
 
-This repository contains the source code for my personal website, **[Yann Cohen](https://iamyannc.github.io/Yann-dev/)** - a space where I share my work, travels, and ongoing projects.
-
----
+This repository contains the source code for my personal website, **[Yann Cohen](https://iamyannc.github.io/Yann-dev/)** ---
 
 ## About
 
 I’m **Yann Cohen**, a data analyst and aspiring web developer - and also an adventurer currently cycling from **Alaska to Argentina**.  
-This website serves as both a personal portfolio and a travel journal. It’s my **first real project** using **HTML**, **CSS**, and **JavaScript**, created from scratch to learn front-end development while documenting my journey.
+This website is my **first real project** using **HTML**, **CSS**, and **JavaScript**, created from scratch to touch front-end development.
 
 ---
 
