@@ -1,12 +1,12 @@
-# Yann Cohen — Personal Website
+# Yann Cohen - Personal Website
 
-This repository contains the source code for my personal website, **[Yann Cohen](https://iamyannc.github.io/Yann-dev/)** — a space where I share my work, travels, and ongoing projects.
+This repository contains the source code for my personal website, **[Yann Cohen](https://iamyannc.github.io/Yann-dev/)** - a space where I share my work, travels, and ongoing projects.
 
 ---
 
 ## About
 
-I’m **Yann Cohen**, a data analyst and aspiring web developer — and also an adventurer currently cycling from **Alaska to Argentina**.  
+I’m **Yann Cohen**, a data analyst and aspiring web developer - and also an adventurer currently cycling from **Alaska to Argentina**.  
 This website serves as both a personal portfolio and a travel journal. It’s my **first real project** using **HTML**, **CSS**, and **JavaScript**, created from scratch to learn front-end development while documenting my journey.
 
 ---
@@ -17,9 +17,9 @@ This website serves as both a personal portfolio and a travel journal. It’s my
 - **Photo and text carousels** describing key moments and milestones  
 - **Sections** about my background, projects, and experiences on the road  
 
-I’m most proud of implementing logic that detects the browser’s language and automatically redirects the user to the site’s French version — even before the DOM reloads — while also storing preferences in local storage so users who choose English aren’t rerouted again.  
+I’m most proud of implementing logic that detects the browser’s language and automatically redirects the user to the site’s French version - even before the DOM reloads - while also storing preferences in local storage so users who choose English aren’t rerouted again.  
 
-My mom is happiest with the addition of the **interactive map** that shows all the places I’ve traveled through. For her, as a non-techy person, it would have taken a long time to gather that data one by one (whereas I just used ChatGPT to do it for me — just like this very README).
+My mom is happiest with the addition of the **interactive map** that shows all the places I’ve traveled through. For her, as a non-techy person, it would have taken a long time to gather that data one by one (whereas I just used ChatGPT to do it for me - just like this very README).
 
 ![A screenshot of the map and main carousel sections of the site](readme-sc.png)
 
@@ -63,4 +63,4 @@ We truly live in a great era.
 
 ---
 
-© Yann Cohen — 2025
+© Yann Cohen - 2025
