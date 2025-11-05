@@ -1,5 +1,5 @@
 # Yann Cohen - Personal Website
----
+
 This repository contains the source code for my **[personal website](https://iamyannc.github.io/Yann-dev/)**.
 ---
 
@@ -63,5 +63,6 @@ We truly live in a great era.
 ---
 
 © Yann Cohen - 2025
+
 
 
