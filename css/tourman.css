@@ -35,6 +35,14 @@
     float: none;
     margin: 0 auto 1rem auto;
   }
+
+.tourman-carousel-track a:hover {
+    transform: none; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Reset to normal shadow */
+    z-index: auto; 
+  }
+
+
 }
 
 
