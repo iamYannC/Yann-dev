@@ -19,7 +19,7 @@ I’m most proud of implementing logic that detects the browser’s language and
 
 My mom is happiest with the addition of the **interactive map** that shows all the places I’ve traveled through. For her, as a non-techy person, it would have taken a long time to gather that data one by one (whereas I just used ChatGPT to do it for me - just like this very README).
 
-![A screenshot of the map and main carousel sections of the site](readme-sc.png)
+<img src="readme-sc.png" alt="A screenshot of the map and main carousel sections of the site" height="400px" style="width:auto;">
 
 ---
 
