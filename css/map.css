@@ -1,8 +1,11 @@
 /* Map Toggle Button */
 .map-toggle-container {
     text-align: center;
-    padding: 30px 20px;
+    padding: 15px 20px;
     background-color: var(--bg-light);
+    margin-top: 8rem;
+    position: relative;
+    z-index: 10;
 }
 
 .view-map-btn {
@@ -92,6 +95,7 @@
     color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.4;
+    margin: 0;
 }
 
 .osm-note .heart {
@@ -114,4 +118,7 @@
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
     }
+}
+.leaflet-control-attribution {
+    display: none;
 }

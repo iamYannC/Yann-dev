@@ -58,26 +58,19 @@ function loadMap() {
 
 function initializeMap() {
     // cities array is loaded from map-cities.js
-    
-    // Initialize the map with bounds for Americas
-    const map = L.map('map', {
-        minZoom: 2,
-        maxZoom: 19,
-        maxBounds: [
-            [60, -170],   // Northwest corner (Alaska/Pacific margin)
-            [-60, 10]     // Southeast corner (Southern South America/Atlantic margin)
-        ],
-        maxBoundsViscosity: 1.0
-    });
+    // Initialize the map with controlled bounds (Americas)
+const map = L.map('map', {
+  minZoom: 2,
+  maxZoom: 19,
+  maxBounds: [
+    [-70, -180], // southwest corner
+    [85, 60]     // northeast corner
+  ],
+  maxBoundsViscosity: 0.7 // how strongly the map resists moving outside bounds
+});
 
-    // Set initial view to show entire Americas
-    map.fitBounds([
-        [70, -170],   // Alaska region
-        [-56, -65]    // Ushuaia region
-    ], {
-        padding: [20, 20]
-    });
-
+// Initial center and zoom
+map.setView([10, -80], 3);
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
@@ -85,13 +78,13 @@ function initializeMap() {
     }).addTo(map);
 
     // Create custom icon
-    const cityIcon = L.divIcon({
-        className: 'custom-marker',
-        html: '<div style="background-color: #667eea; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 3px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">📍</div>',
-        iconSize: [30, 30],
-        iconAnchor: [15, 15]
-    });
 
+const cityIcon = L.divIcon({
+    className: 'custom-marker',
+    html: '<div style="background-color: #FF8C61; width: 6px; height: 6px; border-radius: 50%; border: 1px solid white; box-shadow: 0 1px 3px rgba(0,0,0,0.4);"></div>',
+    iconSize: [4, 4],
+    iconAnchor: [4, 4]
+});
     // Add markers for each city
     cities.forEach(city => {
         const marker = L.marker([city.lat, city.lng], { icon: cityIcon })
@@ -106,22 +99,17 @@ function initializeMap() {
     // Create path between cities
     const pathCoordinates = cities.map(city => [city.lat, city.lng]);
     
-    // Draw the path line
-    const pathLine = L.polyline(pathCoordinates, {
-        color: '#ff4444',
-        weight: 4,
-        opacity: 0.7,
-        smoothFactor: 1
-    }).addTo(map);
 
-    // Add dashed line effect for style
-    const dashedLine = L.polyline(pathCoordinates, {
-        color: '#ffffff',
-        weight: 2,
-        opacity: 0.8,
-        dashArray: '10, 10',
-        smoothFactor: 1
-    }).addTo(map);
+     // Draw a soft dashed path line
+     const pathLine = L.polyline(pathCoordinates, {
+        color:'#656769',           
+        weight: 3,                  // Thinner line
+        opacity: 0.8,               
+        dashArray: '2, 10',         
+        smoothFactor: 8,            
+        lineCap: 'round',           
+        lineJoin: 'round'           
+           }).addTo(map);
 
     // Fit map bounds to show entire path
     map.fitBounds(pathLine.getBounds(), { padding: [50, 50] });
