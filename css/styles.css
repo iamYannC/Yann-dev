@@ -28,7 +28,6 @@
             --border: #4a5568;
             --bg-footer: var(--text-dark);
             --shadow-color: rgba(255, 255, 255, 0.15);
-);
         }
         
         body.funky-theme {
@@ -589,6 +588,7 @@ color: var(--bg-white)
             }
             
         }
+
 
 
 
