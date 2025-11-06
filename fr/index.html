@@ -94,8 +94,8 @@
     <li><a href="#tourman">TOURMAN</a></li>
   </ul>
 
-  <div class="lang-toggle" data-tooltip-fr="Switch to English" data-tooltip-en="Passer en Français">
-    <a href="../index.html">
+  <div class="lang-toggle" data-tooltip-fr="Switch to English" data-tooltip-en="Passer en Français" aria-label="Switch to French / Passer en Français">
+    <a href="../index.html" aria-hidden="true">
       <!-- SVG drapeau britannique -->
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 60 30">
         <clipPath id="t">
@@ -520,9 +520,37 @@
 
     <!-- Leaflet JS, Map reated scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-    
     <script src="../js/map-cities.js"></script>
     <script src="../js/map-fr.js"></script>
+
+    <!-- SEO -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yann Cohen",
+  "jobTitle": "Analyste de données",
+  "url": "https://iamyannc.github.io/Yann-dev/fr/",
+  "sameAs": [
+    "https://linkedin.com/in/yann-cohen-tourman",
+    "https://github.com/iamyannc",
+    "https://instagram.com/yann.tourman"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Martinique"
+  },
+  "email": "yannco5@gmail.com",
+  "image": "https://iamyannc.github.io/Yann-dev/logo.jpg",
+  "alumniOf": "Université Ben-Gourion",
+  "knowsAbout": ["Analyse de données", "Visualisation de données", "Programmation R", "SQL", "Python", "Conception Web"],
+  "knowsLanguage": ["Hébreu", "Anglais", "Français", "Espagnol"]
+}
+</script>
+
+
+
 
 </body>
 </html>

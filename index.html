@@ -127,8 +127,8 @@
     <li><a href="#languages">Languages</a></li>
     <li><a href="#tourman">TOURMAN</a></li>
   </ul>
-  <div class="lang-toggle" data-tooltip-fr="Change to English" data-tooltip-en="Passer en Français">
-    <a href="./fr/index.html">
+  <div class="lang-toggle" data-tooltip-fr="Change to English" data-tooltip-en="Passer en Français" aria-label="Switch to French / Passer en Français">
+    <a href="./fr/index.html"  aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 3 2">
         <rect width="1" height="2" x="0" fill="#0055A4"/>
         <rect width="1" height="2" x="1" fill="#fff"/>
@@ -561,10 +561,35 @@
 
     <!-- Leaflet JS, Map reated scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-    
     <script src="js/map-cities.js"></script>
     <script src="js/map.js"></script>
- 
+    
+
+    <!-- SEO -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yann Cohen",
+  "jobTitle": "Data Analyst",
+  "url": "https://iamyannc.github.io/Yann-dev/",
+  "sameAs": [
+    "https://linkedin.com/in/yann-cohen-tourman",
+    "https://github.com/iamyannc",
+    "https://instagram.com/yann.tourman"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Martinique"
+  },
+  "email": "yannco5@gmail.com",
+  "image": "https://iamyannc.github.io/Yann-dev/logo.jpg",
+  "alumniOf": "Ben-Gourion University",
+  "knowsAbout": ["Data Analysis", "Data Visualization", "R Programming", "SQL", "Python", "Web Design"],
+  "knowsLanguage": ["Hebrew", "English", "French", "Spanish"]
+}
+</script>
 
   </body>
 
