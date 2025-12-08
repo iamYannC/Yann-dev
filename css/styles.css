@@ -369,7 +369,13 @@ html[lang="fr"] .lang-toggle::after {
         .item-description ul {
             margin-left: 1.5rem;
             margin-top: 0.5rem;
+			padding-left: 1.2em;
         }
+
+        .item-description li  {
+			margin-bottom: 0.8em;  
+			line-height: 1.5;      
+		}
         
         .skills-grid {
             display: grid;
@@ -588,6 +594,7 @@ color: var(--bg-white)
             }
             
         }
+
 
 
 
