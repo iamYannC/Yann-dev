@@ -1,4 +1,6 @@
 let mapLoaded = false;
+let map = null;
+
 
 document.getElementById('viewMapBtn').addEventListener('click', function() {
     const mapSection = document.getElementById('mapSection');
@@ -23,7 +25,13 @@ document.getElementById('viewMapBtn').addEventListener('click', function() {
             mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
         
-        // Load map only once
+        // Load map only once, including Safary fix
+       setTimeout(() => {
+            if (map) {
+                map.invalidateSize();
+            }
+        }, 600); 
+        
         if (!mapLoaded) {
             loadMap();
             mapLoaded = true;
@@ -58,23 +66,27 @@ function loadMap() {
 function initializeMap() {
     // cities array is loaded from map-cities.js
     // Initialize the map with controlled bounds (Americas)
-const map = L.map('map', {
-  minZoom: 2,
-  maxZoom: 19,
-  maxBounds: [
-    [-70, -180], // southwest corner
-    [85, 60]     // northeast corner
-  ],
-  maxBoundsViscosity: 0.7 // how strongly the map resists moving outside bounds
+  map = L.map('map', {
+    minZoom: 2,
+    maxZoom: 19,
+    maxBounds: [
+      [-70, -180], // southwest corner
+      [85, 60]     // northeast corner
+    ],
+    maxBoundsViscosity: 0.7 // how strongly the map resists moving outside bounds
 });
 
-// Initial center and zoom
-map.setView([10, -80], 3);
-    // Add OpenStreetMap tiles
+    // Added safety check: if scripts load very fast (cached), 
+    // ensure we resize once the container is likely ready.
+    setTimeout(() => { map.invalidateSize(); }, 600);
+
+    map.setView([10, -80], 3);
+    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 19
     }).addTo(map);
+
 
     // Create custom icon
 
