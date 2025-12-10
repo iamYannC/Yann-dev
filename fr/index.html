@@ -476,58 +476,12 @@
 
     </div>
 
-  <!-- Media Carousel -->
+<!-- ========== Main Carousel========== -->
+
   <div class="tourman-carousel">
     <div class="tourman-carousel-track">
       
-      <!-- ========== Original Set ========== -->
     <!-- Podcast 2019 -->
-<a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer" class="pod19">
-  <img src="../tourman-img/podcast.jpg" alt="Un an sur la route - Podcast 2019" loading="lazy">
-  <div class="tourman-card-info">
-    <strong>Un an sur la route</strong><div>Podcast • 2019 • Anglais</div>
-  </div>
-</a>
-<!-- ZigZaging Americas -->
-<a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer" class="poden">
-  <img src="../tourman-img/gabriel.jpg" alt="ZigZaguer les Amériques Podcast 2025" loading="lazy">
-  <div class="tourman-card-info">
-    <strong>ZigZaguer les Amériques</strong><div>Podcast • 2025 • Anglais</div>
-  </div>
-</a>
-<!-- Hebrew Podcast -->
-<a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer" class="podheb">
-  <img src="../tourman-img/podcast-heb.jpg" alt="(pas) Voyager Facilement Podcast 2025 Hébreu" loading="lazy">
-  <div class="tourman-card-info">
-    <strong>(pas) Voyager Facilement</strong><div>Podcast • 2025 • Hébreu</div>
-  </div>
-</a>
-<!-- Howler Magazine -->
-<a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer" class="howler">
-  <img src="../tourman-img/howler.jpg" alt="Le Costa Rica pendant le Covid - Magazine 2020" loading="lazy">
-  <div class="tourman-card-info">
-    <strong>Le Costa Rica pendant le Covid</strong><div>Magazine • 2020 • Anglais</div>
-  </div>
-</a>
-<!-- TV Interview -->
-<a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer" class="ch13">
-  <img src="../tourman-img/ch13.jpg" alt="Faire du vélo pendant le Covid Entretien TV 2020 Hébreu" loading="lazy">
-  <div class="tourman-card-info">
-    <strong>Faire du vélo pendant le Covid, deux ans sur la route</strong><div>Entretien TV • 2020 • Hébreu</div>
-  </div>
-</a>
-<!-- Haaretz -->
-<a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer" class="haretz">
-  <img src="../tourman-img/haaretz.jpg" alt="Haaretz - Une journée dans ma vie Magazine 2020" loading="lazy">
-  <div class="tourman-card-info">
-    <strong>Haaretz - Une journée dans ma vie</strong><div>Magazine • 2020 • Hébreu</div>
-  </div>
-</a>
-
-
-      <!-- ========== Duplicate Set (for seamless loop) ========== -->
-      
-     <!-- Podcast 2019 -->
 <a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer" class="pod19">
   <img src="../tourman-img/podcast.jpg" alt="Un an sur la route - Podcast 2019" loading="lazy">
   <div class="tourman-card-info">
@@ -572,7 +526,13 @@
       
     </div>
   </div>
-
+  
+<script>
+// Clone items for seamless loop (runs once on page load)
+const track = document.querySelector('.tourman-carousel-track');
+const items = Array.from(track.children);
+items.forEach(item => track.appendChild(item.cloneNode(true)));
+</script>
 
 <div>
 <h3 style="margin-top: 5rem;"> Trois ans, 15 pays (et ce n’est pas fini) - évidemment qu’il y a une carte 🗺️ </h3>
@@ -662,6 +622,7 @@
 
 </body>
 </html>
+
 
 
 
