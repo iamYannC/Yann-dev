@@ -98,17 +98,18 @@ const cityIcon = L.divIcon({
 });
     // Add markers for each city
     cities.forEach(city => {
-        const marker = L.marker([city.lat, city.lng], { icon: cityIcon })
+        const [name, state, lat, lng, info] = city;
+        const marker = L.marker([lat, lng], { icon: cityIcon })
             .addTo(map)
             .bindPopup(`
-                <strong>${city.name}, ${city.state}</strong><br>
-                ${city.info}<br>
-                <em>Lat: ${city.lat.toFixed(4)}, Lng: ${city.lng.toFixed(4)}</em>
+                <strong>${name}, ${state}</strong><br>
+                ${info || ""}<br>
+                <em>Lat: ${lat.toFixed(4)}, Lng: ${lng.toFixed(4)}</em>
             `);
     });
 
     // Create path between cities
-    const pathCoordinates = cities.map(city => [city.lat, city.lng]);
+    const pathCoordinates = cities.map(city => [city[2], city[3]]);
     
 
      // Draw a soft dashed path line

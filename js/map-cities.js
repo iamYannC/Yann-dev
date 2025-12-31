@@ -1,3321 +1,475 @@
-
 const cities = [
-    {
-        name: "New York",
-        state: "NY",
-        lat: 40.7128,
-        lng: -74.0060,
-        info: ""
-    },
-    {
-        name: "Rockland Lake State Park",
-        state: "NY",
-        lat: 41.1166,
-        lng: -73.9160,
-        info: ""
-    },
-    {
-        name: "Newburgh",
-        state: "NY",
-        lat: 41.5034,
-        lng: -74.0107,
-        info: ""
-    },
-    {
-        name: "Livingston",
-        state: "NY",
-        lat: 42.1273,
-        lng: -73.8440,
-        info: ""
-    },
-    {
-        name: "Troy",
-        state: "NY",
-        lat: 42.7284,
-        lng: -73.6918,
-        info: ""
-    },
-    {
-        name: "Whitehall",
-        state: "NY",
-        lat: 43.5670,
-        lng: -73.4079,
-        info: ""
-    },
-    {
-        name: "Addison County Airport (Skydive)",
-        state: "VT",
-        lat: 44.0264,
-        lng: -73.2384,
-        info: ""
-    },
-    {
-        name: "South Hero",
-        state: "VT",
-        lat: 44.6293,
-        lng: -73.3079,
-        info: ""
-    },
-    {
-        name: "Noyan",
-        state: "QC",
-        lat: 45.0065,
-        lng: -73.3644,
-        info: ""
-    },
-    {
-        name: "Montreal",
-        state: "QC",
-        lat: 45.5017,
-        lng: -73.5673,
-        info: ""
-    },
-    {
-        name: "St-Jérôme Aerodrome",
-        state: "QC",
-        lat: 45.7909,
-        lng: -74.0416,
-        info: ""
-    },
-    {
-        name: "Mont-Tremblant",
-        state: "QC",
-        lat: 46.1219,
-        lng: -74.5951,
-        info: ""
-    },
-    {
-        name: "Mont-Laurier",
-        state: "QC",
-        lat: 46.5492,
-        lng: -75.4988,
-        info: ""
-    },
-    {
-        name: "Lac-Sainte-Marie (near Lac Roland)",
-        state: "QC",
-        lat: 46.0694,
-        lng: -75.8344,
-        info: ""
-    },
-    {
-        name: "Lac Gabro (near Sainte-Anne-du-Lac)",
-        state: "QC",
-        lat: 46.7333,
-        lng: -75.6167,
-        info: ""
-    },
-    {
-        name: "Val-d'Or",
-        state: "QC",
-        lat: 48.1066,
-        lng: -77.7818,
-        info: ""
-    },
-    {
-        name: "Val-d'Or (20km South/Approx)",
-        state: "QC",
-        lat: 47.9268,
-        lng: -77.7718,
-        info: ""
-    },
-    {
-        name: "Amos",
-        state: "QC",
-        lat: 48.5667,
-        lng: -78.1167,
-        info: ""
-    },
-    {
-        name: "Rouyn-Noranda",
-        state: "QC",
-        lat: 48.2366,
-        lng: -79.0152,
-        info: ""
-    },
-    {
-        name: "Bruno-Guigues",
-        state: "QC",
-        lat: 47.5303,
-        lng: -79.2553,
-        info: ""
-    },
-    {
-        name: "Témiscamingue (Quebec-Ontario Border Area)",
-        state: "QC/ON",
-        lat: 46.7269,
-        lng: -79.1000,
-        info: ""
-    },
-    {
-        name: "North Bay",
-        state: "ON",
-        lat: 46.3090,
-        lng: -79.4608,
-        info: ""
-    },
-    {
-        name: "Sudbury",
-        state: "ON",
-        lat: 46.4900,
-        lng: -81.0100,
-        info: ""
-    },
-    {
-        name: "Whitefish",
-        state: "ON",
-        lat: 46.3986,
-        lng: -81.3094,
-        info: ""
-    },
-    {
-        name: "Highway 17 (near Thessalon, ON - approx for Case Road)",
-        state: "ON",
-        lat: 46.2570,
-        lng: -83.5650,
-        info: ""
-    },
-    {
-        name: "Highway 17 (near Blind River, ON - 85km west of Thessalon)",
-        state: "ON",
-        lat: 46.1950,
-        lng: -82.9550,
-        info: ""
-    },
-    {
-        name: "Little Rapids",
-        state: "ON",
-        lat: 46.4172,
-        lng: -82.8808,
-        info: ""
-    },
-    {
-        name: "Sault Ste. Marie",
-        state: "ON",
-        lat: 46.5333,
-        lng: -84.3467,
-        info: ""
-    },
-    {
-        name: "Batchawana Bay",
-        state: "ON",
-        lat: 46.8997,
-        lng: -84.5768,
-        info: ""
-    },
-{
-        name: "Wawa",
-        state: "ON",
-        lat: 47.9942,
-        lng: -84.7709,
-        info: ""
-    },
-    {
-        name: "White River",
-        state: "ON",
-        lat: 48.5833,
-        lng: -85.2500,
-        info: ""
-    },
-    {
-        name: "Marathon",
-        state: "ON",
-        lat: 48.7180,
-        lng: -86.3860,
-        info: ""
-    },
-    {
-        name: "Pays Plat First Nation",
-        state: "ON",
-        lat: 48.8680,
-        lng: -87.2140,
-        info: ""
-    },
-    {
-        name: "Highway 17 (Nipigon Area)",
-        state: "ON",
-        lat: 49.0069,
-        lng: -88.2435,
-        info: ""
-    },
-    {
-        name: "Kenora",
-        state: "ON",
-        lat: 49.7690,
-        lng: -94.4913,
-        info: ""
-    },
-    {
-        name: "Elma",
-        state: "MB",
-        lat: 50.0837,
-        lng: -95.8450,
-        info: ""
-    },
-    {
-        name: "Winnipeg",
-        state: "MB",
-        lat: 49.8951,
-        lng: -97.1384,
-        info: ""
-    },
-    {
-        name: "Edmonton",
-        state: "AB",
-        lat: 53.5461,
-        lng: -113.4938,
-        info: ""
-    },
-    {
-        name: "Calgary",
-        state: "AB",
-        lat: 51.0447,
-        lng: -114.0719,
-        info: ""
-    },
-    {
-        name: "Banff",
-        state: "AB",
-        lat: 51.1784,
-        lng: -115.5708,
-        info: ""
-    },
-    {
-        name: "Kelowna",
-        state: "BC",
-        lat: 49.8880,
-        lng: -119.4960,
-        info: ""
-    },
-    {
-        name: "Highway 97C (Merritt-Kelowna area)",
-        state: "BC",
-        lat: 49.7711,
-        lng: -120.3700,
-        info: ""
-    },
-    {
-        name: "New Westminster",
-        state: "BC",
-        lat: 49.2069,
-        lng: -122.9110,
-        info: ""
-    },
-    {
-        name: "Vancouver",
-        state: "BC",
-        lat: 49.2827,
-        lng: -123.1207,
-        info: ""
-    },
-    {
-        name: "Sidney Airport (Skydive)",
-        state: "BC",
-        lat: 48.6470,
-        lng: -123.4280,
-        info: ""
-    },
-    {
-        name: "Victoria",
-        state: "BC",
-        lat: 48.4284,
-        lng: -123.3656,
-        info: ""
-    },
-    {
-        name: "Metchosin/Sooke (Farm area)",
-        state: "BC",
-        lat: 48.4000,
-        lng: -123.6300,
-        info: ""
-    },
-    {
-        name: "Nanaimo",
-        state: "BC",
-        lat: 49.1659,
-        lng: -124.0080,
-        info: ""
-    },
-    {
-        name: "Port Alberni",
-        state: "BC",
-        lat: 49.2330,
-        lng: -124.8000,
-        info: ""
-    },
-    {
-        name: "Tofino",
-        state: "BC",
-        lat: 49.1558,
-        lng: -125.9083,
-        info: ""
-    },
-    {
-        name: "Vancouver (Return 1)",
-        state: "BC",
-        lat: 49.2827,
-        lng: -123.1207,
-        info: ""
-    },
-    {
-        name: "Calgary (Return 1)",
-        state: "AB",
-        lat: 51.0447,
-        lng: -114.0719,
-        info: ""
-    },
-    {
-        name: "Sicamous",
-        state: "BC",
-        lat: 50.8440,
-        lng: -119.0069,
-        info: ""
-    },
-    {
-        name: "Revelstoke",
-        state: "BC",
-        lat: 50.9990,
-        lng: -118.1970,
-        info: ""
-    },
-    {
-        name: "Edmonton (Return 1)",
-        state: "AB",
-        lat: 53.5461,
-        lng: -113.4938,
-        info: ""
-    },
-    {
-        name: "Prince George",
-        state: "BC",
-        lat: 53.9171,
-        lng: -122.7497,
-        info: ""
-    },
-    {
-        name: "Fort St. John",
-        state: "BC",
-        lat: 56.2483,
-        lng: -120.8524,
-        info: ""
-    },
-    {
-        name: "Fort Nelson",
-        state: "BC",
-        lat: 58.8050,
-        lng: -122.7050,
-        info: ""
-    },
-    {
-        name: "Whitehorse",
-        state: "YT",
-        lat: 60.7161,
-        lng: -135.0558,
-        info: ""
-    },
-    {
-        name: "Fort Nelson (Return)",
-        state: "BC",
-        lat: 58.8050,
-        lng: -122.7050,
-        info: ""
-    },
-    {
-        name: "Edmonton (Return 2)",
-        state: "AB",
-        lat: 53.5461,
-        lng: -113.4938,
-        info: ""
-    },
-    {
-        name: "Calgary (Return 2)",
-        state: "AB",
-        lat: 51.0447,
-        lng: -114.0719,
-        info: ""
-    },
-    {
-        name: "Vancouver (Return 2)",
-        state: "BC",
-        lat: 49.2827,
-        lng: -123.1207,
-        info: ""
-    },
-    {
-        name: "New Westminster (Return)",
-        state: "BC",
-        lat: 49.2069,
-        lng: -122.9110,
-        info: ""
-    },
-    {
-        name: "White Rock",
-        state: "BC",
-        lat: 49.0200,
-        lng: -122.8000,
-        info: ""
-    },
-    {
-        name: "Burlington",
-        state: "WA",
-        lat: 48.4735,
-        lng: -122.3276,
-        info: ""
-    },
-    {
-        name: "Freeland",
-        state: "WA",
-        lat: 48.0333,
-        lng: -122.5667,
-        info: ""
-    },
-    {
-        name: "Seattle",
-        state: "WA",
-        lat: 47.6062,
-        lng: -122.3321,
-        info: ""
-    },
-    {
-        name: "Bellevue",
-        state: "WA",
-        lat: 47.6104,
-        lng: -122.2015,
-        info: ""
-    },
-    {
-        name: "Rosburg",
-        state: "WA",
-        lat: 46.2928,
-        lng: -123.6375,
-        info: ""
-    },
-    {
-        name: "Astoria",
-        state: "OR",
-        lat: 46.1878,
-        lng: -123.8313,
-        info: ""
-    },
-    {
-        name: "Rockaway Beach",
-        state: "OR",
-        lat: 45.6032,
-        lng: -123.9454,
-        info: ""
-    },
-    {
-        name: "Newport",
-        state: "OR",
-        lat: 44.6293,
-        lng: -124.0534,
-        info: ""
-    },
-    {
-        name: "Florence",
-        state: "OR",
-        lat: 43.9912,
-        lng: -124.1065,
-        info: ""
-    },
-    {
-        name: "Coos Bay",
-        state: "OR",
-        lat: 43.3754,
-        lng: -124.2185,
-        info: ""
-    },
-    {
-        name: "Brookings",
-        state: "OR",
-        lat: 42.0573,
-        lng: -124.2987,
-        info: ""
-    },
-    {
-        name: "Highway 1 (Redwood National Park Area)",
-        state: "CA",
-        lat: 41.2000,
-        lng: -124.0800,
-        info: ""
-    },
-    {
-        name: "San Francisco",
-        state: "CA",
-        lat: 37.7749,
-        lng: -122.4194,
-        info: ""
-    },
-    {
-        name: "Berkeley",
-        state: "CA",
-        lat: 37.8715,
-        lng: -122.2730,
-        info: ""
-    },
-    {
-        name: "San Jose",
-        state: "CA",
-        lat: 37.3382,
-        lng: -121.8863,
-        info: ""
-    },
-    {
-        name: "Aptos",
-        state: "CA",
-        lat: 36.9899,
-        lng: -121.8908,
-        info: ""
-    },
-    {
-        name: "Carmel Valley",
-        state: "CA",
-        lat: 36.5298,
-        lng: -121.7247,
-        info: ""
-    },
-    {
-        name: "Highway 1 (Big Sur Coast)",
-        state: "CA",
-        lat: 36.1400,
-        lng: -121.6800,
-        info: ""
-    },
-    {
-        name: "Grover Beach",
-        state: "CA",
-        lat: 35.1972,
-        lng: -120.6214,
-        info: ""
-    },
-    {
-        name: "Taft-Maricopa Airport (Skydiving)",
-        state: "CA",
-        lat: 35.1528,
-        lng: -119.4670,
-        info: ""
-    },
-    {
-        name: "Highway 178 (Mojave Area)",
-        state: "CA",
-        lat: 35.6000,
-        lng: -118.0000,
-        info: ""
-    },
-    {
-        name: "Furnace Creek",
-        state: "CA",
-        lat: 36.4627,
-        lng: -116.8676,
-        info: ""
-    },
-    {
-        name: "Death Valley Junction",
-        state: "CA",
-        lat: 36.3119,
-        lng: -116.4025,
-        info: ""
-    },
-    {
-        name: "Las Vegas",
-        state: "NV",
-        lat: 36.1716,
-        lng: -115.1391,
-        info: ""
-    },
-    {
-        name: "Las Vegas (Hostel Area/Return)",
-        state: "NV",
-        lat: 36.1000,
-        lng: -115.1000,
-        info: ""
-    },
-    {
-        name: "Kelso Depot (Mojave)",
-        state: "CA",
-        lat: 35.0347,
-        lng: -115.5867,
-        info: ""
-    },
-    {
-        name: "Amboy",
-        state: "CA",
-        lat: 34.5558,
-        lng: -115.7533,
-        info: ""
-    },
-    {
-        name: "Cathedral City",
-        state: "CA",
-        lat: 33.7786,
-        lng: -116.4842,
-        info: ""
-    },
-    {
-        name: "Palm Springs",
-        state: "CA",
-        lat: 33.8303,
-        lng: -116.5453,
-        info: ""
-    },
-    {
-        name: "Escondido",
-        state: "CA",
-        lat: 33.1192,
-        lng: -117.0869,
-        info: ""
-    },
-    {
-        name: "Lake Elsinore (Skydive)",
-        state: "CA",
-        lat: 33.6600,
-        lng: -117.3333,
-        info: ""
-    },
-    {
-        name: "Dana Point",
-        state: "CA",
-        lat: 33.4686,
-        lng: -117.6800,
-        info: ""
-    },
-    {
-        name: "Escondido (Return)",
-        state: "CA",
-        lat: 33.1192,
-        lng: -117.0869,
-        info: ""
-    },
-    {
-        name: "Brawley",
-        state: "CA",
-        lat: 32.9789,
-        lng: -115.5342,
-        info: ""
-    },
-    {
-        name: "Slab City",
-        state: "CA",
-        lat: 33.2667,
-        lng: -115.5000,
-        info: ""
-    },
-    {
-        name: "Palo Verde",
-        state: "CA",
-        lat: 33.3283,
-        lng: -114.7356,
-        info: ""
-    },
-    {
-        name: "Aguila",
-        state: "AZ",
-        lat: 34.1670,
-        lng: -113.1930,
-        info: ""
-    },
-{
-        name: "Prescott",
-        state: "AZ",
-        lat: 34.5400,
-        lng: -112.4685,
-        info: ""
-    },
-    {
-        name: "Sedona",
-        state: "AZ",
-        lat: 34.8697,
-        lng: -111.9774,
-        info: ""
-    },
-    {
-        name: "Highway 180 (Flagstaff Area)",
-        state: "AZ",
-        lat: 35.1500,
-        lng: -111.7500,
-        info: ""
-    },
-    {
-        name: "Springerville",
-        state: "AZ",
-        lat: 34.1378,
-        lng: -109.2882,
-        info: ""
-    },
-    {
-        name: "Reserve",
-        state: "NM",
-        lat: 33.7081,
-        lng: -108.7561,
-        info: ""
-    },
-    {
-        name: "Santa Fe",
-        state: "NM",
-        lat: 35.6870,
-        lng: -105.9378,
-        info: ""
-    },
-    {
-        name: "New Mexico-Colorado Border (near US-285)",
-        state: "CO",
-        lat: 37.0000,
-        lng: -106.0000,
-        info: ""
-    },
-    {
-        name: "Moffat",
-        state: "CO",
-        lat: 37.9328,
-        lng: -105.8906,
-        info: ""
-    },
-    {
-        name: "Lakewood",
-        state: "CO",
-        lat: 39.7118,
-        lng: -105.0805,
-        info: ""
-    },
-    {
-        name: "Denver",
-        state: "CO",
-        lat: 39.7392,
-        lng: -104.9903,
-        info: ""
-    },
-    {
-        name: "Fort Morgan",
-        state: "CO",
-        lat: 40.2458,
-        lng: -103.7997,
-        info: ""
-    },
-    {
-        name: "Wray",
-        state: "CO",
-        lat: 40.0633,
-        lng: -102.2471,
-        info: ""
-    },
-    {
-        name: "Stratton",
-        state: "NE",
-        lat: 40.1264,
-        lng: -101.4018,
-        info: ""
-    },
-    {
-        name: "Arapahoe",
-        state: "NE",
-        lat: 40.2975,
-        lng: -99.8971,
-        info: ""
-    },
-    {
-        name: "Holdrege",
-        state: "NE",
-        lat: 40.4522,
-        lng: -99.3787,
-        info: ""
-    },
-    {
-        name: "Hastings",
-        state: "NE",
-        lat: 40.5878,
-        lng: -98.3965,
-        info: ""
-    },
-    {
-        name: "Fairmont",
-        state: "NE",
-        lat: 40.6385,
-        lng: -97.5501,
-        info: ""
-    },
-    {
-        name: "Lincoln",
-        state: "NE",
-        lat: 40.8136,
-        lng: -96.7026,
-        info: ""
-    },
-    {
-        name: "Omaha",
-        state: "NE",
-        lat: 41.2565,
-        lng: -95.9345,
-        info: ""
-    },
-    {
-        name: "Corning",
-        state: "IA",
-        lat: 40.9995,
-        lng: -94.7377,
-        info: ""
-    },
-    {
-        name: "Highway 34 (Near Osceola, IA)",
-        state: "IA",
-        lat: 41.0400,
-        lng: -93.7500,
-        info: ""
-    },
-    {
-        name: "Burlington",
-        state: "IA",
-        lat: 40.8037,
-        lng: -91.1090,
-        info: ""
-    },
-    {
-        name: "Kewanee",
-        state: "IL",
-        lat: 41.2356,
-        lng: -89.9218,
-        info: ""
-    },
-    {
-        name: "Rochelle Airport (Skydive)",
-        state: "IL",
-        lat: 41.8700,
-        lng: -89.0600,
-        info: ""
-    },
-    {
-        name: "Chicago",
-        state: "IL",
-        lat: 41.8781,
-        lng: -87.6298,
-        info: ""
-    },
-    {
-        name: "Skydive Chicago (Ottawa Area)",
-        state: "IL",
-        lat: 41.3653,
-        lng: -88.9419,
-        info: ""
-    },
-    {
-        name: "Spring Valley",
-        state: "IL",
-        lat: 41.3217,
-        lng: -89.1981,
-        info: ""
-    },
-    {
-        name: "Peoria",
-        state: "IL",
-        lat: 40.6936,
-        lng: -89.5888,
-        info: ""
-    },
-    {
-        name: "Mount Sterling",
-        state: "IL",
-        lat: 40.1775,
-        lng: -90.7580,
-        info: ""
-    },
-    {
-        name: "Pleasant Hill",
-        state: "IL",
-        lat: 39.5250,
-        lng: -90.8750,
-        info: ""
-    },
-    {
-        name: "St. Louis",
-        state: "MO",
-        lat: 38.6270,
-        lng: -90.1994,
-        info: ""
-    },
-    {
-        name: "Chester",
-        state: "IL",
-        lat: 37.9150,
-        lng: -89.8228,
-        info: ""
-    },
-    {
-        name: "Charleston",
-        state: "MO",
-        lat: 36.9200,
-        lng: -89.3622,
-        info: ""
-    },
-    {
-        name: "Tiptonville",
-        state: "TN",
-        lat: 36.3684,
-        lng: -89.4795,
-        info: ""
-    },
-    {
-        name: "Covington",
-        state: "TN",
-        lat: 35.5681,
-        lng: -89.6462,
-        info: ""
-    },
-    {
-        name: "Memphis",
-        state: "TN",
-        lat: 35.1495,
-        lng: -90.0489,
-        info: ""
-    },
-    {
-        name: "Clarksdale",
-        state: "MS",
-        lat: 34.1983,
-        lng: -90.5723,
-        info: ""
-    },
-    {
-        name: "Eudora",
-        state: "AR",
-        lat: 33.1009,
-        lng: -91.2415,
-        info: ""
-    },
-    {
-        name: "Newellton",
-        state: "LA",
-        lat: 32.0674,
-        lng: -91.2290,
-        info: ""
-    },
-    {
-        name: "Road 418LA (Near St. Joseph)",
-        state: "LA",
-        lat: 31.8500,
-        lng: -91.2000,
-        info: ""
-    },
-    {
-        name: "Baton Rouge",
-        state: "LA",
-        lat: 30.4515,
-        lng: -91.1871,
-        info: ""
-    },
-    {
-        name: "LaPlace",
-        state: "LA",
-        lat: 30.0694,
-        lng: -90.4734,
-        info: ""
-    },
-    {
-        name: "New Orleans",
-        state: "LA",
-        lat: 29.9511,
-        lng: -90.0715,
-        info: ""
-    },
-    // ** Florida Segment **
-
-    {
-        name: "Mobile",
-        state: "AL",
-        lat: 30.6954,
-        lng: -88.0399,
-        info: "City in Alabama"
-    },
-    {
-        name: "Tallahassee",
-        state: "FL",
-        lat: 30.4383,
-        lng: -84.2807,
-        info: "Capital of Florida"
-    },
-    {
-        name: "Homosassa Springs",
-        state: "FL",
-        lat: 28.7905,
-        lng: -82.5802,
-        info: "Homosassa Springs, Florida"
-    },
-    
-    {
-        name: "Bradenton",
-        state: "FL",
-        lat: 27.4989,
-        lng: -82.5748,
-        info: ""
-    },
-    {
-        name: "Miami",
-        state: "FL",
-        lat: 25.7617,
-        lng: -80.1918,
-        info: "Miami, Florida"
-    },
-    {
-        name: "Key Largo",
-        state: "FL",
-        lat: 25.1053,
-        lng: -80.4475,
-        info: "Key Largo, Florida"
-    },
-    {
-        name: "Key West",
-        state: "FL",
-        lat: 24.5551,
-        lng: -81.7800,
-        info: ""
-    },
-    {
-        name: "Key Largo",
-        state: "FL",
-        lat: 25.1053,
-        lng: -80.4475,
-        info: "Key Largo, Florida"
-    },
-    {
-        name: "Miami",
-        state: "FL",
-        lat: 25.7617,
-        lng: -80.1918,
-        info: "Miami, Florida"
-    },
-    {
-        name: "Atlantic Beach",
-        state: "FL",
-        lat: 30.3341,
-        lng: -81.3984,
-        info: ""
-    },
-    {
-        name: "West Palm Beach",
-        state: "FL",
-        lat: 26.7153,
-        lng: -80.0534,
-        info: ""
-    },
-{
-        name: "Tallahassee",
-        state: "FL",
-        lat: 30.4383,
-        lng: -84.2807,
-        info: "Capital of Florida"
-    },
-    {
-        name: "Mobile",
-        state: "AL",
-        lat: 30.6954,
-        lng: -88.0399,
-        info: "City in Alabama"
-    },
-    // ** Return to Louisiana/Texas **
-    {
-        name: "New Orleans (Return)",
-        state: "LA",
-        lat: 29.9511,
-        lng: -90.0715,
-        info: ""
-    },
-    {
-        name: "Houma",
-        state: "LA",
-        lat: 29.5952,
-        lng: -90.7198,
-        info: ""
-    },
-    {
-        name: "Adeline (Near New Iberia)",
-        state: "LA",
-        lat: 30.0258,
-        lng: -91.7317,
-        info: ""
-    },
-    {
-        name: "Lafayette",
-        state: "LA",
-        lat: 30.2241,
-        lng: -92.0198,
-        info: ""
-    },
-    {
-        name: "Kemah",
-        state: "TX",
-        lat: 29.5399,
-        lng: -95.0210,
-        info: ""
-    },
-    {
-        name: "Houston",
-        state: "TX",
-        lat: 29.7604,
-        lng: -95.3698,
-        info: ""
-    },
-    {
-        name: "Bellville",
-        state: "TX",
-        lat: 29.9324,
-        lng: -96.2573,
-        info: ""
-    },
-    {
-        name: "Smithville",
-        state: "TX",
-        lat: 30.0099,
-        lng: -97.1408,
-        info: ""
-    },
-    {
-        name: "Austin",
-        state: "TX",
-        lat: 30.2672,
-        lng: -97.7431,
-        info: ""
-    },
-    {
-        name: "Highway 80 (Near San Marcos, TX)",
-        state: "TX",
-        lat: 29.8800,
-        lng: -97.9400,
-        info: ""
-    },
-    {
-        name: "Skidmore",
-        state: "TX",
-        lat: 28.3275,
-        lng: -97.7472,
-        info: ""
-    },
-    {
-        name: "Edinburg",
-        state: "TX",
-        lat: 26.3023,
-        lng: -98.1633,
-        info: ""
-    },
-    {
-        name: "Highway 97 (Near Sarita)",
-        state: "TX",
-        lat: 27.2400,
-        lng: -97.6300,
-        info: ""
-    },
-    // ** Mexico Segment **
-    {
-        name: "San Fernando",
-        state: "MX-TAM",
-        lat: 24.8550,
-        lng: -98.8070,
-        info: ""
-    },
-    {
-        name: "Jiménez",
-        state: "MX-TAM",
-        lat: 24.2690,
-        lng: -98.2040,
-        info: ""
-    },
-    {
-        name: "Ciudad Victoria",
-        state: "MX-TAM",
-        lat: 23.7333,
-        lng: -99.1333,
-        info: ""
-    },
-    {
-        name: "Ciudad del Maíz",
-        state: "MX-SLP",
-        lat: 22.4080,
-        lng: -99.6050,
-        info: ""
-    },
-    {
-        name: "San Luis Potosí",
-        state: "MX-SLP",
-        lat: 22.1528,
-        lng: -100.9859,
-        info: ""
-    },
-    {
-        name: "Zacatecas",
-        state: "MX-ZAC",
-        lat: 22.7715,
-        lng: -102.5830,
-        info: ""
-    },
-    {
-        name: "Tabasco",
-        state: "MX-ZAC",
-        lat: 22.4283,
-        lng: -102.8500,
-        info: ""
-    },
-    {
-        name: "Aguascalientes",
-        state: "MX-AGS",
-        lat: 21.8833,
-        lng: -102.2833,
-        info: ""
-    },
-    {
-        name: "Lagos de Moreno",
-        state: "MX-JAL",
-        lat: 21.3650,
-        lng: -101.9300,
-        info: ""
-    },
-    {
-        name: "León",
-        state: "MX-GUA",
-        lat: 21.1219,
-        lng: -101.6823,
-        info: ""
-    },
-    {
-        name: "León (20km Area)",
-        state: "MX-GUA",
-        lat: 21.0500,
-        lng: -101.7500,
-        info: ""
-    },
-    {
-        name: "Guanajuato",
-        state: "MX-GUA",
-        lat: 21.0189,
-        lng: -101.2589,
-        info: ""
-    },
-    {
-        name: "Dolores Hidalgo",
-        state: "MX-GUA",
-        lat: 20.9333,
-        lng: -100.9333,
-        info: ""
-    },
-    {
-        name: "San Miguel de Allende",
-        state: "MX-GUA",
-        lat: 20.9144,
-        lng: -100.7420,
-        info: ""
-    },
-    {
-        name: "Yuriria",
-        state: "MX-GUA",
-        lat: 20.2000,
-        lng: -101.1500,
-        info: ""
-    },
-    {
-        name: "Morelia",
-        state: "MX-MIC",
-        lat: 19.7042,
-        lng: -101.1965,
-        info: ""
-    },
-    {
-        name: "Pátzcuaro",
-        state: "MX-MIC",
-        lat: 19.5167,
-        lng: -101.6000,
-        info: ""
-    },
-    {
-        name: "Morelia (Return)",
-        state: "MX-MIC",
-        lat: 19.7042,
-        lng: -101.1965,
-        info: ""
-    },
-    {
-        name: "Highway 15 Bridge (Near Zitácuaro)",
-        state: "MX-MIC",
-        lat: 19.4100,
-        lng: -100.3500,
-        info: ""
-    },
-    {
-        name: "Toluca",
-        state: "MX-MEX",
-        lat: 19.2826,
-        lng: -99.6542,
-        info: ""
-    },
-    {
-        name: "Nevado de Toluca (Summit Area)",
-        state: "MX-MEX",
-        lat: 19.1090,
-        lng: -99.7610,
-        info: ""
-    },
-    {
-        name: "Metepec",
-        state: "MX-MEX",
-        lat: 19.2558,
-        lng: -99.5997,
-        info: ""
-    },
-    {
-        name: "Mexico City",
-        state: "MX-CMX",
-        lat: 19.4326,
-        lng: -99.1332,
-        info: ""
-    },
-    {
-        name: "Cuautla (Skydive)",
-        state: "MX-MOR",
-        lat: 18.8100,
-        lng: -98.9600,
-        info: ""
-    },
-    {
-        name: "Mexico City (Return)",
-        state: "MX-CMX",
-        lat: 19.4326,
-        lng: -99.1332,
-        info: ""
-    },
-    {
-        name: "Huejotzingo",
-        state: "MX-PUE",
-        lat: 19.1417,
-        lng: -98.4000,
-        info: ""
-    },
-    {
-        name: "Cholula",
-        state: "MX-PUE",
-        lat: 19.0620,
-        lng: -98.3130,
-        info: ""
-    },
-    {
-        name: "Puebla",
-        state: "MX-PUE",
-        lat: 19.0438,
-        lng: -98.2001,
-        info: ""
-    },
-    {
-        name: "Skydive Puebla (Atlixco Area)",
-        state: "MX-PUE",
-        lat: 18.8913,
-        lng: -98.4410,
-        info: ""
-    },
-    {
-        name: "Huajuapan de León",
-        state: "MX-OAX",
-        lat: 17.8000,
-        lng: -97.7833,
-        info: ""
-    },
-    {
-        name: "Asunción Nochixtlán",
-        state: "MX-OAX",
-        lat: 17.4833,
-        lng: -96.9500,
-        info: ""
-    },
-    {
-        name: "Oaxaca City",
-        state: "MX-OAX",
-        lat: 17.0732,
-        lng: -96.7266,
-        info: ""
-    },
-    {
-        name: "Sola de Vega",
-        state: "MX-OAX",
-        lat: 16.5167,
-        lng: -97.0000,
-        info: ""
-    },
-    {
-        name: "El Vidrio (Near San Pedro Juchatengo)",
-        state: "MX-OAX",
-        lat: 16.2000,
-        lng: -97.0600,
-        info: ""
-    },
-    {
-        name: "Puerto Escondido",
-        state: "MX-OAX",
-        lat: 15.8600,
-        lng: -97.0730,
-        info: ""
-    },
-    {
-        name: "Palotada (Near Santa María Tonameca)",
-        state: "MX-OAX",
-        lat: 15.7500,
-        lng: -96.6500,
-        info: ""
-    },
-    {
-        name: "Highway 200 (Coastal Road)",
-        state: "MX-OAX",
-        lat: 16.0500,
-        lng: -95.8000,
-        info: ""
-    },
-    {
-        name: "Tehuantepec",
-        state: "MX-OAX",
-        lat: 16.3333,
-        lng: -95.2333,
-        info: ""
-    },
-    {
-        name: "San Pedro Tapanatepec",
-        state: "MX-OAX",
-        lat: 16.3888,
-        lng: -94.2052,
-        info: ""
-    },
-    {
-        name: "San Miguel Chimalapa (Approx for San Miguel)",
-        state: "MX-OAX",
-        lat: 16.8900,
-        lng: -94.0100,
-        info: ""
-    },
-{
-        name: "Tuxtla Gutiérrez",
-        state: "MX-CHP",
-        lat: 16.7535,
-        lng: -93.1165,
-        info: ""
-    },
-    {
-        name: "Ocosingo",
-        state: "MX-CHP",
-        lat: 16.9602,
-        lng: -92.0910,
-        info: ""
-    },
-    {
-        name: "Highway 199 (Near Palenque)",
-        state: "MX-CHP",
-        lat: 17.5000,
-        lng: -91.9000,
-        info: ""
-    },
-    {
-        name: "Villahermosa",
-        state: "MX-TAB",
-        lat: 17.9869,
-        lng: -92.9304,
-        info: ""
-    },
-    {
-        name: "Highway 180 Church (Near Ciudad del Carmen)",
-        state: "MX-CAM",
-        lat: 18.6500,
-        lng: -91.5000,
-        info: ""
-    },
-    {
-        name: "Isla Aguada",
-        state: "MX-CAM",
-        lat: 18.6656,
-        lng: -91.4920,
-        info: ""
-    },
-    {
-        name: "Campeche",
-        state: "MX-CAM",
-        lat: 19.8324,
-        lng: -90.5369,
-        info: ""
-    },
-    {
-        name: "Mérida",
-        state: "MX-YUC",
-        lat: 20.9671,
-        lng: -89.5925,
-        info: ""
-    },
-    {
-        name: "X-Can",
-        state: "MX-YUC",
-        lat: 20.7300,
-        lng: -87.8967,
-        info: ""
-    },
-    {
-        name: "Cancún",
-        state: "MX-ROO",
-        lat: 21.1619,
-        lng: -86.8515,
-        info: ""
-    },
-    {
-        name: "Puerto Morelos",
-        state: "MX-ROO",
-        lat: 20.8547,
-        lng: -86.8795,
-        info: ""
-    },
-    {
-        name: "Playa Del Carmen",
-        state: "MX-ROO",
-        lat: 20.6277,
-        lng: -87.0805,
-        info: ""
-    },
-    {
-        name: "Felipe Carrillo Puerto",
-        state: "MX-ROO",
-        lat: 19.5810,
-        lng: -88.0560,
-        info: ""
-    },
-    {
-        name: "Bacalar",
-        state: "MX-ROO",
-        lat: 18.6667,
-        lng: -88.3833,
-        info: ""
-    },
-    {
-        name: "Orange Walk Town",
-        state: "BZ",
-        lat: 18.0772,
-        lng: -88.5606,
-        info: ""
-    },
-    {
-        name: "Belize City",
-        state: "BZ",
-        lat: 17.5000,
-        lng: -88.2000,
-        info: ""
-    },
-    {
-        name: "Belize-Guatemala Border (Benque Viejo del Carmen)",
-        state: "BZ/GT",
-        lat: 17.0600,
-        lng: -89.1400,
-        info: ""
-    },
-    {
-        name: "Flores",
-        state: "GT",
-        lat: 16.9230,
-        lng: -89.8890,
-        info: ""
-    },
-    {
-        name: "Cobán",
-        state: "GT",
-        lat: 15.4700,
-        lng: -90.3667,
-        info: ""
-    },
-    {
-        name: "Santa Cruz del Quiché",
-        state: "GT",
-        lat: 15.0333,
-        lng: -91.1333,
-        info: ""
-    },
-    {
-        name: "Lake Atitlán (Panajachel)",
-        state: "GT",
-        lat: 14.7350,
-        lng: -91.1500,
-        info: ""
-    },
-    {
-        name: "San Andrés Itzapa",
-        state: "GT",
-        lat: 14.6500,
-        lng: -90.9500,
-        info: ""
-    },
-    {
-        name: "Jocotenango",
-        state: "GT",
-        lat: 14.6000,
-        lng: -90.7500,
-        info: ""
-    },
-    {
-        name: "Road CA-2 (Escuintla Area)",
-        state: "GT",
-        lat: 14.0000,
-        lng: -91.0000,
-        info: ""
-    },
-    {
-        name: "Garita Palmera",
-        state: "SV",
-        lat: 13.8000,
-        lng: -90.0000,
-        info: ""
-    },
-    {
-        name: "San Salvador",
-        state: "SV",
-        lat: 13.6929,
-        lng: -89.2182,
-        info: ""
-    },
-    {
-        name: "San Lorenzo",
-        state: "HN",
-        lat: 13.4500,
-        lng: -87.4500,
-        info: ""
-    },
-    {
-        name: "San Miguel",
-        state: "SV",
-        lat: 13.4833,
-        lng: -88.1667,
-        info: ""
-    },
-    {
-        name: "Jícaro Galán",
-        state: "HN",
-        lat: 13.3833,
-        lng: -87.4167,
-        info: ""
-    },
-    {
-        name: "Choluteca",
-        state: "HN",
-        lat: 13.3000,
-        lng: -87.2000,
-        info: ""
-    },
-    {
-        name: "Chichigalpa",
-        state: "NI",
-        lat: 12.5700,
-        lng: -86.3500,
-        info: ""
-    },
-    {
-        name: "Las Peñitas",
-        state: "NI",
-        lat: 12.3500,
-        lng: -86.9500,
-        info: ""
-    },
-    {
-        name: "Lake Xiloá (Near Managua)",
-        state: "NI",
-        lat: 12.2000,
-        lng: -86.3300,
-        info: ""
-    },
-    {
-        name: "Granada",
-        state: "NI",
-        lat: 11.9271,
-        lng: -85.9557,
-        info: ""
-    },
-    {
-        name: "Ometepe Island (Moyogalpa)",
-        state: "NI",
-        lat: 11.5333,
-        lng: -85.6700,
-        info: ""
-    },
-    {
-        name: "Rivas",
-        state: "NI",
-        lat: 11.4372,
-        lng: -85.8272,
-        info: ""
-    },
-    {
-        name: "Palmares",
-        state: "CR",
-        lat: 10.0000,
-        lng: -84.4500,
-        info: ""
-    },
-    {
-        name: "Atenas",
-        state: "CR",
-        lat: 9.9730,
-        lng: -84.3750,
-        info: ""
-    },
-    {
-        name: "San José",
-        state: "CR",
-        lat: 9.9328,
-        lng: -84.0850,
-        info: ""
-    },
-    {
-        name: "Santa María de Dota",
-        state: "CR",
-        lat: 9.6500,
-        lng: -84.0000,
-        info: ""
-    },
-    {
-        name: "Copey de Dota",
-        state: "CR",
-        lat: 9.5850,
-        lng: -83.9000,
-        info: ""
-    },
-    {
-        name: "Cartago",
-        state: "CR",
-        lat: 9.8644,
-        lng: -83.9197,
-        info: ""
-    },
-    {
-        name: "Río Banano (Near Limón)",
-        state: "CR",
-        lat: 9.9700,
-        lng: -83.1500,
-        info: ""
-    },
-    {
-        name: "Playa Negra",
-        state: "CR",
-        lat: 9.6917,
-        lng: -82.7483,
-        info: ""
-    },
-    {
-        name: "San José (Return 1)",
-        state: "CR",
-        lat: 9.9328,
-        lng: -84.0850,
-        info: ""
-    },
-    {
-        name: "Tierras Enamoradas (Near San Carlos)",
-        state: "CR",
-        lat: 10.4200,
-        lng: -84.2800,
-        info: ""
-    },
-    {
-        name: "San José (Return 2)",
-        state: "CR",
-        lat: 9.9328,
-        lng: -84.0850,
-        info: ""
-    },
-    {
-        name: "Río Banano (Return 1)",
-        state: "CR",
-        lat: 9.9700,
-        lng: -83.1500,
-        info: ""
-    },
-    {
-        name: "Jiménez",
-        state: "CR",
-        lat: 10.2170,
-        lng: -84.0500,
-        info: ""
-    },
-    {
-        name: "Florencia",
-        state: "CR",
-        lat: 10.3700,
-        lng: -84.4500,
-        info: ""
-    },
-    {
-        name: "Tierras Enamoradas (Return)",
-        state: "CR",
-        lat: 10.4200,
-        lng: -84.2800,
-        info: ""
-    },
-    {
-        name: "Atenas (Return)",
-        state: "CR",
-        lat: 9.9730,
-        lng: -84.3750,
-        info: ""
-    },
-    {
-        name: "San José (Return 3)",
-        state: "CR",
-        lat: 9.9328,
-        lng: -84.0850,
-        info: ""
-    },
-    {
-        name: "Turrialba",
-        state: "CR",
-        lat: 9.9000,
-        lng: -83.6833,
-        info: ""
-    },
-    {
-        name: "Pacuare (River Area)",
-        state: "CR",
-        lat: 10.0800,
-        lng: -83.4700,
-        info: ""
-    },
-    {
-        name: "Río Banano (Return 2)",
-        state: "CR",
-        lat: 9.9700,
-        lng: -83.1500,
-        info: ""
-    },
-    {
-        name: "Puerto Viejo de Talamanca",
-        state: "CR",
-        lat: 9.6565,
-        lng: -82.7533,
-        info: ""
-    },
-    {
-        name: "Catarina (Near Puerto Viejo)",
-        state: "CR",
-        lat: 9.7000,
-        lng: -82.7500,
-        info: ""
-    },
-    {
-        name: "Guabito (CR-PA Border)",
-        state: "PA",
-        lat: 9.5333,
-        lng: -82.5000,
-        info: ""
-    },
-    {
-        name: "Chiriquí Grande",
-        state: "PA",
-        lat: 8.9500,
-        lng: -82.1000,
-        info: ""
-    },
-    {
-        name: "Tolé",
-        state: "PA",
-        lat: 8.3581,
-        lng: -81.7408,
-        info: ""
-    },
-    {
-        name: "Santiago de Veraguas",
-        state: "PA",
-        lat: 8.0933,
-        lng: -80.9789,
-        info: ""
-    },
-    {
-        name: "24 de Diciembre (Panama City East)",
-        state: "PA",
-        lat: 9.0833,
-        lng: -79.3333,
-        info: ""
-    },
-    {
-        name: "Panama City",
-        state: "PA",
-        lat: 8.9824,
-        lng: -79.5199,
-        info: ""
-    },
-    {
-        name: "Sabanitas",
-        state: "PA",
-        lat: 9.3500,
-        lng: -79.8667,
-        info: ""
-    },
-    {
-        name: "Portobelo",
-        state: "PA",
-        lat: 9.5500,
-        lng: -79.6500,
-        info: ""
-    },
-    {
-        name: "Linton Bay",
-        state: "PA",
-        lat: 9.6000,
-        lng: -79.7000,
-        info: ""
-    },
-    {
-        name: "La Chorrera",
-        state: "PA",
-        lat: 8.8833,
-        lng: -79.7833,
-        info: ""
-    },
-    {
-        name: "El Llano",
-        state: "PA",
-        lat: 8.8000,
-        lng: -78.6800,
-        info: ""
-    },
-    {
-        name: "Puerto de Cartí (Darién Starting Point)",
-        state: "PA",
-        lat: 9.3500,
-        lng: -78.9500,
-        info: ""
-    },
-    {
-        name: "Puerto Obaldía (Boat to Colombia)",
-        state: "PA",
-        lat: 8.6500,
-        lng: -77.4000,
-        info: ""
-    },
-    {
-        name: "Turbo (Darién Ending Point)",
-        state: "CO",
-        lat: 8.0900,
-        lng: -76.7300,
-        info: ""
-    },
-    {
-        name: "Arboletes",
-        state: "CO",
-        lat: 8.8500,
-        lng: -76.4333,
-        info: ""
-    },
-    {
-        name: "Hotel Manhattan (Near Tolú)",
-        state: "CO",
-        lat: 9.5000,
-        lng: -75.7500,
-        info: ""
-    },
-    {
-        name: "Chinú",
-        state: "CO",
-        lat: 8.9100,
-        lng: -75.4000,
-        info: ""
-    },
-    {
-        name: "Ovejas",
-        state: "CO",
-        lat: 9.5167,
-        lng: -75.1667,
-        info: ""
-    },
-    {
-        name: "San Jacinto",
-        state: "CO",
-        lat: 9.8333,
-        lng: -75.1667,
-        info: ""
-    },
-    {
-        name: "Turbaco",
-        state: "CO",
-        lat: 10.3333,
-        lng: -75.4000,
-        info: ""
-    },
-    {
-        name: "Road (Near Barranquilla)",
-        state: "CO",
-        lat: 10.7000,
-        lng: -74.9000,
-        info: ""
-    },
-    {
-        name: "Palermo (Near Ciénaga)",
-        state: "CO",
-        lat: 10.9800,
-        lng: -74.3000,
-        info: ""
-    },
-    {
-        name: "El Rodadero",
-        state: "CO",
-        lat: 11.2000,
-        lng: -74.2000,
-        info: ""
-    },
-    {
-        name: "Santa Marta",
-        state: "CO",
-        lat: 11.2333,
-        lng: -74.1997,
-        info: ""
-    },
-    {
-        name: "Palomino",
-        state: "CO",
-        lat: 11.4500,
-        lng: -73.5500,
-        info: ""
-    },
-    {
-        name: "Police Control (Riohacha Area)",
-        state: "CO",
-        lat: 11.5500,
-        lng: -72.9000,
-        info: ""
-    },
-    {
-        name: "Colombia - Venezuela Border (Maicao Area)",
-        state: "CO/VE",
-        lat: 11.3500,
-        lng: -72.2300,
-        info: ""
-    },
-    {
-        name: "Paraguaipoa",
-        state: "VE",
-        lat: 11.2200,
-        lng: -71.9714,
-        info: ""
-    },  
-   {
-        name: "Santa Cruz de Mara",
-        state: "VE",
-        lat: 10.7900,
-        lng: -71.6900,
-        info: "Near Maracaibo"
-    },
-    {
-        name: "Paraguaipoa",
-        state: "VE",
-        lat: 11.2200,
-        lng: -71.9714,
-        info: ""
-    },
-    {
-        name: "Maicao",
-        state: "CO",
-        lat: 11.3850,
-        lng: -72.2420,
-        info: ""
-    },
-    {
-        name: "San Juan del Cesar",
-        state: "CO",
-        lat: 10.8667,
-        lng: -73.0000,
-        info: ""
-    },
-    {
-        name: "Agustín Codazzi",
-        state: "CO",
-        lat: 10.0465,
-        lng: -73.0067,
-        info: ""
-    },
-    {
-        name: "San Roque",
-        state: "CO",
-        lat: 9.3800,
-        lng: -73.7800,
-        info: ""
-    },
-    {
-        name: "San Alberto",
-        state: "CO",
-        lat: 8.0000,
-        lng: -73.9600,
-        info: ""
-    },
-    {
-        name: "Road 45A (Near Bucaramanga)",
-        state: "CO",
-        lat: 7.5000,
-        lng: -73.3000,
-        info: ""
-    },
-    {
-        name: "La Reserva Natural (Near Cimitarra)",
-        state: "CO",
-        lat: 6.5000,
-        lng: -74.0000,
-        info: ""
-    },
-    {
-        name: "Bucaramanga",
-        state: "CO",
-        lat: 7.1132,
-        lng: -73.1195,
-        info: ""
-    },
-    {
-        name: "Road 45A (Near San Gil)",
-        state: "CO",
-        lat: 6.5000,
-        lng: -73.1800,
-        info: ""
-    },
-    {
-        name: "Mogotes",
-        state: "CO",
-        lat: 6.4667,
-        lng: -72.9667,
-        info: ""
-    },
-    {
-        name: "Onzaga",
-        state: "CO",
-        lat: 6.1667,
-        lng: -72.8833,
-        info: ""
-    },
-    {
-        name: "Soatá",
-        state: "CO",
-        lat: 6.3333,
-        lng: -72.7167,
-        info: ""
-    },
-    {
-        name: "La Uvita",
-        state: "CO",
-        lat: 6.2667,
-        lng: -72.7000,
-        info: ""
-    },
-{
-        name: "Panqueba",
-        state: "CO",
-        lat: 6.2736,
-        lng: -72.6369,
-        info: ""
-    },
-    {
-        name: "Güicán de la Sierra",
-        state: "CO",
-        lat: 6.4250,
-        lng: -72.4500,
-        info: ""
-    },
-    {
-        name: "Sierra Nevada del Cocuy (High Point)",
-        state: "CO",
-        lat: 6.4700,
-        lng: -72.3000,
-        info: ""
-    },
-    {
-        name: "El Cocuy",
-        state: "CO",
-        lat: 6.4172,
-        lng: -72.3364,
-        info: ""
-    },
-    {
-        name: "Finca (Near La Cabaña)",
-        state: "CO",
-        lat: 6.1000,
-        lng: -72.5000,
-        info: ""
-    },
-    {
-        name: "Sogamoso",
-        state: "CO",
-        lat: 5.7188,
-        lng: -72.9351,
-        info: ""
-    },
-    {
-        name: "Lake Tota (Acuaparque Area)",
-        state: "CO",
-        lat: 5.5900,
-        lng: -72.9300,
-        info: ""
-    },
-    {
-        name: "Toca",
-        state: "CO",
-        lat: 5.6667,
-        lng: -73.2000,
-        info: ""
-    },
-    {
-        name: "Tunja",
-        state: "CO",
-        lat: 5.5350,
-        lng: -73.3598,
-        info: ""
-    },
-    {
-        name: "Villa de Leyva",
-        state: "CO",
-        lat: 5.6450,
-        lng: -73.5350,
-        info: ""
-    },
-    {
-        name: "Gachantivá",
-        state: "CO",
-        lat: 5.6350,
-        lng: -73.5850,
-        info: ""
-    },
-    {
-        name: "Vélez",
-        state: "CO",
-        lat: 6.0083,
-        lng: -73.6806,
-        info: ""
-    },
-    {
-        name: "Cimitarra",
-        state: "CO",
-        lat: 6.1833,
-        lng: -73.9167,
-        info: ""
-    },
-    {
-        name: "Highway 62 (Near Puerto Olaya)",
-        state: "CO",
-        lat: 6.4800,
-        lng: -74.3000,
-        info: ""
-    },
-    {
-        name: "San José del Nus",
-        state: "CO",
-        lat: 6.4500,
-        lng: -74.9000,
-        info: ""
-    },
-    {
-        name: "Highway 25 (Near Barbosa)",
-        state: "CO",
-        lat: 6.5500,
-        lng: -75.3000,
-        info: ""
-    },
-    {
-        name: "Medellín",
-        state: "CO",
-        lat: 6.2442,
-        lng: -75.5812,
-        info: ""
-    },
-    {
-        name: "La Ceja",
-        state: "CO",
-        lat: 6.0333,
-        lng: -75.4333,
-        info: ""
-    },
-    {
-        name: "San Antonio de Prado",
-        state: "CO",
-        lat: 6.1500,
-        lng: -75.6000,
-        info: ""
-    },
-    {
-        name: "La Pintada",
-        state: "CO",
-        lat: 5.6700,
-        lng: -75.5700,
-        info: ""
-    },
-    {
-        name: "Aguadas",
-        state: "CO",
-        lat: 5.6333,
-        lng: -75.5333,
-        info: ""
-    },
-    {
-        name: "Salamina",
-        state: "CO",
-        lat: 5.4333,
-        lng: -75.6000,
-        info: ""
-    },
-    {
-        name: "Neira",
-        state: "CO",
-        lat: 5.1700,
-        lng: -75.5200,
-        info: ""
-    },
-    {
-        name: "Manizales",
-        state: "CO",
-        lat: 5.0688,
-        lng: -75.5173,
-        info: ""
-    },
-    {
-        name: "Pereira",
-        state: "CO",
-        lat: 4.8143,
-        lng: -75.6961,
-        info: ""
-    },
-    {
-        name: "Farm (Near Cartago)",
-        state: "CO",
-        lat: 4.7000,
-        lng: -75.9500,
-        info: ""
-    },
-    {
-        name: "Corozal (Near Tuluá)",
-        state: "CO",
-        lat: 4.1000,
-        lng: -76.1000,
-        info: ""
-    },
-    {
-        name: "El Cabuyal (Near Buga)",
-        state: "CO",
-        lat: 3.9000,
-        lng: -76.3000,
-        info: ""
-    },
-    {
-        name: "Piendamó",
-        state: "CO",
-        lat: 2.6500,
-        lng: -76.4833,
-        info: ""
-    },
-    {
-        name: "Popayán",
-        state: "CO",
-        lat: 2.4419,
-        lng: -76.6062,
-        info: ""
-    },
-    {
-        name: "Highway 25 (Near Rosas)",
-        state: "CO",
-        lat: 2.2000,
-        lng: -76.7000,
-        info: ""
-    },
-    {
-        name: "Higuerones-Mercaderes",
-        state: "CO",
-        lat: 1.8000,
-        lng: -76.9000,
-        info: ""
-    },
-    {
-        name: "El Empate (Near Chachagüí)",
-        state: "CO",
-        lat: 1.4500,
-        lng: -77.2000,
-        info: ""
-    },
-    {
-        name: "Pasto",
-        state: "CO",
-        lat: 1.2136,
-        lng: -77.2842,
-        info: ""
-    },
-    {
-        name: "Laguna de la Cocha",
-        state: "CO",
-        lat: 1.1000,
-        lng: -77.1700,
-        info: ""
-    },
-    {
-        name: "Sibundoy",
-        state: "CO",
-        lat: 1.2222,
-        lng: -76.9200,
-        info: ""
-    },
-    {
-        name: "Villagarzón",
-        state: "CO",
-        lat: 0.9922,
-        lng: -76.6083,
-        info: ""
-    },
-    {
-        name: "La Dorada (Near Putumayo)",
-        state: "CO",
-        lat: 0.8000,
-        lng: -76.6500,
-        info: ""
-    },
-    // ** Ecuador Segment **
-    {
-        name: "Quito",
-        state: "EC",
-        lat: -0.2201,
-        lng: -78.5126,
-        info: ""
-    },
-    {
-        name: "Quito (Return/Area)",
-        state: "EC",
-        lat: -0.2300,
-        lng: -78.5000,
-        info: ""
-    },
-    {
-        name: "Santa Rita (Near Sangolquí)",
-        state: "EC",
-        lat: -0.4000,
-        lng: -78.4500,
-        info: ""
-    },
-    {
-        name: "Cotopaxi National Park Entrance",
-        state: "EC",
-        lat: -0.6300,
-        lng: -78.4300,
-        info: ""
-    },
-    {
-        name: "Sigchos",
-        state: "EC",
-        lat: -0.7300,
-        lng: -79.0300,
-        info: ""
-    },
-    {
-        name: "Road (Near Zumbahua)",
-        state: "EC",
-        lat: -0.9000,
-        lng: -78.9500,
-        info: ""
-    },
-    {
-        name: "Lake Quilotoa",
-        state: "EC",
-        lat: -0.8660,
-        lng: -78.9050,
-        info: ""
-    },
-    {
-        name: "Latacunga",
-        state: "EC",
-        lat: -0.9381,
-        lng: -78.6166,
-        info: ""
-    },
-    {
-        name: "Ambato",
-        state: "EC",
-        lat: -1.2443,
-        lng: -78.6186,
-        info: ""
-    },
-    {
-        name: "Baños de Agua Santa",
-        state: "EC",
-        lat: -1.3980,
-        lng: -78.4330,
-        info: ""
-    },
-    {
-        name: "Ambato (Return)",
-        state: "EC",
-        lat: -1.2443,
-        lng: -78.6186,
-        info: ""
-    },
-    {
-        name: "Aguas Termales (Near Chimborazo)",
-        state: "EC",
-        lat: -1.5000,
-        lng: -78.9000,
-        info: ""
-    },
-    {
-        name: "Chimborazo (Refuge Area)",
-        state: "EC",
-        lat: -1.4500,
-        lng: -78.8500,
-        info: ""
-    },
-    {
-        name: "Road (Near Guamote)",
-        state: "EC",
-        lat: -1.7500,
-        lng: -78.7000,
-        info: ""
-    },
-    {
-        name: "Guamote",
-        state: "EC",
-        lat: -2.0100,
-        lng: -78.7150,
-        info: ""
-    },
-    {
-        name: "Joyagshi",
-        state: "EC",
-        lat: -2.3000,
-        lng: -78.8000,
-        info: ""
-    },
-    {
-        name: "Cañar",
-        state: "EC",
-        lat: -2.5600,
-        lng: -78.9300,
-        info: ""
-    },
-    {
-        name: "Cuenca",
-        state: "EC",
-        lat: -2.8900,
-        lng: -79.0040,
-        info: ""
-    },
-    {
-        name: "Tarqui (Near Cuenca)",
-        state: "EC",
-        lat: -3.0000,
-        lng: -79.0500,
-        info: ""
-    },
-    {
-        name: "Loja",
-        state: "EC",
-        lat: -3.9840,
-        lng: -79.2000,
-        info: ""
-    },
-    {
-        name: "Loja (Area)",
-        state: "EC",
-        lat: -3.9900,
-        lng: -79.2100,
-        info: ""
-    },
-    {
-        name: "Yangana",
-        state: "EC",
-        lat: -4.3800,
-        lng: -79.1600,
-        info: ""
-    },
-    {
-        name: "Palanda",
-        state: "EC",
-        lat: -4.5600,
-        lng: -79.1300,
-        info: ""
-    },
-    // ** Peru Segment **
-    {
-        name: "Namballe",
-        state: "PE",
-        lat: -5.0500,
-        lng: -79.2500,
-        info: ""
-    },
-    {
-        name: "Flor de la Frontera",
-        state: "PE",
-        lat: -5.3000,
-        lng: -79.0500,
-        info: ""
-    },
-    {
-        name: "La Floresta",
-        state: "PE",
-        lat: -5.6000,
-        lng: -79.0000,
-        info: ""
-    },
-    {
-        name: "Jaén",
-        state: "PE",
-        lat: -5.7600,
-        lng: -78.8000,
-        info: ""
-    },
-    {
-        name: "Chiple",
-        state: "PE",
-        lat: -6.0000,
-        lng: -78.6000,
-        info: ""
-    },
-    {
-        name: "Cutervo",
-        state: "PE",
-        lat: -6.3800,
-        lng: -78.8300,
-        info: ""
-    },
-    {
-        name: "Chota",
-        state: "PE",
-        lat: -6.5800,
-        lng: -78.6500,
-        info: ""
-    },
-    {
-        name: "Road 3NPE (Cajamarca Area)",
-        state: "PE",
-        lat: -7.0000,
-        lng: -78.3000,
-        info: ""
-    },
-    {
-        name: "Cajabamba (Near Cobro Negro)",
-        state: "PE",
-        lat: -7.6000,
-        lng: -78.1000,
-        info: ""
-    },
-    {
-        name: "Cajamarca",
-        state: "PE",
-        lat: -7.1500,
-        lng: -78.5000,
-        info: ""
-    },
-    {
-        name: "Church (Near San Marcos)",
-        state: "PE",
-        lat: -7.3000,
-        lng: -77.9500,
-        info: ""
-    },
-    {
-        name: "Cachachi",
-        state: "PE",
-        lat: -7.5000,
-        lng: -77.9000,
-        info: ""
-    },
-    {
-        name: "Cajabamba",
-        state: "PE",
-        lat: -7.6000,
-        lng: -78.0500,
-        info: ""
-    },
-    {
-        name: "Laguna Sausacocha",
-        state: "PE",
-        lat: -7.6500,
-        lng: -77.8500,
-        info: ""
-    },
-    {
-        name: "Laguna Huangagocha (Near Huamachuco)",
-        state: "PE",
-        lat: -7.7500,
-        lng: -77.9000,
-        info: ""
-    },
-    {
-        name: "Cochamarca",
-        state: "PE",
-        lat: -7.9000,
-        lng: -77.7500,
-        info: ""
-    },
-    {
-        name: "Chuquicara",
-        state: "PE",
-        lat: -8.5500,
-        lng: -78.2000,
-        info: ""
-    },
-    {
-        name: "Huarochiri",
-        state: "PE",
-        lat: -9.0000,
-        lng: -78.0000,
-        info: ""
-    },
-    {
-        name: "Caraz",
-        state: "PE",
-        lat: -9.0400,
-        lng: -77.8100,
-        info: ""
-    },
-    {
-        name: "Lake Parón",
-        state: "PE",
-        lat: -8.9600,
-        lng: -77.6500,
-        info: ""
-    },
-    {
-        name: "Caraz (Return)",
-        state: "PE",
-        lat: -9.0400,
-        lng: -77.8100,
-        info: ""
-    },
-    {
-        name: "Huamachuco",
-        state: "PE",
-        lat: -7.8000,
-        lng: -78.0500,
-        info: ""
-    },
-    {
-        name: "Lake 69 Trailhead (Near Caraz)",
-        state: "PE",
-        lat: -9.0500,
-        lng: -77.5800,
-        info: ""
-    },
-    {
-        name: "Yánama",
-        state: "PE",
-        lat: -9.1000,
-        lng: -77.6000,
-        info: ""
-    },
-    {
-        name: "Huaraz",
-        state: "PE",
-        lat: -9.5260,
-        lng: -77.5287,
-        info: ""
-    },
-    {
-        name: "Conococha",
-        state: "PE",
-        lat: -10.1500,
-        lng: -77.3000,
-        info: ""
-    },
-    {
-        name: "Carhuajara (Near Cajatambo)",
-        state: "PE",
-        lat: -10.4000,
-        lng: -77.0000,
-        info: ""
-    },
-    {
-        name: "Llipa",
-        state: "PE",
-        lat: -10.5500,
-        lng: -77.1000,
-        info: ""
-    },
-    {
-        name: "Huacho",
-        state: "PE",
-        lat: -11.0833,
-        lng: -77.6000,
-        info: ""
-    },
-    {
-        name: "Oyón",
-        state: "PE",
-        lat: -10.6667,
-        lng: -76.8000,
-        info: ""
-    },
-    {
-        name: "Rapaz",
-        state: "PE",
-        lat: -10.7500,
-        lng: -76.5000,
-        info: ""
-    },
-    {
-        name: "Parquín",
-        state: "PE",
-        lat: -10.9000,
-        lng: -76.3500,
-        info: ""
-    },
-    {
-        name: "Vichaycocha",
-        state: "PE",
-        lat: -11.1000,
-        lng: -76.2500,
-        info: ""
-    },
-    {
-        name: "Huayllay",
-        state: "PE",
-        lat: -11.2333,
-        lng: -76.4167,
-        info: ""
-    },
-    {
-        name: "Yantac (Near Huayllay)",
-        state: "PE",
-        lat: -11.3500,
-        lng: -76.3500,
-        info: ""
-    },
-    {
-        name: "Marcapomacocha",
-        state: "PE",
-        lat: -11.4500,
-        lng: -76.3000,
-        info: ""
-    },
-    {
-        name: "Río Blanco (Near San Mateo)",
-        state: "PE",
-        lat: -11.7500,
-        lng: -76.0500,
-        info: ""
-    },
-    {
-        name: "Carhuapampa de Pariac",
-        state: "PE",
-        lat: -11.8500,
-        lng: -75.9000,
-        info: ""
-    },
-    {
-        name: "Jauja",
-        state: "PE",
-        lat: -11.7500,
-        lng: -75.5000,
-        info: ""
-    },
-    {
-        name: "Huancayo",
-        state: "PE",
-        lat: -12.0673,
-        lng: -75.2117,
-        info: ""
-    },
-    {
-        name: "Laria",
-        state: "PE",
-        lat: -12.2500,
-        lng: -75.1000,
-        info: ""
-    },
-    {
-        name: "Manta",
-        state: "PE",
-        lat: -12.4500,
-        lng: -75.0500,
-        info: ""
-    },
-    {
-        name: "Huancavelica",
-        state: "PE",
-        lat: -12.7833,
-        lng: -74.9667,
-        info: ""
-    },
-    {
-        name: "Pucapampa",
-        state: "PE",
-        lat: -13.0000,
-        lng: -74.8000,
-        info: ""
-    },
-    {
-        name: "Rumichaca (Near Acobambilla)",
-        state: "PE",
-        lat: -13.3000,
-        lng: -74.5000,
-        info: ""
-    },
-    {
-        name: "Santa Fe (Near Huanta)",
-        state: "PE",
-        lat: -13.5000,
-        lng: -74.1500,
-        info: ""
-    },
-    {
-        name: "Totos",
-        state: "PE",
-        lat: -13.7500,
-        lng: -73.9000,
-        info: ""
-    },
-    {
-        name: "Pampa Cangallo",
-        state: "PE",
-        lat: -14.0500,
-        lng: -73.8000,
-        info: ""
-    },
-    {
-        name: "Vilcas Huamán",
-        state: "PE",
-        lat: -13.6000,
-        lng: -73.9500,
-        info: ""
-    },
-    {
-        name: "Village (Near Huancarama)",
-        state: "PE",
-        lat: -13.4000,
-        lng: -73.3000,
-        info: ""
-    },
-    {
-        name: "Andahuaylas",
-        state: "PE",
-        lat: -13.6500,
-        lng: -73.3833,
-        info: ""
-    },
-    {
-        name: "Huancabamba (Near Andahuaylas)",
-        state: "PE",
-        lat: -13.8000,
-        lng: -73.2000,
-        info: ""
-    },
-    {
-        name: "Santa Rosa",
-        state: "PE",
-        lat: -14.0500,
-        lng: -72.7000,
-        info: ""
-    },
-{
-        name: "Matara",
-        state: "PE",
-        lat: -14.3500, // Approximated Matara near Antabamba region
-        lng: -73.3000,
-        info: ""
-    },
-    {
-        name: "Antabamba",
-        state: "PE",
-        lat: -14.3600,
-        lng: -72.8800,
-        info: ""
-    },
-    {
-        name: "Curanco",
-        state: "PE",
-        lat: -15.0000, // Approximation towards the next road segment
-        lng: -72.5000,
-        info: ""
-    },
-    {
-        name: "Road (Near Cotahuasi)",
-        state: "PE",
-        lat: -15.4000,
-        lng: -72.2000,
-        info: ""
-    },
-    {
-        name: "Arequipa",
-        state: "PE",
-        lat: -16.3989,
-        lng: -71.5369,
-        info: ""
-    },
-    {
-        name: "Arequipa (Area)",
-        state: "PE",
-        lat: -16.3900,
-        lng: -71.5300,
-        info: ""
-    },
-    {
-        name: "Cayma (Arequipa Suburb)",
-        state: "PE",
-        lat: -16.3700,
-        lng: -71.5600,
-        info: ""
-    },
-    {
-        name: "Cañahuas",
-        state: "PE",
-        lat: -16.0200,
-        lng: -71.4500,
-        info: ""
-    },
-    {
-        name: "Pulpera (Near Chivay)",
-        state: "PE",
-        lat: -15.6500,
-        lng: -71.3000,
-        info: ""
-    },
-    {
-        name: "Condorcuyo",
-        state: "PE",
-        lat: -15.3100,
-        lng: -71.6100,
-        info: ""
-    },
-    {
-        name: "Espinar",
-        state: "PE",
-        lat: -14.9000,
-        lng: -71.2900,
-        info: ""
-    },
-    {
-        name: "El Descanso",
-        state: "PE",
-        lat: -14.5333,
-        lng: -71.3056,
-        info: ""
-    },
-    {
-        name: "Layo",
-        state: "PE",
-        lat: -14.5000,
-        lng: -71.1500,
-        info: ""
-    },
-    {
-        name: "Combapata",
-        state: "PE",
-        lat: -14.1000,
-        lng: -71.4300,
-        info: ""
-    },
-    {
-        name: "Palcoyo (Rainbow Mountain)",
-        state: "PE",
-        lat: -13.9000,
-        lng: -71.2800,
-        info: ""
-    },
-    {
-        name: "Combapata (Return)",
-        state: "PE",
-        lat: -14.1000,
-        lng: -71.4300,
-        info: ""
-    },
-    {
-        name: "Pitumarca",
-        state: "PE",
-        lat: -13.9200,
-        lng: -71.3500,
-        info: ""
-    },
-    {
-        name: "Cusipata",
-        state: "PE",
-        lat: -13.9000,
-        lng: -71.5000,
-        info: ""
-    },
-    {
-        name: "Pampacamara (Near Checacupe)",
-        state: "PE",
-        lat: -13.7000,
-        lng: -71.4000,
-        info: ""
-    },
-    {
-        name: "Mazuko",
-        state: "PE",
-        lat: -13.1000,
-        lng: -70.3700,
-        info: ""
-    },
-    {
-        name: "Road (Near Mazuco)",
-        state: "PE",
-        lat: -12.7500,
-        lng: -69.8000,
-        info: ""
-    },
-    {
-        name: "Puerto Maldonado",
-        state: "PE",
-        lat: -12.5933,
-        lng: -69.1914,
-        info: ""
-    },
-    {
-        name: "Alerta",
-        state: "PE",
-        lat: -11.9000,
-        lng: -68.8000,
-        info: ""
-    },
-    {
-        name: "Cubija (Cobija)",
-        state: "BO",
-        lat: -11.0200,
-        lng: -68.7667,
-        info: ""
-    },
-    {
-        name: "Brazilia (Near Assis Brasil)",
-        state: "BR",
-        lat: -10.9200,
-        lng: -69.5700,
-        info: ""
-    },
-    {
-        name: "Rio Branco",
-        state: "BR",
-        lat: -9.9700,
-        lng: -67.8100,
-        info: ""
-    },
-    {
-        name: "Road 364 (Near Abunã)",
-        state: "BR",
-        lat: -9.7000,
-        lng: -66.5000,
-        info: ""
-    },
-    {
-        name: "Gas station Abunã",
-        state: "BR",
-        lat: -9.6900,
-        lng: -65.3300,
-        info: ""
-    },
-    {
-        name: "Lourdes (Near Nova Mamoré)",
-        state: "BR",
-        lat: -10.0000, // Approximated location
-        lng: -64.7000,
-        info: ""
-    },
-    {
-        name: "Jaci Paraná",
-        state: "BR",
-        lat: -9.2500,
-        lng: -64.4100,
-        info: ""
-    },
-    {
-        name: "Porto Velho",
-        state: "BR",
-        lat: -8.7619,
-        lng: -63.9039,
-        info: ""
-    },
-    {
-        name: "Porto Velho (Boat Departure)",
-        state: "BR",
-        lat: -8.7500,
-        lng: -63.9000,
-        info: ""
-    },
-    {
-        name: "Manaus",
-        state: "BR",
-        lat: -3.1200,
-        lng: -60.0200,
-        info: ""
-    },
-    {
-        name: "Manaus (Boat Departure)",
-        state: "BR",
-        lat: -3.1100,
-        lng: -60.0100,
-        info: ""
-    },
-    {
-        name: "Santarém",
-        state: "BR",
-        lat: -2.4333,
-        lng: -54.7167,
-        info: ""
-    },
-    {
-        name: "Macapá",
-        state: "BR",
-        lat: 0.0400,
-        lng: -51.0600,
-        info: ""
-    },
-    {
-        name: "Macapá (Area)",
-        state: "BR",
-        lat: 0.0500,
-        lng: -51.0500,
-        info: ""
-    },
-    {
-        name: "Porto Grande",
-        state: "BR",
-        lat: 0.5500,
-        lng: -51.4167,
-        info: ""
-    },
-    {
-        name: "Tartarugalzinho",
-        state: "BR",
-        lat: 1.5000,
-        lng: -50.9167,
-        info: ""
-    },
-    {
-        name: "Calafate (Near Amapá)",
-        state: "BR",
-        lat: 2.1000,
-        lng: -51.2000,
-        info: ""
-    },
-    {
-        name: "Carnot (Near Calçoene)",
-        state: "BR",
-        lat: 2.5000,
-        lng: -51.1000,
-        info: ""
-    },
-    {
-        name: "BR156 community (Near Oiapoque)",
-        state: "BR",
-        lat: 3.5000,
-        lng: -51.5000,
-        info: ""
-    },
-    {
-        name: "Oiapoque",
-        state: "BR",
-        lat: 3.8400,
-        lng: -51.8300,
-        info: ""
-    },
-    {
-        name: "St. George (Saint-Georges-de-l'Oyapock)",
-        state: "GF",
-        lat: 3.8833,
-        lng: -51.8000,
-        info: ""
-    },
-    {
-        name: "Cayenne",
-        state: "GF",
-        lat: 4.9400,
-        lng: -52.3400,
-        info: ""
-    },
-    {
-        name: "Remire-MontJoly",
-        state: "GF",
-        lat: 4.8800,
-        lng: -52.2800,
-        info: ""
-    },
-    {
-        name: "Kourou",
-        state: "GF",
-        lat: 5.1600,
-        lng: -52.6400,
-        info: ""
-    }
+["New York","NY",40.7128,-74.006,""],
+["Rockland Lake State Park","NY",41.1166,-73.916,""],
+["Newburgh","NY",41.5034,-74.0107,""],
+["Livingston","NY",42.1273,-73.844,""],
+["Troy","NY",42.7284,-73.6918,""],
+["Whitehall","NY",43.567,-73.4079,""],
+["Addison County Airport (Skydive)","VT",44.0264,-73.2384,""],
+["South Hero","VT",44.6293,-73.3079,""],
+["Noyan","QC",45.0065,-73.3644,""],
+["Montreal","QC",45.5017,-73.5673,""],
+["St-Jérôme Aerodrome","QC",45.7909,-74.0416,""],
+["Mont-Tremblant","QC",46.1219,-74.5951,""],
+["Mont-Laurier","QC",46.5492,-75.4988,""],
+["Lac-Sainte-Marie (near Lac Roland)","QC",46.0694,-75.8344,""],
+["Lac Gabro (near Sainte-Anne-du-Lac)","QC",46.7333,-75.6167,""],
+["Val-d'Or","QC",48.1066,-77.7818,""],
+["Val-d'Or (20km South/Approx)","QC",47.9268,-77.7718,""],
+["Amos","QC",48.5667,-78.1167,""],
+["Rouyn-Noranda","QC",48.2366,-79.0152,""],
+["Bruno-Guigues","QC",47.5303,-79.2553,""],
+["Témiscamingue (Quebec-Ontario Border Area)","QC/ON",46.7269,-79.1,""],
+["North Bay","ON",46.309,-79.4608,""],
+["Sudbury","ON",46.49,-81.01,""],
+["Whitefish","ON",46.3986,-81.3094,""],
+["Highway 17 (near Thessalon, ON - approx for Case Road)","ON",46.257,-83.565,""],
+["Highway 17 (near Blind River, ON - 85km west of Thessalon)","ON",46.195,-82.955,""],
+["Little Rapids","ON",46.4172,-82.8808,""],
+["Sault Ste. Marie","ON",46.5333,-84.3467,""],
+["Batchawana Bay","ON",46.8997,-84.5768,""],
+["Wawa","ON",47.9942,-84.7709,""],
+["White River","ON",48.5833,-85.25,""],
+["Marathon","ON",48.718,-86.386,""],
+["Pays Plat First Nation","ON",48.868,-87.214,""],
+["Highway 17 (Nipigon Area)","ON",49.0069,-88.2435,""],
+["Kenora","ON",49.769,-94.4913,""],
+["Elma","MB",50.0837,-95.845,""],
+["Winnipeg","MB",49.8951,-97.1384,""],
+["Edmonton","AB",53.5461,-113.4938,""],
+["Calgary","AB",51.0447,-114.0719,""],
+["Banff","AB",51.1784,-115.5708,""],
+["Kelowna","BC",49.888,-119.496,""],
+["Highway 97C (Merritt-Kelowna area)","BC",49.7711,-120.37,""],
+["New Westminster","BC",49.2069,-122.911,""],
+["Vancouver","BC",49.2827,-123.1207,""],
+["Sidney Airport (Skydive)","BC",48.647,-123.428,""],
+["Victoria","BC",48.4284,-123.3656,""],
+["Metchosin/Sooke (Farm area)","BC",48.4,-123.63,""],
+["Nanaimo","BC",49.1659,-124.008,""],
+["Port Alberni","BC",49.233,-124.8,""],
+["Tofino","BC",49.1558,-125.9083,""],
+["Vancouver (Return 1)","BC",49.2827,-123.1207,""],
+["Calgary (Return 1)","AB",51.0447,-114.0719,""],
+["Sicamous","BC",50.844,-119.0069,""],
+["Revelstoke","BC",50.999,-118.197,""],
+["Edmonton (Return 1)","AB",53.5461,-113.4938,""],
+["Prince George","BC",53.9171,-122.7497,""],
+["Fort St. John","BC",56.2483,-120.8524,""],
+["Fort Nelson","BC",58.805,-122.705,""],
+["Whitehorse","YT",60.7161,-135.0558,""],
+["Fort Nelson (Return)","BC",58.805,-122.705,""],
+["Edmonton (Return 2)","AB",53.5461,-113.4938,""],
+["Calgary (Return 2)","AB",51.0447,-114.0719,""],
+["Vancouver (Return 2)","BC",49.2827,-123.1207,""],
+["New Westminster (Return)","BC",49.2069,-122.911,""],
+["White Rock","BC",49.02,-122.8,""],
+["Burlington","WA",48.4735,-122.3276,""],
+["Freeland","WA",48.0333,-122.5667,""],
+["Seattle","WA",47.6062,-122.3321,""],
+["Bellevue","WA",47.6104,-122.2015,""],
+["Rosburg","WA",46.2928,-123.6375,""],
+["Astoria","OR",46.1878,-123.8313,""],
+["Rockaway Beach","OR",45.6032,-123.9454,""],
+["Newport","OR",44.6293,-124.0534,""],
+["Florence","OR",43.9912,-124.1065,""],
+["Coos Bay","OR",43.3754,-124.2185,""],
+["Brookings","OR",42.0573,-124.2987,""],
+["Highway 1 (Redwood National Park Area)","CA",41.2,-124.08,""],
+["San Francisco","CA",37.7749,-122.4194,""],
+["Berkeley","CA",37.8715,-122.273,""],
+["San Jose","CA",37.3382,-121.8863,""],
+["Aptos","CA",36.9899,-121.8908,""],
+["Carmel Valley","CA",36.5298,-121.7247,""],
+["Highway 1 (Big Sur Coast)","CA",36.14,-121.68,""],
+["Grover Beach","CA",35.1972,-120.6214,""],
+["Taft-Maricopa Airport (Skydiving)","CA",35.1528,-119.467,""],
+["Highway 178 (Mojave Area)","CA",35.6,-118,""],
+["Furnace Creek","CA",36.4627,-116.8676,""],
+["Death Valley Junction","CA",36.3119,-116.4025,""],
+["Las Vegas","NV",36.1716,-115.1391,""],
+["Las Vegas (Hostel Area/Return)","NV",36.1,-115.1,""],
+["Kelso Depot (Mojave)","CA",35.0347,-115.5867,""],
+["Amboy","CA",34.5558,-115.7533,""],
+["Cathedral City","CA",33.7786,-116.4842,""],
+["Palm Springs","CA",33.8303,-116.5453,""],
+["Escondido","CA",33.1192,-117.0869,""],
+["Lake Elsinore (Skydive)","CA",33.66,-117.3333,""],
+["Dana Point","CA",33.4686,-117.68,""],
+["Escondido (Return)","CA",33.1192,-117.0869,""],
+["Brawley","CA",32.9789,-115.5342,""],
+["Slab City","CA",33.2667,-115.5,""],
+["Palo Verde","CA",33.3283,-114.7356,""],
+["Aguila","AZ",34.167,-113.193,""],
+["Prescott","AZ",34.54,-112.4685,""],
+["Sedona","AZ",34.8697,-111.9774,""],
+["Highway 180 (Flagstaff Area)","AZ",35.15,-111.75,""],
+["Springerville","AZ",34.1378,-109.2882,""],
+["Reserve","NM",33.7081,-108.7561,""],
+["Santa Fe","NM",35.687,-105.9378,""],
+["New Mexico-Colorado Border (near US-285)","CO",37,-106,""],
+["Moffat","CO",37.9328,-105.8906,""],
+["Lakewood","CO",39.7118,-105.0805,""],
+["Denver","CO",39.7392,-104.9903,""],
+["Fort Morgan","CO",40.2458,-103.7997,""],
+["Wray","CO",40.0633,-102.2471,""],
+["Stratton","NE",40.1264,-101.4018,""],
+["Arapahoe","NE",40.2975,-99.8971,""],
+["Holdrege","NE",40.4522,-99.3787,""],
+["Hastings","NE",40.5878,-98.3965,""],
+["Fairmont","NE",40.6385,-97.5501,""],
+["Lincoln","NE",40.8136,-96.7026,""],
+["Omaha","NE",41.2565,-95.9345,""],
+["Corning","IA",40.9995,-94.7377,""],
+["Highway 34 (Near Osceola, IA)","IA",41.04,-93.75,""],
+["Burlington","IA",40.8037,-91.109,""],
+["Kewanee","IL",41.2356,-89.9218,""],
+["Rochelle Airport (Skydive)","IL",41.87,-89.06,""],
+["Chicago","IL",41.8781,-87.6298,""],
+["Skydive Chicago (Ottawa Area)","IL",41.3653,-88.9419,""],
+["Spring Valley","IL",41.3217,-89.1981,""],
+["Peoria","IL",40.6936,-89.5888,""],
+["Mount Sterling","IL",40.1775,-90.758,""],
+["Pleasant Hill","IL",39.525,-90.875,""],
+["St. Louis","MO",38.627,-90.1994,""],
+["Chester","IL",37.915,-89.8228,""],
+["Charleston","MO",36.92,-89.3622,""],
+["Tiptonville","TN",36.3684,-89.4795,""],
+["Covington","TN",35.5681,-89.6462,""],
+["Memphis","TN",35.1495,-90.0489,""],
+["Clarksdale","MS",34.1983,-90.5723,""],
+["Eudora","AR",33.1009,-91.2415,""],
+["Newellton","LA",32.0674,-91.229,""],
+["Road 418LA (Near St. Joseph)","LA",31.85,-91.2,""],
+["Baton Rouge","LA",30.4515,-91.1871,""],
+["LaPlace","LA",30.0694,-90.4734,""],
+["New Orleans","LA",29.9511,-90.0715,""],
+["Mobile","AL",30.6954,-88.0399,"City in Alabama"],
+["Tallahassee","FL",30.4383,-84.2807,"Capital of Florida"],
+["Homosassa Springs","FL",28.7905,-82.5802,"Homosassa Springs, Florida"],
+["Bradenton","FL",27.4989,-82.5748,""],
+["Miami","FL",25.7617,-80.1918,"Miami, Florida"],
+["Key Largo","FL",25.1053,-80.4475,"Key Largo, Florida"],
+["Key West","FL",24.5551,-81.78,""],
+["Key Largo","FL",25.1053,-80.4475,"Key Largo, Florida"],
+["Miami","FL",25.7617,-80.1918,"Miami, Florida"],
+["Atlantic Beach","FL",30.3341,-81.3984,""],
+["West Palm Beach","FL",26.7153,-80.0534,""],
+["Tallahassee","FL",30.4383,-84.2807,"Capital of Florida"],
+["Mobile","AL",30.6954,-88.0399,"City in Alabama"],
+["New Orleans (Return)","LA",29.9511,-90.0715,""],
+["Houma","LA",29.5952,-90.7198,""],
+["Adeline (Near New Iberia)","LA",30.0258,-91.7317,""],
+["Lafayette","LA",30.2241,-92.0198,""],
+["Kemah","TX",29.5399,-95.021,""],
+["Houston","TX",29.7604,-95.3698,""],
+["Bellville","TX",29.9324,-96.2573,""],
+["Smithville","TX",30.0099,-97.1408,""],
+["Austin","TX",30.2672,-97.7431,""],
+["Highway 80 (Near San Marcos, TX)","TX",29.88,-97.94,""],
+["Skidmore","TX",28.3275,-97.7472,""],
+["Edinburg","TX",26.3023,-98.1633,""],
+["Highway 97 (Near Sarita)","TX",27.24,-97.63,""],
+["San Fernando","MX-TAM",24.855,-98.807,""],
+["Jiménez","MX-TAM",24.269,-98.204,""],
+["Ciudad Victoria","MX-TAM",23.7333,-99.1333,""],
+["Ciudad del Maíz","MX-SLP",22.408,-99.605,""],
+["San Luis Potosí","MX-SLP",22.1528,-100.9859,""],
+["Zacatecas","MX-ZAC",22.7715,-102.583,""],
+["Tabasco","MX-ZAC",22.4283,-102.85,""],
+["Aguascalientes","MX-AGS",21.8833,-102.2833,""],
+["Lagos de Moreno","MX-JAL",21.365,-101.93,""],
+["León","MX-GUA",21.1219,-101.6823,""],
+["León (20km Area)","MX-GUA",21.05,-101.75,""],
+["Guanajuato","MX-GUA",21.0189,-101.2589,""],
+["Dolores Hidalgo","MX-GUA",20.9333,-100.9333,""],
+["San Miguel de Allende","MX-GUA",20.9144,-100.742,""],
+["Yuriria","MX-GUA",20.2,-101.15,""],
+["Morelia","MX-MIC",19.7042,-101.1965,""],
+["Pátzcuaro","MX-MIC",19.5167,-101.6,""],
+["Morelia (Return)","MX-MIC",19.7042,-101.1965,""],
+["Highway 15 Bridge (Near Zitácuaro)","MX-MIC",19.41,-100.35,""],
+["Toluca","MX-MEX",19.2826,-99.6542,""],
+["Nevado de Toluca (Summit Area)","MX-MEX",19.109,-99.761,""],
+["Metepec","MX-MEX",19.2558,-99.5997,""],
+["Mexico City","MX-CMX",19.4326,-99.1332,""],
+["Cuautla (Skydive)","MX-MOR",18.81,-98.96,""],
+["Mexico City (Return)","MX-CMX",19.4326,-99.1332,""],
+["Huejotzingo","MX-PUE",19.1417,-98.4,""],
+["Cholula","MX-PUE",19.062,-98.313,""],
+["Puebla","MX-PUE",19.0438,-98.2001,""],
+["Skydive Puebla (Atlixco Area)","MX-PUE",18.8913,-98.441,""],
+["Huajuapan de León","MX-OAX",17.8,-97.7833,""],
+["Asunción Nochixtlán","MX-OAX",17.4833,-96.95,""],
+["Oaxaca City","MX-OAX",17.0732,-96.7266,""],
+["Sola de Vega","MX-OAX",16.5167,-97,""],
+["El Vidrio (Near San Pedro Juchatengo)","MX-OAX",16.2,-97.06,""],
+["Puerto Escondido","MX-OAX",15.86,-97.073,""],
+["Palotada (Near Santa María Tonameca)","MX-OAX",15.75,-96.65,""],
+["Highway 200 (Coastal Road)","MX-OAX",16.05,-95.8,""],
+["Tehuantepec","MX-OAX",16.3333,-95.2333,""],
+["San Pedro Tapanatepec","MX-OAX",16.3888,-94.2052,""],
+["San Miguel Chimalapa (Approx for San Miguel)","MX-OAX",16.89,-94.01,""],
+["Tuxtla Gutiérrez","MX-CHP",16.7535,-93.1165,""],
+["Ocosingo","MX-CHP",16.9602,-92.091,""],
+["Highway 199 (Near Palenque)","MX-CHP",17.5,-91.9,""],
+["Villahermosa","MX-TAB",17.9869,-92.9304,""],
+["Highway 180 Church (Near Ciudad del Carmen)","MX-CAM",18.65,-91.5,""],
+["Isla Aguada","MX-CAM",18.6656,-91.492,""],
+["Campeche","MX-CAM",19.8324,-90.5369,""],
+["Mérida","MX-YUC",20.9671,-89.5925,""],
+["X-Can","MX-YUC",20.73,-87.8967,""],
+["Cancún","MX-ROO",21.1619,-86.8515,""],
+["Puerto Morelos","MX-ROO",20.8547,-86.8795,""],
+["Playa Del Carmen","MX-ROO",20.6277,-87.0805,""],
+["Felipe Carrillo Puerto","MX-ROO",19.581,-88.056,""],
+["Bacalar","MX-ROO",18.6667,-88.3833,""],
+["Orange Walk Town","BZ",18.0772,-88.5606,""],
+["Belize City","BZ",17.5,-88.2,""],
+["Belize-Guatemala Border (Benque Viejo del Carmen)","BZ/GT",17.06,-89.14,""],
+["Flores","GT",16.923,-89.889,""],
+["Cobán","GT",15.47,-90.3667,""],
+["Santa Cruz del Quiché","GT",15.0333,-91.1333,""],
+["Lake Atitlán (Panajachel)","GT",14.735,-91.15,""],
+["San Andrés Itzapa","GT",14.65,-90.95,""],
+["Jocotenango","GT",14.6,-90.75,""],
+["Road CA-2 (Escuintla Area)","GT",14,-91,""],
+["Garita Palmera","SV",13.8,-90,""],
+["San Salvador","SV",13.6929,-89.2182,""],
+["San Lorenzo","HN",13.45,-87.45,""],
+["San Miguel","SV",13.4833,-88.1667,""],
+["Jícaro Galán","HN",13.3833,-87.4167,""],
+["Choluteca","HN",13.3,-87.2,""],
+["Chichigalpa","NI",12.57,-86.35,""],
+["Las Peñitas","NI",12.35,-86.95,""],
+["Lake Xiloá (Near Managua)","NI",12.2,-86.33,""],
+["Granada","NI",11.9271,-85.9557,""],
+["Ometepe Island (Moyogalpa)","NI",11.5333,-85.67,""],
+["Rivas","NI",11.4372,-85.8272,""],
+["Palmares","CR",10,-84.45,""],
+["Atenas","CR",9.973,-84.375,""],
+["San José","CR",9.9328,-84.085,""],
+["Santa María de Dota","CR",9.65,-84,""],
+["Copey de Dota","CR",9.585,-83.9,""],
+["Cartago","CR",9.8644,-83.9197,""],
+["Río Banano (Near Limón)","CR",9.97,-83.15,""],
+["Playa Negra","CR",9.6917,-82.7483,""],
+["San José (Return 1)","CR",9.9328,-84.085,""],
+["Tierras Enamoradas (Near San Carlos)","CR",10.42,-84.28,""],
+["San José (Return 2)","CR",9.9328,-84.085,""],
+["Río Banano (Return 1)","CR",9.97,-83.15,""],
+["Jiménez","CR",10.217,-84.05,""],
+["Florencia","CR",10.37,-84.45,""],
+["Tierras Enamoradas (Return)","CR",10.42,-84.28,""],
+["Atenas (Return)","CR",9.973,-84.375,""],
+["San José (Return 3)","CR",9.9328,-84.085,""],
+["Turrialba","CR",9.9,-83.6833,""],
+["Pacuare (River Area)","CR",10.08,-83.47,""],
+["Río Banano (Return 2)","CR",9.97,-83.15,""],
+["Puerto Viejo de Talamanca","CR",9.6565,-82.7533,""],
+["Catarina (Near Puerto Viejo)","CR",9.7,-82.75,""],
+["Guabito (CR-PA Border)","PA",9.5333,-82.5,""],
+["Chiriquí Grande","PA",8.95,-82.1,""],
+["Tolé","PA",8.3581,-81.7408,""],
+["Santiago de Veraguas","PA",8.0933,-80.9789,""],
+["24 de Diciembre (Panama City East)","PA",9.0833,-79.3333,""],
+["Panama City","PA",8.9824,-79.5199,""],
+["Sabanitas","PA",9.35,-79.8667,""],
+["Portobelo","PA",9.55,-79.65,""],
+["Linton Bay","PA",9.6,-79.7,""],
+["La Chorrera","PA",8.8833,-79.7833,""],
+["El Llano","PA",8.8,-78.68,""],
+["Puerto de Cartí (Darién Starting Point)","PA",9.35,-78.95,""],
+["Puerto Obaldía (Boat to Colombia)","PA",8.65,-77.4,""],
+["Turbo (Darién Ending Point)","CO",8.09,-76.73,""],
+["Arboletes","CO",8.85,-76.4333,""],
+["Hotel Manhattan (Near Tolú)","CO",9.5,-75.75,""],
+["Chinú","CO",8.91,-75.4,""],
+["Ovejas","CO",9.5167,-75.1667,""],
+["San Jacinto","CO",9.8333,-75.1667,""],
+["Turbaco","CO",10.3333,-75.4,""],
+["Road (Near Barranquilla)","CO",10.7,-74.9,""],
+["Palermo (Near Ciénaga)","CO",10.98,-74.3,""],
+["El Rodadero","CO",11.2,-74.2,""],
+["Santa Marta","CO",11.2333,-74.1997,""],
+["Palomino","CO",11.45,-73.55,""],
+["Police Control (Riohacha Area)","CO",11.55,-72.9,""],
+["Colombia - Venezuela Border (Maicao Area)","CO/VE",11.35,-72.23,""],
+["Paraguaipoa","VE",11.22,-71.9714,""],
+["Santa Cruz de Mara","VE",10.79,-71.69,"Near Maracaibo"],
+["Paraguaipoa","VE",11.22,-71.9714,""],
+["Maicao","CO",11.385,-72.242,""],
+["San Juan del Cesar","CO",10.8667,-73,""],
+["Agustín Codazzi","CO",10.0465,-73.0067,""],
+["San Roque","CO",9.38,-73.78,""],
+["San Alberto","CO",8,-73.96,""],
+["Road 45A (Near Bucaramanga)","CO",7.5,-73.3,""],
+["La Reserva Natural (Near Cimitarra)","CO",6.5,-74,""],
+["Bucaramanga","CO",7.1132,-73.1195,""],
+["Road 45A (Near San Gil)","CO",6.5,-73.18,""],
+["Mogotes","CO",6.4667,-72.9667,""],
+["Onzaga","CO",6.1667,-72.8833,""],
+["Soatá","CO",6.3333,-72.7167,""],
+["La Uvita","CO",6.2667,-72.7,""],
+["Panqueba","CO",6.2736,-72.6369,""],
+["Güicán de la Sierra","CO",6.425,-72.45,""],
+["Sierra Nevada del Cocuy (High Point)","CO",6.47,-72.3,""],
+["El Cocuy","CO",6.4172,-72.3364,""],
+["Finca (Near La Cabaña)","CO",6.1,-72.5,""],
+["Sogamoso","CO",5.7188,-72.9351,""],
+["Lake Tota (Acuaparque Area)","CO",5.59,-72.93,""],
+["Toca","CO",5.6667,-73.2,""],
+["Tunja","CO",5.535,-73.3598,""],
+["Villa de Leyva","CO",5.645,-73.535,""],
+["Gachantivá","CO",5.635,-73.585,""],
+["Vélez","CO",6.0083,-73.6806,""],
+["Cimitarra","CO",6.1833,-73.9167,""],
+["Highway 62 (Near Puerto Olaya)","CO",6.48,-74.3,""],
+["San José del Nus","CO",6.45,-74.9,""],
+["Highway 25 (Near Barbosa)","CO",6.55,-75.3,""],
+["Medellín","CO",6.2442,-75.5812,""],
+["La Ceja","CO",6.0333,-75.4333,""],
+["San Antonio de Prado","CO",6.15,-75.6,""],
+["La Pintada","CO",5.67,-75.57,""],
+["Aguadas","CO",5.6333,-75.5333,""],
+["Salamina","CO",5.4333,-75.6,""],
+["Neira","CO",5.17,-75.52,""],
+["Manizales","CO",5.0688,-75.5173,""],
+["Pereira","CO",4.8143,-75.6961,""],
+["Farm (Near Cartago)","CO",4.7,-75.95,""],
+["Corozal (Near Tuluá)","CO",4.1,-76.1,""],
+["El Cabuyal (Near Buga)","CO",3.9,-76.3,""],
+["Piendamó","CO",2.65,-76.4833,""],
+["Popayán","CO",2.4419,-76.6062,""],
+["Highway 25 (Near Rosas)","CO",2.2,-76.7,""],
+["Higuerones-Mercaderes","CO",1.8,-76.9,""],
+["El Empate (Near Chachagüí)","CO",1.45,-77.2,""],
+["Pasto","CO",1.2136,-77.2842,""],
+["Laguna de la Cocha","CO",1.1,-77.17,""],
+["Sibundoy","CO",1.2222,-76.92,""],
+["Villagarzón","CO",0.9922,-76.6083,""],
+["La Dorada (Near Putumayo)","CO",0.8,-76.65,""],
+["Quito","EC",-0.2201,-78.5126,""],
+["Quito (Return/Area)","EC",-0.23,-78.5,""],
+["Santa Rita (Near Sangolquí)","EC",-0.4,-78.45,""],
+["Cotopaxi National Park Entrance","EC",-0.63,-78.43,""],
+["Sigchos","EC",-0.73,-79.03,""],
+["Road (Near Zumbahua)","EC",-0.9,-78.95,""],
+["Lake Quilotoa","EC",-0.866,-78.905,""],
+["Latacunga","EC",-0.9381,-78.6166,""],
+["Ambato","EC",-1.2443,-78.6186,""],
+["Baños de Agua Santa","EC",-1.398,-78.433,""],
+["Ambato (Return)","EC",-1.2443,-78.6186,""],
+["Aguas Termales (Near Chimborazo)","EC",-1.5,-78.9,""],
+["Chimborazo (Refuge Area)","EC",-1.45,-78.85,""],
+["Road (Near Guamote)","EC",-1.75,-78.7,""],
+["Guamote","EC",-2.01,-78.715,""],
+["Joyagshi","EC",-2.3,-78.8,""],
+["Cañar","EC",-2.56,-78.93,""],
+["Cuenca","EC",-2.89,-79.004,""],
+["Tarqui (Near Cuenca)","EC",-3,-79.05,""],
+["Loja","EC",-3.984,-79.2,""],
+["Loja (Area)","EC",-3.99,-79.21,""],
+["Yangana","EC",-4.38,-79.16,""],
+["Palanda","EC",-4.56,-79.13,""],
+["Namballe","PE",-5.05,-79.25,""],
+["Flor de la Frontera","PE",-5.3,-79.05,""],
+["La Floresta","PE",-5.6,-79,""],
+["Jaén","PE",-5.76,-78.8,""],
+["Chiple","PE",-6,-78.6,""],
+["Cutervo","PE",-6.38,-78.83,""],
+["Chota","PE",-6.58,-78.65,""],
+["Road 3NPE (Cajamarca Area)","PE",-7,-78.3,""],
+["Cajabamba (Near Cobro Negro)","PE",-7.6,-78.1,""],
+["Cajamarca","PE",-7.15,-78.5,""],
+["Church (Near San Marcos)","PE",-7.3,-77.95,""],
+["Cachachi","PE",-7.5,-77.9,""],
+["Cajabamba","PE",-7.6,-78.05,""],
+["Laguna Sausacocha","PE",-7.65,-77.85,""],
+["Laguna Huangagocha (Near Huamachuco)","PE",-7.75,-77.9,""],
+["Cochamarca","PE",-7.9,-77.75,""],
+["Chuquicara","PE",-8.55,-78.2,""],
+["Huarochiri","PE",-9,-78,""],
+["Caraz","PE",-9.04,-77.81,""],
+["Lake Parón","PE",-8.96,-77.65,""],
+["Caraz (Return)","PE",-9.04,-77.81,""],
+["Huamachuco","PE",-7.8,-78.05,""],
+["Lake 69 Trailhead (Near Caraz)","PE",-9.05,-77.58,""],
+["Yánama","PE",-9.1,-77.6,""],
+["Huaraz","PE",-9.526,-77.5287,""],
+["Conococha","PE",-10.15,-77.3,""],
+["Carhuajara (Near Cajatambo)","PE",-10.4,-77,""],
+["Llipa","PE",-10.55,-77.1,""],
+["Huacho","PE",-11.0833,-77.6,""],
+["Oyón","PE",-10.6667,-76.8,""],
+["Rapaz","PE",-10.75,-76.5,""],
+["Parquín","PE",-10.9,-76.35,""],
+["Vichaycocha","PE",-11.1,-76.25,""],
+["Huayllay","PE",-11.2333,-76.4167,""],
+["Yantac (Near Huayllay)","PE",-11.35,-76.35,""],
+["Marcapomacocha","PE",-11.45,-76.3,""],
+["Río Blanco (Near San Mateo)","PE",-11.75,-76.05,""],
+["Carhuapampa de Pariac","PE",-11.85,-75.9,""],
+["Jauja","PE",-11.75,-75.5,""],
+["Huancayo","PE",-12.0673,-75.2117,""],
+["Laria","PE",-12.25,-75.1,""],
+["Manta","PE",-12.45,-75.05,""],
+["Huancavelica","PE",-12.7833,-74.9667,""],
+["Pucapampa","PE",-13,-74.8,""],
+["Rumichaca (Near Acobambilla)","PE",-13.3,-74.5,""],
+["Santa Fe (Near Huanta)","PE",-13.5,-74.15,""],
+["Totos","PE",-13.75,-73.9,""],
+["Pampa Cangallo","PE",-14.05,-73.8,""],
+["Vilcas Huamán","PE",-13.6,-73.95,""],
+["Village (Near Huancarama)","PE",-13.4,-73.3,""],
+["Andahuaylas","PE",-13.65,-73.3833,""],
+["Huancabamba (Near Andahuaylas)","PE",-13.8,-73.2,""],
+["Santa Rosa","PE",-14.05,-72.7,""],
+["Matara","PE",-14.35,-73.3,""],
+["Antabamba","PE",-14.36,-72.88,""],
+["Curanco","PE",-15,-72.5,""],
+["Road (Near Cotahuasi)","PE",-15.4,-72.2,""],
+["Arequipa","PE",-16.3989,-71.5369,""],
+["Arequipa (Area)","PE",-16.39,-71.53,""],
+["Cayma (Arequipa Suburb)","PE",-16.37,-71.56,""],
+["Cañahuas","PE",-16.02,-71.45,""],
+["Pulpera (Near Chivay)","PE",-15.65,-71.3,""],
+["Condorcuyo","PE",-15.31,-71.61,""],
+["Espinar","PE",-14.9,-71.29,""],
+["El Descanso","PE",-14.5333,-71.3056,""],
+["Layo","PE",-14.5,-71.15,""],
+["Combapata","PE",-14.1,-71.43,""],
+["Palcoyo (Rainbow Mountain)","PE",-13.9,-71.28,""],
+["Combapata (Return)","PE",-14.1,-71.43,""],
+["Pitumarca","PE",-13.92,-71.35,""],
+["Cusipata","PE",-13.9,-71.5,""],
+["Pampacamara (Near Checacupe)","PE",-13.7,-71.4,""],
+["Mazuko","PE",-13.1,-70.37,""],
+["Road (Near Mazuco)","PE",-12.75,-69.8,""],
+["Puerto Maldonado","PE",-12.5933,-69.1914,""],
+["Alerta","PE",-11.9,-68.8,""],
+["Cubija (Cobija)","BO",-11.02,-68.7667,""],
+["Brazilia (Near Assis Brasil)","BR",-10.92,-69.57,""],
+["Rio Branco","BR",-9.97,-67.81,""],
+["Road 364 (Near Abunã)","BR",-9.7,-66.5,""],
+["Gas station Abunã","BR",-9.69,-65.33,""],
+["Lourdes (Near Nova Mamoré)","BR",-10,-64.7,""],
+["Jaci Paraná","BR",-9.25,-64.41,""],
+["Porto Velho","BR",-8.7619,-63.9039,""],
+["Porto Velho (Boat Departure)","BR",-8.75,-63.9,""],
+["Manaus","BR",-3.12,-60.02,""],
+["Manaus (Boat Departure)","BR",-3.11,-60.01,""],
+["Santarém","BR",-2.4333,-54.7167,""],
+["Macapá","BR",0.04,-51.06,""],
+["Macapá (Area)","BR",0.05,-51.05,""],
+["Porto Grande","BR",0.55,-51.4167,""],
+["Tartarugalzinho","BR",1.5,-50.9167,""],
+["Calafate (Near Amapá)","BR",2.1,-51.2,""],
+["Carnot (Near Calçoene)","BR",2.5,-51.1,""],
+["BR156 community (Near Oiapoque)","BR",3.5,-51.5,""],
+["Oiapoque","BR",3.84,-51.83,""],
+["St. George (Saint-Georges-de-l'Oyapock)","GF",3.8833,-51.8,""],
+["Cayenne","GF",4.94,-52.34,""],
+["Remire-MontJoly","GF",4.88,-52.28,""],
+["Kourou","GF",5.16,-52.64,""]
 ];
