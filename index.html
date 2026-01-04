@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<!-- Google Ownership -->
-<meta name="google-site-verification" content="np9eMTNhnJVeG1mUpmD67aELeh944EL1eS1FhHkaHKg" />
+  <!-- Google Ownership -->
+  <meta name="google-site-verification" content="np9eMTNhnJVeG1mUpmD67aELeh944EL1eS1FhHkaHKg" />
 
-	<script>
-		 // disabling auto directing if the english option is clicked , for debugging clear local storage
-	 // localStorage.removeItem("langRedirected");
-(function() {
-  // Only redirect from English root once
-  const redirected = localStorage.getItem("langRedirected");
-  const onRoot = window.location.pathname === "/Yann-dev/" || window.location.pathname === "/Yann-dev/index.html";
-  
-  if (!redirected && onRoot) {
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang && userLang.startsWith("fr")) {
-      localStorage.setItem("langRedirected", "true");
-      setTimeout(() => {
-        window.location.href = "./fr/index.html";
-      }, 100); // delay to ensure storage is saved
-    }
-  }
-})();
-</script>
+  <script>
+    // disabling auto directing if the english option is clicked , for debugging clear local storage
+    // localStorage.removeItem("langRedirected");
+    (function () {
+      // Only redirect from English root once
+      const redirected = localStorage.getItem("langRedirected");
+      const onRoot = window.location.pathname === "/Yann-dev/" || window.location.pathname === "/Yann-dev/index.html";
 
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      if (!redirected && onRoot) {
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang && userLang.startsWith("fr")) {
+          localStorage.setItem("langRedirected", "true");
+          setTimeout(() => {
+            window.location.href = "./fr/index.html";
+          }, 100); // delay to ensure storage is saved
+        }
+      }
+    })();
+  </script>
 
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <title>Yann Cohen – Data Analyst</title>
+
+
+  <title>Yann Cohen – Data Analyst</title>
 
   <!-- SEO -->
 
-  <meta name="description" content="Yann Cohen – Data Analyst and Web Designer based in Martinique. Expert in R, Python, and data visualization.">
-  <meta name="keywords" content="Yann Cohen, Yann Tourman, data analyst, data visualization, R, Python, SQL, web designer, Martinique, bike-tourist, TOURMAN">
+  <meta name="description"
+    content="Yann Cohen – Data Analyst and Web Designer based in Martinique. Expert in R, Python, and data visualization.">
+  <meta name="keywords"
+    content="Yann Cohen, Yann Tourman, data analyst, data visualization, R, Python, SQL, web designer, Martinique, bike-tourist, TOURMAN">
   <meta name="author" content="Yann Cohen">
   <meta name="robots" content="index, follow">
 
@@ -47,9 +50,9 @@
   <link rel="alternate" hreflang="en" href="https://iamyannc.github.io/Yann-dev/">
   <link rel="alternate" hreflang="fr" href="https://iamyannc.github.io/Yann-dev/fr/">
   <link rel="alternate" hreflang="x-default" href="https://iamyannc.github.io/Yann-dev/" />
-  
+
   <!-- Schema.org JSON-LD -->
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -149,7 +152,8 @@
   <!-- Open Graph for Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yann Cohen – Data Analyst">
-  <meta property="og:description" content="Explore the portfolio of Yann Cohen (aka Tourman) – Data Analyst and Web Dveloper based in Martinique, expert in R, Python, and data visualization.">
+  <meta property="og:description"
+    content="Explore the portfolio of Yann Cohen (aka Tourman) – Data Analyst and Web Dveloper based in Martinique, expert in R, Python, and data visualization.">
   <meta property="og:image" content="https://iamyannc.github.io/Yann-dev/logo.jpg">
   <meta property="og:url" content="https://iamyannc.github.io/Yann-dev/">
   <meta property="og:site_name" content="Yann Cohen Portfolio">
@@ -178,458 +182,494 @@
 
   <!-- SRI 6.5.1 -->
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Yann Cohen</h1>
-            <div class="subtitle-container">
-    <span class="typing-text typing-1">Data Analyst</span>
-    <span class="typing-text typing-2">Web Designer</span>
-    <span class="typing-text typing-3">Adventurer</span>
+  <header>
+    <div class="header-content">
+      <h1>Yann Cohen</h1>
+      <div class="subtitle-container">
+        <span class="typing-text typing-1">Data Analyst</span>
+        <span class="typing-text typing-2">Web Designer</span>
+        <span class="typing-text typing-3">Adventurer</span>
 
-    <div class="final-titles">
-      <div class="final-title">Data Analyst</div>
-      <div class="final-title">Web Designer</div>
-      <div class="final-title">Adventurer</div>
-    </div>
-</div>  
-
-            <img src="logo.jpg" alt="Yann Cohen Logo" class="profile-logo">
-            <p class="tagline">I love Data, I love Design.<br>📍 Martinique</p>
-            
-            <div class="contact-links">
-    <a href="mailto:Yannco5@gmail.com"><i class="fa-solid fa-envelope"></i> yannco5@gmail.com</a>
-    <a href="https://wa.me/596696665893" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> 06 9666 5893</a>
-    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-    <a href="https://github.com/iamyannc" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
+        <div class="final-titles">
+          <div class="final-title">Data Analyst</div>
+          <div class="final-title">Web Designer</div>
+          <div class="final-title">Adventurer</div>
         </div>
-    </header>
-      
-   <nav id="main-nav">
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#languages">Languages</a></li>
-    <li><a href="#tourman">TOURMAN</a></li>
-  </ul>
-  <div class="lang-toggle" data-tooltip-fr="Change to English" data-tooltip-en="Passer en Français" aria-label="Switch to French / Passer en Français">
-    <a href="./fr/index.html"  aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 3 2">
-        <rect width="1" height="2" x="0" fill="#0055A4"/>
-        <rect width="1" height="2" x="1" fill="#fff"/>
-        <rect width="1" height="2" x="2" fill="#EF4135"/>
-      </svg>
-    </a>
-  </div>
-</nav>
+      </div>
 
-    
-    <div class="container">
+      <img src="logo.jpg" alt="Yann Cohen Logo" class="profile-logo">
+      <p class="tagline">I love Data, I love Design.<br>📍 Martinique</p>
+
+      <div class="contact-links">
+        <a href="mailto:Yannco5@gmail.com"><i class="fa-solid fa-envelope"></i> yannco5@gmail.com</a>
+        <a href="https://wa.me/596696665893" target="_blank" rel="noopener noreferrer"><i
+            class="fa-brands fa-whatsapp"></i> 06 9666 5893</a>
+        <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" rel="noopener noreferrer"><i
+            class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/iamyannc" target="_blank" rel="noopener noreferrer"><i
+            class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#tourman">TOURMAN</a></li>
+    </ul>
+    <div class="lang-toggle" data-tooltip-fr="Change to English" data-tooltip-en="Passer en Français"
+      aria-label="Switch to French / Passer en Français">
+      <a href="./fr/index.html" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 3 2">
+          <rect width="1" height="2" x="0" fill="#0055A4" />
+          <rect width="1" height="2" x="1" fill="#fff" />
+          <rect width="1" height="2" x="2" fill="#EF4135" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+
+  <div class="container">
     <section id="about">
-    <h2>About Me</h2>
-    
-    <div style="display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--text-light);">
+      <h2>About Me</h2>
+
+      <div
+        style="display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--text-light);">
         <p>
-            <strong>Data Analyst and Psychology graduate based in Martinique, a French Caribbean island 🌴🏖️.</strong>
+          <strong>Data Analyst and Psychology graduate based in Martinique, a French Caribbean island 🌴🏖️.</strong>
         </p>
         <p>
-            Equipped with an adventurous spirit and strong analytical thinking, I believe no project is ever too small. From data cleaning and visualization to advanced predictive modeling, my focus is on delivering actionable insights that drive meaningful decisions. </p>
-		<p>
-		    Open communication is the key for any successful partnership 👌.
+          Equipped with an adventurous spirit and strong analytical thinking, I believe no project is ever too small.
+          From data cleaning and visualization to advanced predictive modeling, my focus is on delivering actionable
+          insights that drive meaningful decisions. </p>
+        <p>
+          Open communication is the key for any successful partnership 👌.
         </p>
         <p>
-            When I’m not building dashboards, you’ll probably find me at around 12k feet, jumping out of an airplane (60 jumps and counting...) 🪂.
+          When I’m not building dashboards, you’ll probably find me at around 12k feet, jumping out of an airplane (60
+          jumps and counting...) 🪂.
         </p>
-    </div>
-</section>
-        
-       <section id="experience">
-    <h2>Professional Experience</h2>
-
-    <!-- Statistics Consultant -->
-    <div class="experience-item">
-        <div class="item-header">
-            <div>
-                <div class="item-title">Statistics Consultant (remote)</div>
-                <div class="item-company">Freelance</div>
-            </div>
-            <div class="item-date">2024 – 2025</div>
-        </div>
-        <div class="item-description">
-            <ul>
-                <li>Assisted in an academic study by developing a graph‑network representation using the <strong>NetworkX</strong> module in <strong>Python</strong> to examine relationships between specific personality traits in primary school children.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Data Analyst -->
-    <div class="experience-item">
-        <div class="item-header">
-            <div>
-                <div class="item-title">Data Analyst</div>
-                <div class="item-company">INNIO, Austria</div>
-            </div>
-            <div class="item-date">2023 – 2024</div>
-        </div>
-        <div class="item-description">
-  <ul>
-    <li>Extracted multilingual text from legacy contracts using <strong>Tesseract OCR</strong>, improving data accessibility and search capabilities.</li>
-    <li>Built a text-analysis dashboard using <strong>NLP</strong> methods to analyze free-text comments from engineers, revealing actionable insights.</li>
-    <li>Contributed to a large-scale, company-wide data validation initiative, ensuring dataset reliability.</li>
-    <li>Developed predictive models for engine performance and identified optimal maintenance sweet spots, informing policies valued in millions of euros.</li>
-    <li>Created a customer-friction and churn <strong>KPI</strong> for rigorous measurement of satisfaction.</li>
-    <li>Built additional <strong>machine-learning</strong> models for customer segmentation and supply-chain bottleneck detection.</li>
-  </ul>
-</div>
-    </div>
-
-    <!-- Private Tutor and Developer -->
-    <div class="experience-item">
-        <div class="item-header">
-            <div>
-                <div class="item-title">Private Tutor and Developer</div>
-                <div class="item-company">Freelance</div>
-            </div>
-            <div class="item-date">2020 – 2023</div>
-        </div>
-        <div class="item-description">
-            <ul>
-                <li>Taught programming and statistics to students and PhD candidates.</li>
-                <li>Developed web applications using the <strong>R Shiny</strong> framework, basic <strong>HTML</strong> and <strong>CSS</strong>, and created custom <strong>R packages</strong>.</li>
-                <li>Taught English at an intermediate level.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-  <h2>Education</h2>
-
-  <div class="education-item">
-    <div class="item-header">
-      <div class="item-info-left">
-        <h3 class="item-title">Data Science and Math Courses</h3>
-        <p class="item-company">Innsbruck University (Austria)</p>
       </div>
-       <div class="item-date">2022 – 2023</div>
-    </div>
+    </section>
 
-    <div class="download-container">
-      <a href="pdf/Academy Innsbruck grades.jpg" class="download-link" aria-label="Download Certificate" download>
-        <i class="fa-solid fa-download"></i>
-      </a>
-      <img src="pdf/Academy Innsbruck grades.jpg" class="pdf-preview" alt="Certificate Preview">
-    </div>
+    <section id="experience">
+      <h2>Professional Experience</h2>
 
-    <div class="item-description">
-      During my Erasmus exchange in Innsbruck, I completed mathematics and programming courses focused on data science, including Python, linear algebra, and algorithms.
-    </div>
-  </div>
-
-  <div class="education-item">
-    <div class="item-header">
-      <div class="item-info-left">
-        <h3 class="item-title">B.A. in Psychology</h3>
-        <p class="item-company">Ben-Gourion University, final grade: 94 - cum laude</p>
+      <!-- Statistics Consultant -->
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Statistics Consultant (remote)</div>
+            <div class="item-company">Freelance</div>
+          </div>
+          <div class="item-date">2024 – 2025</div>
+        </div>
+        <div class="item-description">
+          <ul>
+            <li>Assisted in an academic study by developing a graph‑network representation using the
+              <strong>NetworkX</strong> module in <strong>Python</strong> to examine relationships between specific
+              personality traits in primary school children.</li>
+          </ul>
+        </div>
       </div>
-      <div class="item-date">2020 – 2024</div>
+
+      <!-- Data Analyst -->
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Data Analyst</div>
+            <div class="item-company">INNIO, Austria</div>
+          </div>
+          <div class="item-date">2023 – 2024</div>
+        </div>
+        <div class="item-description">
+          <ul>
+            <li>Extracted multilingual text from legacy contracts using <strong>Tesseract OCR</strong>, improving data
+              accessibility and search capabilities.</li>
+            <li>Built a text-analysis dashboard using <strong>NLP</strong> methods to analyze free-text comments from
+              engineers, revealing actionable insights.</li>
+            <li>Contributed to a large-scale, company-wide data validation initiative, ensuring dataset reliability.
+            </li>
+            <li>Developed predictive models for engine performance and identified optimal maintenance sweet spots,
+              informing policies valued in millions of euros.</li>
+            <li>Created a customer-friction and churn <strong>KPI</strong> for rigorous measurement of satisfaction.
+            </li>
+            <li>Built additional <strong>machine-learning</strong> models for customer segmentation and supply-chain
+              bottleneck detection.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Private Tutor and Developer -->
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Private Tutor and Developer</div>
+            <div class="item-company">Freelance</div>
+          </div>
+          <div class="item-date">2020 – 2023</div>
+        </div>
+        <div class="item-description">
+          <ul>
+            <li>Taught programming and statistics to students and PhD candidates.</li>
+            <li>Developed web applications using the <strong>R Shiny</strong> framework, basic <strong>HTML</strong> and
+              <strong>CSS</strong>, and created custom <strong>R packages</strong>.</li>
+            <li>Taught English at an intermediate level.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <h2>Education</h2>
+
+    <div class="education-item">
+      <div class="item-header">
+        <div class="item-info-left">
+          <h3 class="item-title">Data Science and Math Courses</h3>
+          <p class="item-company">Innsbruck University (Austria)</p>
+        </div>
+        <div class="item-date">2022 – 2023</div>
+      </div>
+
+      <div class="download-container">
+        <a href="pdf/Academy Innsbruck grades.jpg" class="download-link" aria-label="Download Certificate" download>
+          <i class="fa-solid fa-download"></i>
+        </a>
+        <img src="pdf/Academy Innsbruck grades.jpg" class="pdf-preview" alt="Certificate Preview">
+      </div>
+
+      <div class="item-description">
+        During my Erasmus exchange in Innsbruck, I completed mathematics and programming courses focused on data
+        science, including Python, linear algebra, and algorithms.
+      </div>
     </div>
 
-    <div class="download-container">
-      <a href="pdf/ba_grades.pdf" class="download-link" aria-label="Download Certificate" target="_blank">
-        <i class="fa-solid fa-download"></i>
-      </a>
-      <img src="pdf/Academy BA Final Grades prev.png" class="pdf-preview" alt="Certificate Preview">
+    <div class="education-item">
+      <div class="item-header">
+        <div class="item-info-left">
+          <h3 class="item-title">B.A. in Psychology</h3>
+          <p class="item-company">Ben-Gourion University, final grade: 94 - cum laude</p>
+        </div>
+        <div class="item-date">2020 – 2024</div>
+      </div>
+
+      <div class="download-container">
+        <a href="pdf/ba_grades.pdf" class="download-link" aria-label="Download Certificate" target="_blank">
+          <i class="fa-solid fa-download"></i>
+        </a>
+        <img src="pdf/Academy BA Final Grades prev.png" class="pdf-preview" alt="Certificate Preview">
+      </div>
+
+      <div class="item-description">
+        Studied emotional and personality theories, advanced methods in cognition and statistics, and neuroimaging
+        techniques - all aimed at deepening my understanding of the human brain (and because it was truly
+        fascinating...).
+      </div>
     </div>
+    </section>
 
-    <div class="item-description">
-      Studied emotional and personality theories, advanced methods in cognition and statistics, and neuroimaging techniques - all aimed at deepening my understanding of the human brain (and because it was truly fascinating...).
-    </div>
-  </div>
-</section>
-        
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming & Tools</h3>
-                    <div>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Markdown</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">Shiny Framework</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Photoshop</span>
-                    </div>
-                </div>
-                
-                
-            </div>
-        </section>
-        
-        <section id="languages">
-            <h2>Languages</h2>
-            <div class="languages">
-                <div class="language-item">
-                    <div class="language-name">Hebrew</div>
-                    <div class="language-level">Native</div>
-                </div>
-                <div class="language-item">
-                    <div class="language-name">English</div>
-                    <div class="language-level">Excellent (oral & written)</div>
-                </div>
-                <div class="language-item">
-                    <div class="language-name">French</div>
-                    <div class="language-level">Excellent (oral)</div>
-                </div>
-                <div class="language-item">
-                    <div class="language-name">Spanish</div>
-                    <div class="language-level">Very Good (oral & written)</div>
-                </div>
-            </div>
-        </section>
-
-        
-<section id="tourman">
-  <h2>TOURMAN</h2>
-
- 
-<div class="tourman-section-main"> <!-- tourman-section-main is only the text and pictures. main carousel and map not included -->
-	<h3>Wait, who's Tourman?</h3>  
-	<div class="tourman-text">	  
-        <div class="tourman-portrait-container">
-          <div class="tourman-portrait-card">
-            <div class="tourman-portrait-face tourman-portrait-front">
-              <img src="tourman-webp/portrait.webp" alt="Portrait Front" loading="lazy">
-            </div>
-            <div class="tourman-portrait-face tourman-portrait-back">
-              <img src="tourman-webp/portrait-spin.webp" alt="Portrait Back" loading="lazy">
-            </div>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming & Tools</h3>
+          <div>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Markdown</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Shiny Framework</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">Photoshop</span>
           </div>
         </div>
-          <p>Early on, when I started traveling, I adopted this last name as if to let people around me, and mostly myself, know that this journey is no joke. Let me (try to) start from the beginning.</p>
-        <p>Somewhere in Australia back in 2017, I got this idea of riding a bicycle the entire length of the globe from north to south. A few months later, on August 21st, 2018, I left Brooklyn, NYC, and headed north. Alaska north.</p>
-        <p>I returned south and started zigzagging between the coasts, deserts, and valleys of this vast country before eventually entering Mexico. In the next few months, the world was about to change - COVID. I found myself in mid-2020 in Costa Rica, unable to continue further south, I decided to go back home. The bike stayed there.</p>
-        <p>Fast forward to November 2024 (well, you can read in the sections above what I did all this time). I flew back to Costa Rica and re-launched my bike trip with the intention of reaching my destination: <strong>Ushuia</strong>, fin del mundo.</p>
-
-<div class="text-carousel-container" role="region" aria-label="Tourman photo carousel">
-  <ul class="text-carousel" aria-live="polite">
-   <li>
-    <img src="tourman-webp/map.webp" alt="Map showing the Tourman travel route" loading="lazy">
-    
-    <button class="view-large" aria-label="View larger image">
-        <i class="fa-solid fa-up-down-left-right"></i>
-    </button>
-</li>
-    <li>
-      <img src="tourman-webp/rt66.webp" alt="Tourman cycling on Route 66 desert road" loading="lazy">
-  <button class="view-large" aria-label="View larger image">
-<i class="fa-solid fa-up-down-left-right"></i>
-</button>
-
-    </li>
-    <li>
-      <img src="tourman-webp/yannchimbo.webp" alt="Tourman with his bike near Chimborazo mountain" loading="lazy">
-  <button class="view-large" aria-label="View larger image">
-<i class="fa-solid fa-up-down-left-right"></i>
-</button>
-
-    </li>
-    <li>
-      <img src="tourman-webp/yannview.webp" alt="Tourman overlooking a mountain landscape with his bike" loading="lazy">
-  <button class="view-large" aria-label="View larger image">
-<i class="fa-solid fa-up-down-left-right"></i>
-</button>
-
-    </li>
-  </ul>
-</div>
-
-
-<div id="imageModal" class="image-modal" hidden>
-  <div class="image-modal-content">
-    <button class="close-modal" aria-label="Close">×</button>
-    <img id="modalImage" src="" alt="Enlarged view" loading="lazy">
-  </div>
-</div>
-
-        <p>I'm in no rush. As one of the podcast titles down below rightfully stated, I don't just ride, I <em>zigzag</em>. So I found myself riding the high Andes, the mighty Amazonas, and - at the time of writing these lines - preparing for a boat-hitchhiking adventure to take me to Martinique, a French Caribbean island.</p>
-        <p>If you want to read, listen, or watch more, visit the links down below. And if you want to contact me - be it as a programmer or as an adventurer - I'm always glad to share this experience with others.</p>
 
 
       </div>
-    
+    </section>
 
-<!-- INSTAGRAM--> 
-<!-- all credit for this button goes to Uiverse.io by Zameerahmad01 --> 
-<ul class="example-2">
-   <li class="icon-content">
-    <a
-      data-social="instagram"
-      aria-label="Instagram"
-      target="_blank"
-      href="https://www.instagram.com/yann.tourman"
-    >
-      <div class="filled"></div>
-      <svg
-        xml:space="preserve"
-        viewBox="0 0 16 16"
-        class="bi bi-instagram"
-        fill="currentColor"
-        height="16"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill="currentColor"
-          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-        ></path>
-      </svg>
-    </a>
-    <div class="tooltip">Yann.Tourman</div>
-  </li>
- </ul>
-
-</div> 
-
-        <!-- ========== Main Carousel========== -->
-
- <div class="tourman-carousel">
-  <div class="tourman-carousel-track">
-    
-    <!-- Podcast 2019 -->
-    <a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer" class="tourman-card pod19">
-      <img src="tourman-webp/podcast.webp" alt="One Year on the Road - Podcast 2019" loading="lazy">
-      <div class="tourman-card-info">
-        <strong>One Year on the Road</strong><div>Podcast • 2019 • English</div>
-      </div>
-    </a>
-
-    <!-- ZigZaging Americas -->
-    <a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer" class="tourman-card poden">
-      <img src="tourman-webp/gabriel.webp" alt="ZigZaging the Americas Podcast 2025" loading="lazy">
-      <div class="tourman-card-info">
-        <strong>ZigZaging the Americas</strong><div>Podcast • 2025 • English</div>
-      </div>
-    </a>
-
-
-    <!-- Howler Magazine -->
-    <a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer" class="tourman-card howler">
-      <img src="tourman-webp/howler.webp" alt="Costa Rica During Covid - Magazine 2020" loading="lazy">
-      <div class="tourman-card-info">
-        <strong>Costa Rica during Covid</strong><div>Magazine • 2020 • English</div>
-      </div>
-    </a>
-
-    <!-- TV Interview -->
-    <a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank" rel="noopener noreferrer" class="tourman-card ch13">
-      <img src="tourman-webp/ch13.webp" alt="Cycling During Covid TV Interview 2020 Hebrew" loading="lazy">
-      <div class="tourman-card-info">
-        <strong>Cycling During Covid, 2 years on the road</strong><div>TV Interview • 2020 • Hebrew</div>
-      </div>
-    </a>
-	  
-  <!-- Hebrew Podcast -->
-    <a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer" class="tourman-card podheb">
-      <img src="tourman-webp/podcast-heb.webp" alt="(not) Easy Travelling Podcast 2025 Hebrew" loading="lazy">
-      <div class="tourman-card-info">
-        <strong>(not) Easy Travelling</strong><div>Podcast • 2025 • Hebrew</div>
-      </div>
-    </a>
-    <!-- Haaretz -->
-    <a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000" target="_blank" rel="noopener noreferrer" class="tourman-card haretz">
-      <img src="tourman-webp/haaretz.webp" alt="Haaretz - A day in my life Magazine 2020" loading="lazy">
-      <div class="tourman-card-info">
-        <strong>Haaretz - A Day in My Life</strong><div>Magazine • 2020 • Hebrew</div>
-      </div>
-    </a>
-
-  </div>
-</div>
-
-<script>
-// Clone items for seamless loop (runs once on page load)
-const track = document.querySelector('.tourman-carousel-track');
-const items = Array.from(track.children);
-items.forEach(item => track.appendChild(item.cloneNode(true)));
-</script>
-
-      
-  
-<div>
-<h3 style="margin-top: 5rem;"> Three years, 15 countries (and counting) - you bet there's a map 🗺️ </h3>
-    
-    <button id="viewMapBtn" class="view-map-btn">
-        🚴‍♂️ Show me the map
-    </button>
-</div>
-
-<!-- Map Container (initially hidden) -->
-<div id="mapSection" class="map-section" style="display: none;">
-    <div class="map-container">
-        <div id="map"></div>
-        <div class="map-controls">
-           <p class="osm-note">
-  Locations are not 100% accurate. <br>
-  I <span class="heart" aria-hidden="true">♥</span>
-  <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>
-</p>
+    <section id="languages">
+      <h2>Languages</h2>
+      <div class="languages">
+        <div class="language-item">
+          <div class="language-name">Hebrew</div>
+          <div class="language-level">Native</div>
         </div>
-    </div>
-</div>
+        <div class="language-item">
+          <div class="language-name">English</div>
+          <div class="language-level">Excellent (oral & written)</div>
+        </div>
+        <div class="language-item">
+          <div class="language-name">French</div>
+          <div class="language-level">Excellent (oral)</div>
+        </div>
+        <div class="language-item">
+          <div class="language-name">Spanish</div>
+          <div class="language-level">Very Good (oral & written)</div>
+        </div>
+      </div>
+    </section>
 
-  
 
-</section>
-          
+    <section id="tourman">
+      <h2>TOURMAN</h2>
+
+
+      <div class="tourman-section-main">
+        <!-- tourman-section-main is only the text and pictures. main carousel and map not included -->
+        <h3>Wait, who's Tourman?</h3>
+        <div class="tourman-text">
+          <div class="tourman-portrait-container">
+            <div class="tourman-portrait-card">
+              <div class="tourman-portrait-face tourman-portrait-front">
+                <img src="tourman-webp/portrait.webp" alt="Portrait Front" loading="lazy">
+              </div>
+              <div class="tourman-portrait-face tourman-portrait-back">
+                <img src="tourman-webp/portrait-spin.webp" alt="Portrait Back" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <p>Early on, when I started traveling, I adopted this last name as if to let people around me, and mostly
+            myself, know that this journey is no joke. Let me (try to) start from the beginning.</p>
+          <p>Somewhere in Australia back in 2017, I got this idea of riding a bicycle the entire length of the globe
+            from north to south. A few months later, on August 21st, 2018, I left Brooklyn, NYC, and headed north.
+            Alaska north.</p>
+          <p>I returned south and started zigzagging between the coasts, deserts, and valleys of this vast country
+            before eventually entering Mexico. In the next few months, the world was about to change - COVID. I found
+            myself in mid-2020 in Costa Rica, unable to continue further south, I decided to go back home. The bike
+            stayed there.</p>
+          <p>Fast forward to November 2024 (well, you can read in the sections above what I did all this time). I flew
+            back to Costa Rica and re-launched my bike trip with the intention of reaching my destination:
+            <strong>Ushuia</strong>, fin del mundo.</p>
+
+          <div class="text-carousel-container" role="region" aria-label="Tourman photo carousel">
+            <ul class="text-carousel" aria-live="polite">
+              <li>
+                <img src="tourman-webp/map.webp" alt="Map showing the Tourman travel route" loading="lazy">
+
+                <button class="view-large" aria-label="View larger image">
+                  <i class="fa-solid fa-up-down-left-right"></i>
+                </button>
+              </li>
+              <li>
+                <img src="tourman-webp/rt66.webp" alt="Tourman cycling on Route 66 desert road" loading="lazy">
+                <button class="view-large" aria-label="View larger image">
+                  <i class="fa-solid fa-up-down-left-right"></i>
+                </button>
+
+              </li>
+              <li>
+                <img src="tourman-webp/yannchimbo.webp" alt="Tourman with his bike near Chimborazo mountain"
+                  loading="lazy">
+                <button class="view-large" aria-label="View larger image">
+                  <i class="fa-solid fa-up-down-left-right"></i>
+                </button>
+
+              </li>
+              <li>
+                <img src="tourman-webp/yannview.webp" alt="Tourman overlooking a mountain landscape with his bike"
+                  loading="lazy">
+                <button class="view-large" aria-label="View larger image">
+                  <i class="fa-solid fa-up-down-left-right"></i>
+                </button>
+
+              </li>
+            </ul>
+          </div>
+
+
+          <div id="imageModal" class="image-modal" hidden>
+            <div class="image-modal-content">
+              <button class="close-modal" aria-label="Close">×</button>
+              <img id="modalImage" src="" alt="Enlarged view" loading="lazy">
+            </div>
+          </div>
+
+          <p>I'm in no rush. As one of the podcast titles down below rightfully stated, I don't just ride, I
+            <em>zigzag</em>. So I found myself riding the high Andes, the mighty Amazonas, and - at the time of writing
+            these lines - preparing for a boat-hitchhiking adventure to take me to Martinique, a French Caribbean
+            island.</p>
+          <p>If you want to read, listen, or watch more, visit the links down below. And if you want to contact me - be
+            it as a programmer or as an adventurer - I'm always glad to share this experience with others.</p>
+
+
+        </div>
+
+
+        <!-- INSTAGRAM-->
+        <!-- all credit for this button goes to Uiverse.io by Zameerahmad01 -->
+        <ul class="example-2">
+          <li class="icon-content">
+            <a data-social="instagram" aria-label="Instagram" target="_blank"
+              href="https://www.instagram.com/yann.tourman">
+              <div class="filled"></div>
+              <svg xml:space="preserve" viewBox="0 0 16 16" class="bi bi-instagram" fill="currentColor" height="16"
+                width="16" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                </path>
+              </svg>
+            </a>
+            <div class="tooltip">Yann.Tourman</div>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- ========== Main Carousel========== -->
+
+      <div class="tourman-carousel">
+        <div class="tourman-carousel-track">
+
+          <!-- Podcast 2019 -->
+          <a href="https://youtu.be/eaap6Qkx4cg?si=4WrVZELrGWlQXLKL" target="_blank" rel="noopener noreferrer"
+            class="tourman-card pod19">
+            <img src="tourman-webp/podcast.webp" alt="One Year on the Road - Podcast 2019" loading="lazy">
+            <div class="tourman-card-info">
+              <strong>One Year on the Road</strong>
+              <div>Podcast • 2019 • English</div>
+            </div>
+          </a>
+
+          <!-- ZigZaging Americas -->
+          <a href="https://youtu.be/_Q0FuGATPKk?si=dzIjUxUtj51JZVhL" target="_blank" rel="noopener noreferrer"
+            class="tourman-card poden">
+            <img src="tourman-webp/gabriel.webp" alt="ZigZaging the Americas Podcast 2025" loading="lazy">
+            <div class="tourman-card-info">
+              <strong>ZigZaging the Americas</strong>
+              <div>Podcast • 2025 • English</div>
+            </div>
+          </a>
+
+
+          <!-- Howler Magazine -->
+          <a href="https://issuu.com/howler/docs/202006_june_9_oclock/32" target="_blank" rel="noopener noreferrer"
+            class="tourman-card howler">
+            <img src="tourman-webp/howler.webp" alt="Costa Rica During Covid - Magazine 2020" loading="lazy">
+            <div class="tourman-card-info">
+              <strong>Costa Rica during Covid</strong>
+              <div>Magazine • 2020 • English</div>
+            </div>
+          </a>
+
+          <!-- TV Interview -->
+          <a href="https://13tv.co.il/item/news/haolam-haboker/season-01/clips/uljk7-2027118/" target="_blank"
+            rel="noopener noreferrer" class="tourman-card ch13">
+            <img src="tourman-webp/ch13.webp" alt="Cycling During Covid TV Interview 2020 Hebrew" loading="lazy">
+            <div class="tourman-card-info">
+              <strong>Cycling During Covid, 2 years on the road</strong>
+              <div>TV Interview • 2020 • Hebrew</div>
+            </div>
+          </a>
+
+          <!-- Hebrew Podcast -->
+          <a href="https://youtu.be/gYPW4E74i18?si=tWp_1eqQBv_5kaK8" target="_blank" rel="noopener noreferrer"
+            class="tourman-card podheb">
+            <img src="tourman-webp/podcast-heb.webp" alt="(not) Easy Travelling Podcast 2025 Hebrew" loading="lazy">
+            <div class="tourman-card-info">
+              <strong>(not) Easy Travelling</strong>
+              <div>Podcast • 2025 • Hebrew</div>
+            </div>
+          </a>
+          <!-- Haaretz -->
+          <a href="https://www.haaretz.co.il/blogs/sivanklingbail/2020-05-27/ty-article/0000017f-f8f1-d460-afff-fbf701fc0000"
+            target="_blank" rel="noopener noreferrer" class="tourman-card haretz">
+            <img src="tourman-webp/haaretz.webp" alt="Haaretz - A day in my life Magazine 2020" loading="lazy">
+            <div class="tourman-card-info">
+              <strong>Haaretz - A Day in My Life</strong>
+              <div>Magazine • 2020 • Hebrew</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <script>
+        // Clone items for seamless loop (runs once on page load)
+        const track = document.querySelector('.tourman-carousel-track');
+        const items = Array.from(track.children);
+        items.forEach(item => track.appendChild(item.cloneNode(true)));
+      </script>
+
+
+
+      <div>
+        <h3 style="margin-top: 5rem;"> Three years, 15 countries (and counting) - you bet there's a map 🗺️ </h3>
+
+        <button id="viewMapBtn" class="view-map-btn">
+          🚴‍♂️ Show me the map
+        </button>
+      </div>
+
+      <!-- Map Container (initially hidden) -->
+      <div id="mapSection" class="map-section" style="display: none;">
+        <div class="map-container">
+          <div id="map"></div>
+          <div class="map-controls">
+            <p class="osm-note">
+              Locations are not 100% accurate. <br>
+              I <span class="heart" aria-hidden="true">♥</span>
+              <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+
     <footer>
-        <div class="footer-links">
-    <a href="mailto:Yannco5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://wa.me/596696665893" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/iamyannc" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        </div>
-        
-        <p>Congrats, you made it to fin del mundo 🎉<br> P.S, I wrote this website.</p>
-<p>&copy; 2025 Yann Cohen</p>    
-</footer>
-    
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme menu">
-        🎨
-    </button>
-   
-    <div class="theme-menu" id="themeMenu">
-        <button class="theme-option active" data-theme="light">☀️ Light</button>
-        <button class="theme-option" data-theme="dark">🌙 Dark</button>
-        <button class="theme-option" data-theme="funky">✨ Funky</button>
-    </div>
- 
+      <div class="footer-links">
+        <a href="mailto:Yannco5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/596696665893" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+            class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://linkedin.com/in/yann-cohen-tourman" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/iamyannc" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+      </div>
 
-   
+      <p>Congrats, you made it to fin del mundo 🎉<br> P.S, I wrote this website.</p>
+      <p>&copy; 2026 Yann Cohen</p>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme menu">
+      🎨
+    </button>
+
+    <div class="theme-menu" id="themeMenu">
+      <button class="theme-option active" data-theme="light">☀️ Light</button>
+      <button class="theme-option" data-theme="dark">🌙 Dark</button>
+      <button class="theme-option" data-theme="funky">✨ Funky</button>
+    </div>
+
+
+
     <script src="main.js"></script>
 
     <!-- Leaflet JS, Map reated scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="js/map-cities.js"></script>
     <script src="js/map.js"></script>
-    
+
 
     <!-- SEO -->
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -653,13 +693,6 @@ items.forEach(item => track.appendChild(item.cloneNode(true)));
 }
 </script>
 
-  </body>
+</body>
 
 </html>
-
-
-
-
-
-
-
