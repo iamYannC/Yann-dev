@@ -2221,7 +2221,7 @@ margin: 0.75rem 0 1rem;
 border: 1px solid #d1d5db;
 border-radius: 10px;
 background: #ffffff;
-overflow: hidden;
+overflow: visible;
 }
 details.solution-toggle > summary {
 cursor: pointer;
@@ -2267,6 +2267,30 @@ code,
 direction: ltr;
 text-align: left;
 unicode-bidi: plaintext;
+}
+.sourceCode,
+pre,
+.cell-output-display,
+.math.display,
+table {
+max-width: 100%;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+.math.display {
+display: block;
+}
+@media (max-width: 768px) {
+body {
+overflow-x: hidden;
+}
+.sourceCode,
+pre,
+.cell-output-display,
+.math.display,
+table {
+font-size: 0.95rem;
+}
 }
 </style>
 <script>
