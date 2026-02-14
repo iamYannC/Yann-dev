@@ -2216,6 +2216,36 @@ direction: ltr;
 .back-to-site:hover {
 background: oklch(0.73 0.13 53.31);
 }
+details.solution-toggle {
+margin: 0.75rem 0 1rem;
+border: 1px solid #d1d5db;
+border-radius: 10px;
+background: #ffffff;
+overflow: hidden;
+}
+details.solution-toggle > summary {
+cursor: pointer;
+padding: 0.6rem 0.85rem;
+font-weight: 600;
+color: #1f2937;
+background: #f3f4f6;
+border-bottom: 1px solid #e5e7eb;
+list-style: none;
+}
+details.solution-toggle > summary::-webkit-details-marker {
+display: none;
+}
+details.solution-toggle > summary::before {
+content: "▸";
+margin-inline-end: 0.5rem;
+}
+details.solution-toggle[open] > summary::before {
+content: "▾";
+}
+details.solution-toggle > .answer-block,
+details.solution-toggle > .solution {
+padding: 0.8rem 0.9rem 0.4rem;
+}
 .answer-block {
 color: oklch(0.56 0.18 253.53);
 }
@@ -2239,6 +2269,24 @@ text-align: left;
 unicode-bidi: plaintext;
 }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const blocks = document.querySelectorAll(".solution, .answer-block");
+  blocks.forEach(function (block) {
+    if (!block.parentElement || block.parentElement.tagName === "DETAILS") return;
+
+    const details = document.createElement("details");
+    details.className = "solution-toggle";
+
+    const summary = document.createElement("summary");
+    summary.textContent = "הצג פתרון";
+
+    block.parentNode.insertBefore(details, block);
+    details.appendChild(summary);
+    details.appendChild(block);
+  });
+});
+</script>
 
   <script>/*
  * Polyfill service v3.111.0
