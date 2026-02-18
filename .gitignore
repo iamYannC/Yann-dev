@@ -2,3 +2,4 @@ solution-page/
 plots/
 *.qmd
 dev/
+.Rhistory
