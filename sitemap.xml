@@ -22,4 +22,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://iamyannc.github.io/Yann-dev/" />
   </url>
 
+  <!-- Hidden: 2026 A Solution (HTML) -->
+  <url>
+    <loc>https://iamyannc.github.io/Yann-dev/2026_a_solution.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Hidden: Tree Builder App -->
+  <url>
+    <loc>https://iamyannc.github.io/Yann-dev/tree-builder/</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
