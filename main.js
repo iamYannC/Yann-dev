@@ -1,50 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const themeToggle = document.getElementById('themeToggle');
-const themeMenu = document.getElementById('themeMenu');
-const themeOptions = document.querySelectorAll('.theme-option');
+const themeCheckbox = document.getElementById('themeCheckbox');
 const body = document.body;
 
-// Open on hover
-themeToggle.addEventListener('mouseenter', () => {
-  themeMenu.classList.add('open');
-});
-
-// Keep menu open while hovering
-themeMenu.addEventListener('mouseenter', () => {
-  themeMenu.classList.add('open');
-});
-
-// Close when leaving both
-themeToggle.addEventListener('mouseleave', () => {
-  setTimeout(() => {
-    if (!themeMenu.matches(':hover')) themeMenu.classList.remove('open');
-  }, 100);
-});
-
-themeMenu.addEventListener('mouseleave', () => {
-  themeMenu.classList.remove('open');
-});
-
-// Theme selection logic
-themeOptions.forEach(option => {
-  option.addEventListener('click', () => {
-    const theme = option.getAttribute('data-theme');
-    applyTheme(theme);
-    themeMenu.classList.remove('open');
-  });
-});
-
-function applyTheme(theme) {
-  body.classList.remove('dark-theme', 'funky-theme');
-
-  if (theme === 'dark') body.classList.add('dark-theme');
-  else if (theme === 'funky') body.classList.add('funky-theme');
-
-  themeOptions.forEach(opt => {
-    opt.classList.toggle('active', opt.getAttribute('data-theme') === theme);
-  });
+// Apply saved theme on load
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-theme');
+  themeCheckbox.checked = true;
 }
+
+// Toggle theme on checkbox change
+themeCheckbox.addEventListener('change', () => {
+  if (themeCheckbox.checked) {
+    body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
+  }
+});
 
         
         // Intersection Observer for active navigation
