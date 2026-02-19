@@ -7,41 +7,32 @@
         }
         
         :root {
-            --primary: #FF8C61;
-            --primary-dark: #e67a52;
-            --text-dark: #2d3748;
-            --text-light: #4a5568;
-            --bg-light: #f7fafc;
-            --bg-white: #ffffff;
-            --border: #e2e8f0;
+            --primary: oklch(75.7% 0.151 41);
+            --primary-dark: oklch(69.4% 0.145 41);
+            --text-dark: oklch(33.5% 0.033 261);
+            --text-light: oklch(44.7% 0.034 261);
+            --bg-light: oklch(98.3% 0.004 237);
+            --bg-white: oklch(100% 0 0);
+            --border: oklch(92.9% 0.013 256);
             --bg-footer: var(--text-dark);
+            --link-color: oklch(55% 0.15 270);
 	    --shadow-color: rgba(0, 0, 0, 0.1);
         }
         
         body.dark-theme {
-            --primary: #e68967;
-            --primary-dark: #fc9772;
-            --text-dark: #e2e8f0;
-            --text-light: #cbd5e0;
-            --bg-light: #2d3748;
-            --bg-white: #1a202c;
-            --border: #4a5568;
+            --primary: oklch(78% 0.16 41);
+            --primary-dark: oklch(72% 0.17 41);
+            --text-dark: oklch(92.9% 0.013 256);
+            --text-light: oklch(86.9% 0.019 251);
+            --bg-light: oklch(33.5% 0.033 261);
+            --bg-white: oklch(24.3% 0.025 264);
+            --border: oklch(44.7% 0.034 261);
             --bg-footer: var(--text-dark);
+            --link-color: oklch(78% 0.12 250);
             --shadow-color: rgba(255, 255, 255, 0.15);
         }
         
-        body.funky-theme {
-            --primary: #ff1493;
-            --primary-dark: #c71067;
-            --text-dark: #fce7f3;
-            --text-light: #f9a8d4;
-            --bg-light: #1e1b4b;
-            --bg-white: #0f0a2e;
-            --border: #4c1d95;
-            --bg-footer: #ffd1dc;
-	    --shadow-color: rgba(245, 76, 186, 0.23);
-
-        }
+        
         
         body {
             font-family: 'Inter', Roboto, sans-serif, 'Segoe UI';
@@ -51,6 +42,14 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
+        /* Content links (not nav, header, or footer) */
+        .item-description a {
+            color: var(--link-color);
+            transition: color 0.3s ease;
+        }
+        .item-description a:hover {
+            color: var(--primary);
+        }
 
 body::before {
   content: "";
@@ -268,36 +267,52 @@ html[lang="fr"] .lang-toggle::after {
 
 }
 
+/* Api key thanks message on linkedin from Er Nan */
 
-/* Api key thanks message on linkedin from Er Nan
-/* Target only the first LI in the first experience item */
+/* 1. Base Setup for the First LI */
 .experience-item:first-of-type .item-description ul li:first-child {
   position: relative;
 }
 
-/* Updated Popup Positioning */
-.experience-item:first-of-type .item-description ul li:first-child .popup-image {
-  position: absolute;
-  bottom: 110%; 
-  right: 200px;   
-  width: 350px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  z-index: 100;
-  
-  /* Animation / Visibility */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease-in-out;
-  pointer-events: none;
+/* 2. Desktop Styles (Hover Popup) */
+@media (min-width: 1024px) {
+  .experience-item:first-of-type .item-description ul li:first-child .popup-image {
+    position: absolute;
+    bottom: 110%;
+    right: 200px; /* Shifted to the right */
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 100;
+    
+    /* Hover Animation Logic */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+  /* Show only on hover for Desktop */
+  .experience-item:first-of-type .item-description ul li:first-child:hover .popup-image {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-/* Trigger on hover */
-.experience-item:first-of-type .item-description ul li:first-child:hover .popup-image {
-  opacity: 1;
-  visibility: visible;
+/* 3. Mobile Styles (Option B: Displayed Inline) */
+@media (max-width: 1023px) {
+  .experience-item:first-of-type .item-description ul li:first-child .popup-image {
+    display: block;
+    position: static;   /* Removes absolute floating to prevent cropping */
+    width: 100%;        /* Fits the screen width */
+    max-width: 400px;
+    margin: 10px 0;     /* Adds spacing above/below the text */
+    border-radius: 8px;
+    opacity: 1;         /* Always visible on mobile */
+    visibility: visible;
+  }
 }
-
 
 .language-item {
     margin-bottom: 0; }
@@ -507,105 +522,13 @@ color: var(--bg-white)
             opacity: 1;
        }
         
-              .theme-toggle {
+/* Theme toggle positioning */
+.theme-toggle-wrapper {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  width: 38px;
-  height: 38px;
-  background: var(--primary);
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 12px var(--shadow-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  opacity: 0.7;
-  transition: all 0.3s ease;
   z-index: 1000;
-  animation: floatToggle 3s ease-in-out infinite;
 }
-        
-        .theme-toggle:hover {
-            opacity: 1;
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-        }
-        
-        .theme-toggle:active {
-            transform: scale(0.95);
-        }
-        
-@keyframes floatToggle {
-  0%, 100% {
-    transform: translateY(-6px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-}
-
-        .theme-menu {
-            position: fixed;
-            bottom: 5rem;
-            right: 1.5rem;
-            background: var(--bg-light);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 0.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            display: none;
-            z-index: 999;
-        }
-
-        #themeMenu button {
-	    padding: 0.5rem;
-	}
-        
-        .theme-menu.open {
-            display: block;
-            animation: slideIn 0.3s ease;
-        }
-        
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .theme-option {
-            display: block;
-            width: 100%;
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-white);
-            border: 2px solid var(--border);
-            border-radius: 8px;
-            margin: 0.5rem 0;
-            cursor: pointer;
-            font-size: 1rem;
-            color: var(--text-dark);
-            transition: all 0.2s ease;
-            text-align: left;
-        }
-        
-        .theme-option:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateX(-5px);
-        }
-        
-        .theme-option.active {
-            border-color: var(--primary);
-            font-weight: bold;
-        }
         
         @media (max-width: 768px) {
             h1 {
