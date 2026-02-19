@@ -268,6 +268,37 @@ html[lang="fr"] .lang-toggle::after {
 
 }
 
+
+/* Api key thanks message on linkedin from Er Nan
+/* Target only the first LI in the first experience item */
+.experience-item:first-of-type .item-description ul li:first-child {
+  position: relative;
+}
+
+/* Updated Popup Positioning */
+.experience-item:first-of-type .item-description ul li:first-child .popup-image {
+  position: absolute;
+  bottom: 110%; 
+  right: 200px;   
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 100;
+  
+  /* Animation / Visibility */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+/* Trigger on hover */
+.experience-item:first-of-type .item-description ul li:first-child:hover .popup-image {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 .language-item {
     margin-bottom: 0; }
 
