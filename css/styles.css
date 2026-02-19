@@ -269,51 +269,63 @@ html[lang="fr"] .lang-toggle::after {
 
 /* Api key thanks message on linkedin from Er Nan */
 
-/* 1. Base Setup for the First LI */
-.experience-item:first-of-type .item-description ul li:first-child {
+.hover-popup {
   position: relative;
 }
 
-/* 2. Desktop Styles (Hover Popup) */
+/* --- DESKTOP SETTINGS (Screens wider than 1024px) --- */
 @media (min-width: 1024px) {
-  .experience-item:first-of-type .item-description ul li:first-child .popup-image {
+  .hover-popup .popup-image {
     position: absolute;
-    bottom: 110%;
-    right: 200px; /* Shifted to the right */
+    z-index: 100;
+    
+    /* LOCATION CONTROLS */
+    bottom: 110%;    /* Distance from the bottom of the text */
+    right: 200px;    /* Horizontal offset */
+    
     width: 350px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 100;
     
+    /* Animation Logic */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(5px); /* Subtle slide up effect */
+    pointer-events: none;
+  }
+}
+
+/* --- MOBILE SETTINGS (Screens smaller than 1023px) --- */
+@media (max-width: 1023px) {
+  .hover-popup .popup-image {
+    position: absolute;
+    z-index: 100;
+
+    /* LOCATION CONTROLS for Mobile */
+    top: 100%;       /* Appears right beneath the text */
+    left: 0;         /* Aligned to the left edge of the bullet */
+    
+    width: 280px;    /* Slightly smaller for phone screens */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
     /* Hover Animation Logic */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
     pointer-events: none;
   }
-
-  /* Show only on hover for Desktop */
-  .experience-item:first-of-type .item-description ul li:first-child:hover .popup-image {
-    opacity: 1;
-    visibility: visible;
-  }
 }
 
-/* 3. Mobile Styles (Option B: Displayed Inline) */
-@media (max-width: 1023px) {
-  .experience-item:first-of-type .item-description ul li:first-child .popup-image {
-    display: block;
-    position: static;   /* Removes absolute floating to prevent cropping */
-    width: 100%;        /* Fits the screen width */
-    max-width: 400px;
-    margin: 10px 0;     /* Adds spacing above/below the text */
-    border-radius: 8px;
-    opacity: 1;         /* Always visible on mobile */
-    visibility: visible;
-  }
+/* Common Trigger: Show on Hover (or Tap on mobile) */
+.hover-popup:hover .popup-image {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
-
 .language-item {
     margin-bottom: 0; }
 
